@@ -48,6 +48,8 @@
 			</li>
 		</ul>
 	</div> <!-- end of menu -->
+	
+	<!-- start of left -->
 	<div class="left">
     	<div class="nav">
 		<img src="img/nav_menu1.png" width="200" height="200">
@@ -58,10 +60,12 @@
         <div class="sub_nav_2">
         <img src="img/sub_nav_2.png" width="200" height="56">
         </div>        
-	</div>
+	</div> <!-- end of left -->
+	
 	<div class="center">
 		<img src="img/centerimg1.png" width="700" height="300">
 	</div>
+
 	<img src="img/footercopyrighter.png" width="1000" height="190">
 	<div class="footer"></div>
 </div>
