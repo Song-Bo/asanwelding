@@ -72,7 +72,7 @@
 
 
 <!-- start of footer-->
-<div id="footer">
+<div id="footer" align="center">
 <img src="../img/footercopyrighter.png">
 </div><!-- end of footer -->	
 </body>

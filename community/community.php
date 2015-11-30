@@ -53,8 +53,8 @@
 
 
 <!-- start of footer-->
-<div id="footer">
-<img src="../img/footercopyrighter.png">
+<div id="footer" align="center">
+<img src="../img/footercopyrighter.png" >
 </div><!-- end of footer -->	
 </body>
 </html>

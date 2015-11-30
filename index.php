@@ -34,7 +34,7 @@
 	<!-- start of center -->
 	<div class="center">
 		<div class="logo">
-			<img src="img/logo.png" width="380" height="48">
+			<a href="#"><img src="img/logo.png" width="380" height="48"></a>
 		</div>
 		<div class="menu">
 			<ul>
@@ -74,7 +74,7 @@
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<img src="img/sub_nav_1.png" width="200" height="66">
+					<a href="#"><img src="img/sub_nav_1.png" width="200" height="66"></a>
 				</div>
 				<div class="sub_nav2">
 					<img src="img/sub_nav_2.png" width="200" height="56">
@@ -114,8 +114,8 @@
 
 
 <!-- start of footer-->
-<div id="footer">
-<img src="img/footercopyrighter.png">
+<div id="footer" align="center">	
+	<img src="img/footercopyrighter.png">
 </div><!-- end of footer -->	
 </body>
 </html>
