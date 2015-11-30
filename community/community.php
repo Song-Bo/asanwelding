@@ -28,7 +28,7 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../img/nav_menu3.png" width="200" height="200" alt="">
+				<img src="../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
 			</div>
 			<div class="sub_nav">
 				<!-- <div class="sub_nav1">
@@ -54,7 +54,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">
-<img src="../img/footercopyrighter.png" alt="">
+<img src="../img/footercopyrighter.png" alt="푸터">
 </div><!-- end of footer -->	
 </body>
 </html>

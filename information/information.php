@@ -28,7 +28,7 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../img/nav_menu2.png" width="200" height="200" alt="">
+				<img src="../img/nav_menu2.png" width="200" height="200" alt="수강안내">
 			</div>
 			<div class="sub_nav">
 				<!-- <div class="sub_nav1">
@@ -41,7 +41,7 @@
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="../img/info_1.gif" alt="">
+					<img src="../img/info_1.gif" alt="용접기능사">
 				</div>
 				<div class="main_co2">
 					
@@ -54,7 +54,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">
-<img src="../img/footercopyrighter.png" alt="">
+<img src="../img/footercopyrighter.png" alt="푸터">
 </div><!-- end of footer -->	
 </body>
 </html>

@@ -28,20 +28,20 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../img/nav_menu1.png" width="200" height="200" alt="">
+				<img src="../img/nav_menu1.png" width="200" height="200" alt="학원소개">
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66" alt=""></a>
+					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66" alt="인사말"></a>
 				</div>
 				<div class="sub_nav2">
-					<img src="../img/sub_nav_2.png" width="200" height="56" alt="">
+					<img src="../img/sub_nav_2.png" width="200" height="56" alt="오시는 길">
 				</div>
 			</div>
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="../img/centerimg1.png" width="700" height="300" alt="">
+					<img src="../img/centerimg1.png" width="700" height="300" alt="용접즁">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -73,7 +73,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">
-<img src="../img/footercopyrighter.png" alt="">
+<img src="../img/footercopyrighter.png" alt="푸터">
 </div><!-- end of footer -->	
 </body>
 </html>

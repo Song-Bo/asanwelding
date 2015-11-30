@@ -18,7 +18,7 @@
 
 <!-- start of header -->
 <div id="header" class="header">
-	<!-- start of global -->
+	<!-- header of global -->
 	<div class="global">
 		<div id="top" class="above">
 		<div class="notice">
@@ -31,31 +31,31 @@
 		</div>
 	</div><!-- end of global -->
 
-	<!-- start of center -->
+	<!-- header of center -->
 	<div class="center">
 		<div class="logo">
-			<a href="#"><img src="img/logo.png" alt="" width="380" height="48"></a>
+			<a href="#"><img src="img/logo.png" width="380" height="48" alt="메인로고"></a>
 		</div>
 		<div class="menu">
 			<ul>
 				<li class="menu1">
 					<div class="menu1">
-						<a href="introduce/introduce.php"><img src="img/menu1.png" alt="" width="70" height="19"></a>
+						<a href="introduce/introduce.php"><img src="img/menu1.png" width="70" height="19" alt="학원소개"></a>
 					</div>
 				</li>
 				<li class="menu2">
 					<div class="menu2">
-						<a href="information/information.php"><img src="img/menu2.png" alt="" width="70" height="19"></a>
+						<a href="information/information.php"><img src="img/menu2.png" width="70" height="19" alt="수강안내"></a>
 					</div>
 				</li>
 				<li class="menu3">
 					<div class="menu3">
-					<a href="community/community.php"><img src="img/menu3.png" alt="" width="69" height="19"></a>
+					<a href="community/community.php"><img src="img/menu3.png" width="69" height="19" alt="커뮤니티"></a>
 					</div>
 				</li>
 				<li class="menu4">
 					<div class="menu4">
-						<a href="gallery/gallery.php"><img src="img/menu4.png" alt="" width="52" height="19"></a>
+						<a href="gallery/gallery.php"><img src="img/menu4.png" width="52" height="19" alt="갤러리"></a>
 					</div>
 				</li>
 			</ul>
@@ -70,20 +70,20 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="img/nav_menu1.png" alt="" width="200" height="200">
+				<img src="img/nav_menu1.png" width="200" height="200" alt="학원소개">
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<a href="#"><img src="img/sub_nav_1.png" alt="" width="200" height="66"></a>
+					<a href="#"><img src="img/sub_nav_1.png" width="200" height="66" alt="인사말"></a>
 				</div>
 				<div class="sub_nav2">
-					<img src="img/sub_nav_2.png" alt="" width="200" height="56">
+					<img src="img/sub_nav_2.png" width="200" height="56" alt="오시는 길">
 				</div>
 			</div>
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="img/centerimg1.png" alt="" width="700" height="300">
+					<img src="img/centerimg1.png" width="700" height="300" alt="용접즁">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -115,7 +115,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">	
-	<img src="img/footercopyrighter.png" alt="">
+	<img src="img/footercopyrighter.png" alt="푸터">
 </div><!-- end of footer -->	
 </body>
 </html>

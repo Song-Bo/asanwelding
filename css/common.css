@@ -1,4 +1,4 @@
-/*Body*/
+/* Body */
 body {
 	position: relative;
 	min-width: 1024px;
@@ -29,7 +29,9 @@ div {
 }
 
 
-/*Header*/
+
+
+/* Header */
 #header {
 	min-width: 1024px;
 	max-width: 2560px;
@@ -45,7 +47,8 @@ div {
 	content: '';
 }
 
-/*Header-top*/
+
+/* Header - global */
 .global {
 	height: 30px;
 	border-bottom: 1px solid #f0f0f0;
@@ -112,7 +115,8 @@ div {
 	margin-right:20px;
 }
 
-/* header - Center*/
+
+/* Header - Center */
 .center {
 	overflow:hidden;
 	width: 1024px;
@@ -143,7 +147,8 @@ ul, li {
 
 
 
-/*Container*/
+
+/* Container */
 #container {
 	background-color:#ececec;
 	position: relative;
@@ -153,7 +158,7 @@ ul, li {
 	max-width: 2560px;
 	min-height: 500px;
 	max-height: 100%;
-	/*margin: 0 auto;*/
+	margin: 0 auto;
 }
 
 .wrap {
@@ -165,6 +170,7 @@ ul, li {
 }
 
 
+/* Container - Content */
 .content {
 	float:none;
 	width:1024px;
@@ -175,13 +181,14 @@ ul, li {
 	max-height: 9999999px;
 }
 
-
 .content:after {
 	display:block;
 	clear:both;
 	content:'';
 }
 
+
+/* Container - Content - nav */
 .nav_wrap {
 	position:absolute;
 	width:200px;
@@ -190,6 +197,7 @@ ul, li {
 	bottom:0;
 	background:#f4f4f4;
 }
+
 .nav {
 	width: 200px;
 	max-width: 200px;
@@ -200,6 +208,8 @@ ul, li {
 	max-width: 200px;
 }
 
+
+/* Container - Content - mainContent */
 .main_content{
 	float:left;
 	width: 824px;
@@ -219,7 +229,10 @@ ul, li {
 	padding: 40px 32px 50px;	
 }
 
-/*Footer*/
+
+
+
+/* Footer */
 #footer {
 	min-width: 1024px;
 	max-width: 2560px;
