@@ -115,7 +115,7 @@
 
 <!-- start of footer-->
 <div id="footer">
-<img src="img/footercopyrighter.png" width="1000" height="190">
+<img src="img/footercopyrighter.png">
 </div><!-- end of footer -->	
 </body>
 </html>
