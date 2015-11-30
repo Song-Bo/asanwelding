@@ -9,7 +9,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <title>갤러리</title>
@@ -28,7 +28,7 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../img/nav_menu4.png" width="200" height="200">
+				<img src="../img/nav_menu4.png" width="200" height="200" alt="">
 			</div>
 			<div class="sub_nav">
 				<!-- <div class="sub_nav1">
@@ -54,7 +54,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">
-<img src="../img/footercopyrighter.png">
+<img src="../img/footercopyrighter.png" alt="">
 </div><!-- end of footer -->	
 </body>
 </html>

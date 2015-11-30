@@ -9,7 +9,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <title>학원소개</title>
@@ -28,20 +28,20 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../img/nav_menu1.png" width="200" height="200">
+				<img src="../img/nav_menu1.png" width="200" height="200" alt="">
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>
+					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66" alt=""></a>
 				</div>
 				<div class="sub_nav2">
-					<img src="../img/sub_nav_2.png" width="200" height="56">
+					<img src="../img/sub_nav_2.png" width="200" height="56" alt="">
 				</div>
 			</div>
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="../img/centerimg1.png" width="700" height="300">
+					<img src="../img/centerimg1.png" width="700" height="300" alt="">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -73,7 +73,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">
-<img src="../img/footercopyrighter.png">
+<img src="../img/footercopyrighter.png" alt="">
 </div><!-- end of footer -->	
 </body>
 </html>

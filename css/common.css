@@ -202,20 +202,21 @@ ul, li {
 
 .main_content{
 	float:left;
+	width: 824px;
 	margin-left: 200px;
 }
 
 .main_co1 {
-	position: relative;
-	width: 770px;
+	position: relative;	
+	width:760px;
 	min-height: 100%;
-	padding:40px 50px 50px;
+	padding:50px 32px 40px;
 }
 
 .main_co2{
 	position: relative;
-	width:770px;
-	padding: 40px 50px 50px;	
+	width:760px;
+	padding: 40px 32px 50px;	
 }
 
 /*Footer*/

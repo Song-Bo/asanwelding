@@ -15,29 +15,29 @@
 	<div class="center">
 		<div class="logo">
 			<a href="../index.php">
-				<img src="../img/logo.png" width="380" height="48">
+				<img src="../img/logo.png" width="380" height="48" alt="">
 			</a>
 		</div>
 		<div class="menu">
 			<ul>
 				<li class="menu1">
 					<div class="menu1">
-					<a href="../introduce/introduce.php"><img src="../img/menu1.png" width="70" height="19"></a>
+					<a href="../introduce/introduce.php"><img src="../img/menu1.png" width="70" height="19" alt=""></a>
 					</div>
 				</li>
 				<li class="menu2">
 					<div class="menu2">
-					<a href="../information/information.php"><img src="../img/menu2.png" width="70" height="19"></a>
+					<a href="../information/information.php"><img src="../img/menu2.png" width="70" height="19" alt=""></a>
 					</div>
 				</li>
 				<li class="menu3">
 					<div class="menu3">
-					<a href="../community/community.php"><img src="../img/menu3.png" width="69" height="19"></a>
+					<a href="../community/community.php"><img src="../img/menu3.png" width="69" height="19" alt=""></a>
 					</div>
 				</li>
 				<li class="menu4">
 					<div class="menu4">
-					<a href="../gallery/gallery.php"><img src="../img/menu4.png" width="52" height="19"></a>
+					<a href="../gallery/gallery.php"><img src="../img/menu4.png" width="52" height="19" alt=""></a>
 					</div>
 				</li>
 			</ul>
