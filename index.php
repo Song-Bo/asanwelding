@@ -9,8 +9,8 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <title>아산용접배관학원</title>
 </head>
@@ -33,20 +33,19 @@
 
 	<!-- start of center -->
 	<div class="center">
-		<div id="asanCenter" class="centerWrap">
-			<div class="logo">
-				<img src="img/logo.png" width="380" height="48">
-			</div>
-			<div class="menu">
+		<div class="logo">
+			<img src="img/logo.png" width="380" height="48">
+		</div>
+		<div class="menu">
 			<ul>
 				<li class="menu1">
 					<div class="menu1">
-					<a href="introduce/introduce.php"><img src="img/menu1.png" width="70" height="19"></a>
+						<a href="introduce/introduce.php"><img src="img/menu1.png" width="70" height="19"></a>
 					</div>
 				</li>
 				<li class="menu2">
 					<div class="menu2">
-					<a href="information/information.php"><img src="img/menu2.png" width="70" height="19"></a>
+						<a href="information/information.php"><img src="img/menu2.png" width="70" height="19"></a>
 					</div>
 				</li>
 				<li class="menu3">
@@ -59,9 +58,8 @@
 						<a href="gallery/gallery.php"><img src="img/menu4.png" width="52" height="19"></a>
 					</div>
 				</li>
-				</ul>
-			</div><!-- end of menu -->
-		</div><!-- end of centerWrap -->
+			</ul>
+		</div><!-- end of menu -->
 	</div><!-- end of center -->
 </div><!-- end of Header -->
 

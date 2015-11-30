@@ -13,13 +13,12 @@
 
 	<!-- start of center -->
 	<div class="center">
-		<div id="asanCenter" class="centerWrap">
-			<div class="logo">
-				<a href="../index.php">
+		<div class="logo">
+			<a href="../index.php">
 				<img src="../img/logo.png" width="380" height="48">
-				</a>
-			</div>
-			<div class="menu">
+			</a>
+		</div>
+		<div class="menu">
 			<ul>
 				<li class="menu1">
 					<div class="menu1">
@@ -38,10 +37,9 @@
 				</li>
 				<li class="menu4">
 					<div class="menu4">
-						<a href="../gallery/gallery.php"><img src="../img/menu4.png" width="52" height="19"></a>
+					<a href="../gallery/gallery.php"><img src="../img/menu4.png" width="52" height="19"></a>
 					</div>
 				</li>
-				</ul>
-			</div><!-- end of menu -->
-		</div><!-- end of centerWrap -->
+			</ul>
+		</div><!-- end of menu -->
 	</div><!-- end of center -->
