@@ -11,58 +11,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" href="css/common.css">
-<title>아산용접배관학원</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<title>학원소개</title>
 </head>
 <body>
 
 <!-- start of header -->
 <div id="header" class="header">
-	<!-- start of global -->
-	<div class="global">
-		<div id="top" class="above">
-		<div class="notice">
-			[공지]  홈페이지 개설중..
-		</div>
-		<ul class="util">
-			<li>로그인</li>
-			<li>회원가입</li>
-		</ul>		
-		</div>
-	</div><!-- end of global -->
-
-	<!-- start of center -->
-	<div class="center">
-		<div id="asanCenter" class="centerWrap">
-			<div class="logo">
-				<img src="img/logo.png" width="380" height="48">
-			</div>
-			<div class="menu">
-			<ul>
-				<li class="menu1">
-					<div class="menu1">
-					<a href="introduce/introduce.php"><img src="img/menu1.png" width="70" height="19"></a>
-					</div>
-				</li>
-				<li class="menu2">
-					<div class="menu2">
-					<a href="information/information.php"><img src="img/menu2.png" width="70" height="19"></a>
-					</div>
-				</li>
-				<li class="menu3">
-					<div class="menu3">
-					<a href="community/community.php"><img src="img/menu3.png" width="69" height="19"></a>
-					</div>
-				</li>
-				<li class="menu4">
-					<div class="menu4">
-						<a href="gallery/gallery.php"><img src="img/menu4.png" width="52" height="19"></a>
-					</div>
-				</li>
-				</ul>
-			</div><!-- end of menu -->
-		</div><!-- end of centerWrap -->
-	</div><!-- end of center -->
+	<? include "../lib/header1.php"; ?>	
 </div><!-- end of Header -->
 
 
@@ -72,20 +28,20 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="img/nav_menu1.png" width="200" height="200">
+				<img src="../img/nav_menu1.png" width="200" height="200">
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<img src="img/sub_nav_1.png" width="200" height="66">
+					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>
 				</div>
 				<div class="sub_nav2">
-					<img src="img/sub_nav_2.png" width="200" height="56">
+					<img src="../img/sub_nav_2.png" width="200" height="56">
 				</div>
 			</div>
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="img/centerimg1.png" width="700" height="300">
+					<img src="../img/centerimg1.png" width="700" height="300">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -117,7 +73,7 @@
 
 <!-- start of footer-->
 <div id="footer">
-<img src="img/footercopyrighter.png" width="1000" height="190">
+<img src="../img/footercopyrighter.png">
 </div><!-- end of footer -->	
 </body>
 </html>
