@@ -1,0 +1,229 @@
+/*Body*/
+body {
+	position: relative;
+	min-width: 1024px;
+	max-width: 2560px;
+	margin: 0 auto;
+	min-height: 100%;
+	background: #fff;
+}
+
+body, th, td, input, select, textarea, button, pre {
+	font-family: 'Apple SD Gothic Neo', '나눔고딕', NanumGothic, ng, '돋움', dotum, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.27;
+	letter-spacing: -1px;
+	color: #2a303a;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+code, form, fieldset, legend, textarea, p, blockquote, th, td, 
+input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
+div {
+	display:block;
+}
+
+
+/*Header*/
+#header {
+	min-width: 1024px;
+	max-width: 2560px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+#header:after {
+	overflow:hidden;
+	display: block;
+	clear: both;
+	content: '';
+}
+
+/*Header-top*/
+.global {
+	height: 30px;
+	border-bottom: 1px solid #f0f0f0;
+	font-size: 12px;
+	line-height: 30px;
+	letter-spacing: 0;
+	color: #b1b1b4;
+	zoom: 1;
+	margin:0px;
+	padding:0px;
+}
+
+.above {
+	position:relative;
+	width: 1024px;
+	margin:0 auto;
+	background-color: #fff;
+
+}
+
+.above:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.above .notice {
+	overflow:hidden;
+	position: relative;
+	float:left;	
+	height:30px;
+	margin-left: 20px;
+}
+
+.global ul {  
+	overflow:hidden;
+	float: right;	
+	height: 30px;
+	margin-right: 20px;
+}
+
+.global li:first-child {
+	background:none;
+	margin-left:0;
+}
+
+.global li {
+	float:left;
+	margin-left: 10px;
+	padding:0 0 0 10px;
+	background: url(//paycoscdn.toastoven.net/payco/www/img/bl_left.png) no-repeat 0 10px;
+	color: #76797e;
+}
+
+.global:after {
+	overflow:hidden;
+	display:block;
+	clear:both;
+	content:'';
+}
+
+.util {
+	float:right;
+	margin-right:20px;
+}
+
+/* header - Center*/
+.center {
+	overflow:hidden;
+	width: 1024px;
+	height: 88px;
+	margin: 0 auto;
+}
+
+.logo {
+	float:left;
+	margin-top:20px;
+}
+
+.menu {
+	float:right;
+	margin-right: 20px;
+}
+
+ul, li {
+	list-style:none;
+}
+
+.menu li {
+	float: left;
+	margin-left: 41px;
+	margin-top: 41px;
+	margin-bottom: 22px;
+}
+
+
+
+/*Container*/
+#container {
+	background-color:#ececec;
+	position: relative;
+	padding: 30px 0 80px;
+
+	min-width: 1024px;
+	max-width: 2560px;
+	min-height: 500px;
+	max-height: 100%;
+	/*margin: 0 auto;*/
+}
+
+.wrap {
+	position: relative;
+	background-color:#fff;
+	
+	width: 1024px;
+	margin: 0 auto;
+}
+
+
+.content {
+	float:none;
+	width:1024px;
+	min-height: 570px;
+}
+
+.content, .main {
+	max-height: 9999999px;
+}
+
+
+.content:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+.nav_wrap {
+	position:absolute;
+	width:200px;
+	top:0;
+	left:0;
+	bottom:0;
+	background:#f4f4f4;
+}
+.nav {
+	width: 200px;
+	max-width: 200px;
+}
+
+.sub_nav {
+	width: 200px;
+	max-width: 200px;
+}
+
+.main_content{
+	float:left;
+	margin-left: 200px;
+}
+
+.main_co1 {
+	position: relative;
+	width: 770px;
+	min-height: 100%;
+	padding:40px 50px 50px;
+}
+
+.main_co2{
+	position: relative;
+	width:770px;
+	padding: 40px 50px 50px;	
+}
+
+/*Footer*/
+#footer {
+	min-width: 1024px;
+	max-width: 2560px;
+	height: 150px;
+
+	margin-left: 150px;
+	margin-top: 30px;
+}
