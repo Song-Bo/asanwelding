@@ -14,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <title>학원소개</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<script>
+</script>
 </head>
 <body>
 

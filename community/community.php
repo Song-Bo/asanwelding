@@ -13,6 +13,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <title>커뮤니티</title>
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<script>
+
+</script>
 </head>
 <body>
 

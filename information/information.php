@@ -14,8 +14,7 @@
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <title>수강안내</title>
-<script>
-	
+<script>	
 function change() {
 	var c = document.getElementById("class").value;
 	if (c == 1)
@@ -35,7 +34,6 @@ function change() {
 	if (c == 8)
 		document.getElementById("info").innerHTML ="<img src='../img/information/info_8.jpg' alt='산업현장속성과정'>";
 }
-
 </script>
 </head>
 <body>
