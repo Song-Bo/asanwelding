@@ -206,6 +206,7 @@ ul, li {
 .sub_nav {
 	width: 200px;
 	max-width: 200px;
+	
 }
 
 
@@ -220,13 +221,13 @@ ul, li {
 	position: relative;	
 	width:760px;
 	min-height: 100%;
-	padding:50px 32px 40px;
+	padding:50px 32px 20px;
 }
 
 .main_co2{
 	position: relative;
 	width:760px;
-	padding: 40px 32px 50px;	
+	padding: 20px 32px 50px;	
 }
 
 

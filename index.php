@@ -12,6 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/common.css">
+<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <title>아산용접배관학원</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
 	<div class="global">
 		<div id="top" class="above">
 		<div class="notice">
-			[공지]  홈페이지 개설중..
+			[공지]  홈페이지 개설중.....
 		</div>
 		<ul class="util">
 			<li>로그인</li>
@@ -34,7 +35,7 @@
 	<!-- header of center -->
 	<div class="center">
 		<div class="logo">
-			<a href="#"><img src="img/logo.png" width="380" height="48" alt="메인로고"></a>
+			<a href="index.php"><img src="img/logo.png" width="380" height="48" alt="메인로고"></a>
 		</div>
 		<div class="menu">
 			<ul>
@@ -74,10 +75,10 @@
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<a href="#"><img src="img/sub_nav_1.png" width="200" height="66" alt="인사말"></a>
+					<a href="introduce/introduce.php"><img src="img/menu1_sub_nav_1.png" width="200" height="66" alt="인사말"></a>
 				</div>
 				<div class="sub_nav2">
-					<img src="img/sub_nav_2.png" width="200" height="56" alt="오시는 길">
+					<img src="img/menu1_sub_nav_2.png" width="200" height="56" alt="오시는 길">
 				</div>
 			</div>
 			</div>
