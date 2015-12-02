@@ -11,6 +11,8 @@
 	$table = "free";
 	$page = $_GET[page];
 
+	$writer = $_POST[writer];
+
 	include "../../lib/dbconn.php";
 
 	$sql = "select * from $table where num=$num";
@@ -188,14 +190,14 @@
 				<div id="view_button">
 					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>&nbsp;
 			<?
-				if ($userid && ($userid == $item_id) || $userlevel == 1) {
+				// if ($userid && ($userid == $item_id) || $userlevel == 1) {
 			?>
-				<a href="write_form.php?table=<?= $table ?>&mode=modify&num=<?= $num ?>&page=<?= $page ?>">
+				<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
 					<img src="../../img/board/modify.png"></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')">
 					<img src="../../img/board/delete.png"></a>&nbsp;
 			<?
-				}
+				// }
 			?>
 			
 			<?

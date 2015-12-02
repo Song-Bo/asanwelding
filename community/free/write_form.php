@@ -23,12 +23,12 @@
 		$sql = "select * from $table where num=$num";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-
+		$item_nick = $row[nick];
 		$item_subject = $row[subject];
 		$item_content = $row[content];
-		$item_file0 = $row[file_name_0];
-		$item_file1 = $row[file_name_1];
-		$item_file2 = $row[file_name_2];
+		$item_file_0 = $row[file_name_0];
+		$item_file_1 = $row[file_name_1];
+		$item_file_2 = $row[file_name_2];
 		$copied_file_0 = $row[file_copied_0];
 		$copied_file_1 = $row[file_copied_1];
 		$copied_file_2 = $row[file_copied_2];
@@ -79,7 +79,7 @@
 				<img src="../../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
 			</div>
 			<div class="sub_nav">
-				<div class="sub_nav1" style="padding: 20px 40px 20px">
+				<div class="sub_nav1" style="padding: 30px 20px 20px">
 					<a href="../free/list.php"><h3>자유 게시판</h3></a>
 				</div>
 				<!-- <div class="sub_nav1">
@@ -125,14 +125,18 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-												<div class="col2"><input type="text" name="writer" value="작성자"></div>
+												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
+			
 			<?
 				if ($mode != "modify") {
 			?>
 							<div class="col3"><input type="checkbox" name="html_ok" value="y"> HTML 쓰기 </div>
+			<?
 				}
 			?>
+			
 						</div><!-- end of write_row1 -->
+			
 					<div class="write_line"></div>
 						<div class="write_row2"><div class="col1"> 제목 </div>
 												<div class="col2"><input type="text" name="subject" value="<?=$item_subject?>"></div>
@@ -140,7 +144,7 @@
 					<div class="write_line"></div>
 
 						<div class="write_row3"><div class="col1"> 내용 </div>
-												<div class="col2"><textarea rows="15" cols="79" name="content"><?=$item_content?></textarea></div>
+												<div class="col2"><textarea rows="12" cols="73" name="content"><?=$item_content?></textarea></div>
 						</div><!-- end of write_row3 -->
 
 					<div class="write_line"></div>
@@ -214,7 +218,7 @@
 		</div><!-- end of content -->
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
-</form></div>
+
 
 <!-- start of footer-->
 <div id="footer" align="center">

@@ -159,7 +159,7 @@
 				?>
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
-						<div class="list_item2"><a href="view.php?table=<?= $table ?>&num=<?= $page ?>"><?= $item_subject ?></a></div>
+						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a></div>
 				<?
 					if ($num_ripple) echo "[$num_ripple]";
 				?>						
