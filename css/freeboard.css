@@ -1,69 +1,80 @@
-/* #content #col2 {
-	width:807px;
+/* 메인 */
+/*.main_co1 {
+	width: 760px;
 	min-height:558px;
 	float:left;
-	margin-left:15px;
-border:solid 1px #cccccc;
+	margin-left:0px;
+	/*border:solid 1px #cccccc;
 } */
 
-/* #content #col2 #title{
+/*#content .main_co2 #title{
 	margin-top:30px;
 	height:30px;
 	border-bottom:solid 1px #cccccc;
-}
- */
+}*/
+ 
 
 /* list css */
 
+
+/* #list_search */
 #list_search {
 	height:100%;
 	min-height: 30px;
-	padding-top:10px;
-	margin-bottom:20px;
+	/*padding-top:10px;*/
+	/*margin-bottom:20px;*/
+	margin-bottom: 0px;
 
 }
 
-#list_search #list_search1 {
+
+#list_search .list_search1 {
 	float:left;
 	margin-top:2px;
 }
 
-#list_search #list_search2 {
+#list_search .list_search2 {
 	float:left;
-	margin-left:300px;
+	/*margin-left:300px;*/
+	margin-left: 240px;
 	margin-top:4px;
 }
 
 
-#list_search #list_search3 {
+#list_search .list_search3 {
 	float:left;
 	margin-left:5px;
 	margin-top:1px;
 }
 
-#list_search #list_search3 select {
+#list_search .list_search3 select {
 	width:80px;
 	height:21px;
 	border:solid 1px #cccccc;
 }
 
-#list_search #list_search4 {
+#list_search .list_search4 {
 	float:left;
 	margin-left:3px;
+	margin-top:2px;
 }
 
-#list_search #list_search4 input {
+#list_search .list_search4 input {
 	width:120px;
 	height:18px;
 	border:solid 1px #cccccc;
 }
 
-#list_search #list_search5 {
+#list_search .list_search5 {
 	float:left;
 	margin-left:5px;
 	margin-top:1px;
 	margin-bottom: 10px;
 }
+
+
+
+/* #list_top_title */
 
 #list_top_title {
 	height:20px;
@@ -77,30 +88,36 @@ border:solid 1px #cccccc;
 	display:inline;
 }
 
-#list_top_title #list_title1 {
+#list_top_title .list_title1 {
 	margin-left:5px;
 }
 
-#list_top_title #list_title2 {
-	margin-left:250px;
+#list_top_title .list_title2 {
+	/*margin-left:250px;*/
+	margin-left:220px;
 }
 
-#list_top_title #list_title3 {
+#list_top_title .list_title3 {
 	margin-left:290px;
 }
 
-#list_top_title #list_title4 {
+#list_top_title .list_title4 {
 	margin-left:32px;
 }
 
-#list_top_title #list_title5 {
+#list_top_title .list_title5 {
 	margin-left:26px;
 }
 
+
+
+
+/* #list_content */
 #list_content {
-	height:380px;
+	/*height:380px;*/
 }
 
+/* #list_item */
 #list_item {
 	height:18px;
 	margin-top:2px;
@@ -108,51 +125,62 @@ border:solid 1px #cccccc;
 	border-bottom:solid 1px #eeeeee;
 }
 
-#list_item #list_item1{
+#list_item .list_item1{
 	float:left;
-	width:40px;
+	/*width:40px;*/
+	width:30px;
 	text-align:center;
 }
 
-#list_item #list_item2{
+#list_item .list_item2{
 	float:left;
-	width:560px;
+	/*width:560px;*/
+	width:532px;
 }
 
-#list_item #list_item3{
+#list_item .list_item3{
 	float:left;
 	width:65px;
 	text-align:center;
 }
 
-#list_item #list_item4{
+#list_item .list_item4{
 	float:left;
 	width:80px;
 	text-align:center;
 }
 
-#list_item #list_item5{
+#list_item .list_item5{
 	float:left;
 	width:40px;
 	text-align:center;
 }
 
+
+/* #page_button */
 #page_button {
 	margin-top:20px;
 }
 
-#page_num {
+.page_num {
 	float:left;
 	width:80%;
 	margin-top:10px;
 	text-align:center;
 }
 
-#button {
+.button {
 	float:left;
 	width:18%;
 	text-align:right;
 }
+
+
+
+
+
+
+
 
 /* write_form css */
 
@@ -281,6 +309,9 @@ border:solid 1px #cccccc;
 	margin:0 0 3px 140px;
 }
 
+
+
+
 /* view.php css */
 
 #view_comment {
@@ -322,6 +353,11 @@ border:solid 1px #cccccc;
 	margin-bottom:15px;
 
 }
+
+
+
+
+
 
 /* ripple css */
 

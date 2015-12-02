@@ -210,12 +210,15 @@ ul, li {
 	
 }
 
+/*151202*/
+
 
 /* Container - Content - mainContent */
 .main_content{
 	float:left;
 	width: 824px;
 	margin-left: 200px;
+	min-height: 100%
 }
 
 .main_co1 {
