@@ -1,5 +1,5 @@
 /* 메인 */
-/*.main_co1 {
+/*#content.main_co1 {
 	width: 760px;
 	min-height:558px;
 	float:left;
@@ -28,19 +28,24 @@ a {
 	/*padding-top:10px;*/
 	/*margin-bottom:20px;*/
 	margin-bottom: 0px;
-
+	width:760px;
 }
 
 
 #list_search .list_search1 {
 	float:left;
 	margin-top:2px;
+	width: 50%;
+}
+
+#list_search .list_search_form {
+	width: 50%;
+	float:right;
 }
 
 #list_search .list_search2 {
 	float:left;
 	/*margin-left:300px;*/
-	margin-left: 240px;
 	margin-top:4px;
 }
 
@@ -132,31 +137,36 @@ a {
 #list_item .list_item1{
 	float:left;
 	/*width:40px;*/
-	width:30px;
+	/*width:30px;*/
+	width:10%;
 	text-align:center;
 }
 
 #list_item .list_item2{
 	float:left;
 	/*width:560px;*/
-	width:532px;
+	/*width:532px;*/
+	width:40%;
 }
 
 #list_item .list_item3{
 	float:left;
-	width:65px;
+	/*width:65px;*/
+	width:10%;
 	text-align:center;
 }
 
 #list_item .list_item4{
 	float:left;
-	width:80px;
+	/*width:80px;*/
+	width:20%;
 	text-align:center;
 }
 
 #list_item .list_item5{
 	float:left;
-	width:40px;
+	/*width:40px;*/
+	width:10%;
 	text-align:center;
 }
 
@@ -175,12 +185,9 @@ a {
 
 .button {
 	float:left;
-	width:18%;
+	/*width:18%;*/
 	text-align:right;
 }
-
-
-
 
 
 

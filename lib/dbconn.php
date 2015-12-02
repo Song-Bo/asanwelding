@@ -2,7 +2,7 @@
 	$servername = "localhost";
 	$dbuser = "root";
 	$password = "1234";
-	$db = "asan_db";
+	$db = "cho_db";
 
 	// Create connection
 	$conn = new mysqli($servername, $dbuser, $password, $db);
