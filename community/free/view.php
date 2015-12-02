@@ -1,6 +1,7 @@
 <?
 	session_start();
-
+	$table = "free";
+	$page = $_GET[page];
 	$num = $_GET[num];
 	/*
 	$userid = $_SESSION[userid];
@@ -8,10 +9,7 @@
     $usernick = $_SESSION[usernick];
     $userlevel = $_SESSION[userlevel];
 	*/
-	$table = "free";
-	$page = $_GET[page];
-
-	$writer = $_POST[writer];
+	
 
 	include "../../lib/dbconn.php";
 
@@ -79,6 +77,20 @@
 <title>커뮤니티 - 자유게시판</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script>
+	function check_input() {
+		if (!document.ripple_form.ripple_content.value) {
+			alert("내용을 입력하세요 !");
+			document.ripple_form.ripple_content.focus();
+			return;
+		}
+		document.ripple_form.submit();
+	}
+
+	function del(href) {
+		if (confirm("한번 삭제한 자료는 복구할 방법이 없습니다. \n\n 정말 삭제 하시겠습니까?")) {
+			document.location.href = href;
+		}
+	}
 </script>
 </head>
 
@@ -121,7 +133,7 @@
 					</div>
 
 
-				<!-- <div id="view_comment"> &nbsp; </div> -->
+			<!-- <div id="view_comment"> &nbsp; </div> -->
 					
 					<div id="view_title">
 						<div class="view_title1"><?= $item_subject ?></div>
@@ -140,9 +152,10 @@
 					}
 				}
 			?>
-
 						<?= $item_content ?>
 				</div>
+
+<!-- start of ripple -->
 
 				<div id="ripple">
 			<?

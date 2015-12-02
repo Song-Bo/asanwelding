@@ -50,6 +50,11 @@
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script>
 	function check_input() {
+		if (!document.board_form.writer.value) {
+			alert('작성자명을 입력하세요 !');
+			document.board_form.writer.focus();
+			return;
+		}
 		if (!document.board_form.subject.value) {
 			alert('제목을 입력하세요 !');
 			document.board_form.subject.focus();
