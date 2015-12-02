@@ -34,7 +34,6 @@
 		$copied_file_2 = $row[file_copied_2];
 	}
 ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
 <!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
@@ -50,6 +49,19 @@
 <title>커뮤니티 - 자유게시판</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script>
+	function check_input() {
+		if (!document.board_form.subject.value) {
+			alert('제목을 입력하세요 !');
+			document.board_form.subject.focus();
+			return;
+		}
+		if (!document.board_form.content.value) {
+			alert('내용을 입력하세요 !');
+			document.board_form.content.focus();
+			return;
+		}
+		document.board_form.submit();
+	}
 </script>
 </head>
 <body>
@@ -89,8 +101,113 @@
 						<!-- <img src="../img/title_free.gif"> -->
 					</div>
 
-					
+					<div id="write_form_title">
+						<img src="../../img/board/write_form_title.gif">
+					</div>
 
+					<div class="clear"></div>
+	
+			<?
+				if ($mode == "modify") {
+			?>
+				<form name="board_form" method="post" action="insert.php?mode=modify&num=<?= $num ?>&
+				page=<?= $page ?>&table=<?= $table ?>" enctype="multipart/form-data">
+			<?
+				} else {
+			?>
+				<form name="board_form" method="post" action="insert.php?table=<?= $table ?>" enctype="multipart/form-data">
+			<?
+				}
+			?>
+		
+				<!-- start of #write_form -->
+				<div id="write_form">
+					<div class="write_line"></div> 						
+						<div class="write_row1"><div class="col1"> 작성자 </div>
+												<div class="col2"><?= $usernick ?></div>
+			<?
+				if ($mode != "modify") {
+			?>
+							<div class="col3"><input type="checkbox" name="html_ok" value="y"> HTML 쓰기 </div>
+				}
+			?>
+						</div><!-- end of write_row1 -->
+					<div class="write_line"></div>
+						<div class="write_row2"><div class="col1"> 제목 </div>
+												<div class="col2"><input type="text" name="subject" value="<?=$item_subject ?>"></div>
+						</div><!-- end of write_row2 -->
+					<div class="write_line"></div>
+
+						<div class="write_row3"><div class="col1"> 내용 </div>
+												<div class="col2"><textarea rows="15" cols="79" name="content"><?= $item_content ?></textarea></div>
+						</div><!-- end of write_row3 -->
+
+					<div class="write_line"></div>
+
+
+						<div class="write_row4"><div class="col1"> 이미지파일 1 </div>
+												<div class="col2"><input type="file" name="upfile[]"></div>
+						</div><!-- end of write_row4 -->
+
+					<div class="clear"></div>
+
+			<?
+				if ($mode == "modify" && $item_file_0) {
+			?>
+					<div class="delete_ok"><?= $item_file_0 ?> 파일이 등록 되어 있습니다.
+					<input type="checkbox" name="del_file[]" value="0"> 삭제 </div>
+					<div class="clear"></div>
+			<?
+				}		
+			?>
+					<div class="write_line"></div>
+
+
+						<div class="write_row5"><div class="col1"> 이미지파일 2 </div>
+												<div class="col2"><input type="file" name="upfile[]"></div>
+						</div><!-- end of write_row5 -->
+
+					<div class="clear"></div>
+
+			<?
+				if ($mode == "modify" && $item_file_1) {
+			?>
+					<div class="delete_ok"><?= $item_file_1 ?> 파일이 등록 되어 있습니다.
+					<input type="checkbox" name="del_file[]" value="1"> 삭제 </div>
+					<div class="clear"></div>
+			<?
+				}		
+			?>
+					<div class="write_line"></div>
+					<div class="clear"></div>
+
+						<div class="write_row6"><div class="col1"> 이미지파일 3 </div>
+												<div class="col2"><input type="file" name="upfile[]"></div>
+						</div><!-- end of write_row6 -->
+
+					<div class="clear"></div>
+
+			<?
+				if ($mode == "modify" && $item_file_2) {
+			?>
+					<div class="delete_ok"><?= $item_file_2 ?> 파일이 등록 되어 있습니다.
+					<input type="checkbox" name="del_file[]" value="2"> 삭제 </div>
+					<div class="clear"></div>
+			<?
+				}		
+			?>
+					<div class="write_line"></div>
+					<div class="clear"></div>
+				</div><!-- end of #write_form -->
+
+				<!-- start of #write_button -->
+				<div id="write_button"><a href="#"><img src="../../img/board/ok.png" onclick="check_input()"></a>
+								&nbsp; <a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
+										<img src="../../img/board/list.png"></a>
+
+				</div><!-- end of #write_button -->
+
+				</form><!-- end of form -->
 				</div><!-- end of main_co2 -->
 			</div><!-- end of main_content -->
 		</div><!-- end of content -->

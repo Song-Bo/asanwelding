@@ -13,9 +13,13 @@
 	border-bottom:solid 1px #cccccc;
 }*/
  
+a {
+	text-decoration: none;
+}
 
-/* list css */
 
+
+/* list.php */
 
 /* #list_search */
 #list_search {
@@ -182,7 +186,7 @@
 
 
 
-/* write_form css */
+/* write_form.php */
 
 #write_form_title {
 	margin-top:20px;
@@ -312,10 +316,13 @@
 
 
 
+
+
+
 /* view.php css */
 
 #view_comment {
-	margin:10px 0 0 10px;
+	margin:0px 0 0 10px;
 }
 
 #view_title {
@@ -326,12 +333,12 @@
 	margin-bottom:5px;
 }
 
-#view_title1 {
+.view_title1 {
 	float:left;
 	width:60%;
 }
 
-#view_title2 {
+.view_title2 {
 	float:left;
 	width:40%;
 	text-align:right;
@@ -363,7 +370,6 @@
 
 #ripple {
 	width:98%;
-
 }
 
 #ripple_writer_title {
@@ -379,16 +385,16 @@
 	display:inline;
 }
 
-#writer_title1 {
+.writer_title1 {
 	margin-left:10px;
 	font-weight:bold;
 }
 
-#writer_title2 {
+.writer_title2 {
 	margin-left:20px;
 }
 
-#writer_title3 {
+.writer_title3 {
 	margin-left:540px;
 }
 
@@ -406,7 +412,8 @@
 }
 
 #ripple_box {
-	width:99%;
+	/*width:99%;*/
+	width:98%;
 	height:100px;
 	padding:8px;
 	margin-left:3px;
@@ -414,21 +421,25 @@
 	background-color:#efefef;
 }
 
-#ripple_box1 {
+.ripple_box1 {
 	float:left;
 	margin:5px;
 }
 
-#ripple_box2 {
+.ripple_box2 {
 	float:left;
-	margin:5px;
+	/*margin:5px;*/
+	margin:0px;
 }
 
-#ripple_box2 textarea {
+.ripple_box2 textarea {
+	margin-left
 	border:solid 1px #cccccc;
+	margin-right: 10px;
 }
 
-#ripple_box3 {
+.ripple_box3 {
 	float:left;
-	margin:5px 0 0 10px;
+	/*margin:5px 0 0 10px;*/
+	margin: 10px 0 0 10px;
 }

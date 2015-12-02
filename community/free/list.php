@@ -80,7 +80,7 @@
 				<img src="../../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
 			</div>
 			<div class="sub_nav">
-				<div class="sub_nav1" style="padding: 20px 40px 20px">
+				<div class="sub_nav1" style="padding: 30px 20px 20px">
 					<a href="../free/list.php"><h3>자유 게시판</h3></a>
 				</div>
 				<!-- <div class="sub_nav1">
@@ -184,10 +184,13 @@
 						&nbsp;&nbsp;&nbsp;&nbsp; 다음 ▶
 						</div>
 						<div class="button">
+							<!-- 목록 -->
 							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
 							<img src="../../img/board/list.png"></a> &nbsp;
+							<!-- 글쓰기 -->
 							<a href="write_form.php?table=<?= $table ?>">
 							<img src="../../img/board/write.png"></a>
+
 				<!--
 				<?
 					if($userid) {
