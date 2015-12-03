@@ -468,10 +468,10 @@ a {
 
 #latest1 {
 	width:46%;
-	height:250px;
+	height:250px;	
 	float:left;
 	padding-right:20px;
-	margin:15px 0 0 20px;
+	margin:0px 0 0 0px;
 	border-right:solid 1px #dddddd;
 }
 
@@ -480,9 +480,9 @@ a {
 	border-bottom:solid 2px #dddddd;
 }
 
-#title_latest1 img {
+/*#title_latest1 img {
 	padding-bottom:5px;
-}
+}*/
 
 
 .latest_box {

@@ -35,19 +35,13 @@
 						<div id="latest1">
 							<div id="title_latest1"><h3>자유 게시판</h3></div>
 							<div class="latest_box">
-							<? latest_article("free", 10, 30); ?>
+							<? latest_article("free", 7, 30); ?>
 							</div>
-						</div>
-						<!-- <div id="latest2">
-							<div id="title_latest2"><img src="../img/board/title_latest2.gif"></div>
-							<div class="latest_box">
-							<? latest_article("concert", 10, 30); ?>
-							</div>
-						</div> -->
+						</div>						
 					</div>
 				<!-- 최근글 불러오기 -->
-				</div>
-			</div>
+				</div><!-- end of main_co2 -->
+			</div><!-- end of main_content -->
 		</div><!-- end of content -->
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
