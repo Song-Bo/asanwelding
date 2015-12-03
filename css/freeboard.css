@@ -456,3 +456,68 @@ a {
 	/*margin:5px 0 0 10px;*/
 	margin: 10px 0 0 10px;
 }
+
+
+
+
+/* 최근글 */
+
+#latest {
+	width:760;
+}
+
+#latest1 {
+	width:46%;
+	height:250px;
+	float:left;
+	padding-right:20px;
+	margin:15px 0 0 20px;
+	border-right:solid 1px #dddddd;
+}
+
+#title_latest1 {
+	height:30px;
+	border-bottom:solid 2px #dddddd;
+}
+
+#title_latest1 img {
+	padding-bottom:5px;
+}
+
+
+.latest_box {
+	margin-top:5px;
+/*	border-bottom:dotted 1px #dddddd; */
+}
+
+.latest_box .col1 {
+	width:65%;
+	float:left;
+	padding:5px 5px 4px 3px;
+}
+
+.latest_box .col2 {
+	width:30%;
+	float:left;
+	padding:5px 5px 4px 3px;
+}
+
+.latest_box .col3 {
+	float:left;
+	padding:5px 5px 4px 3px;
+}
+
+#latest2 {
+	width:46%;
+	float:left;
+	margin:15px 0 0 18px;
+}
+
+#title_latest2 {
+	height:30px;
+	border-bottom:solid 2px #dddddd;
+}
+
+#title_latest2 img {
+	padding-bottom:5px;
+}

@@ -18,7 +18,7 @@
 			$regist_day = substr($row[regist_day], 0, 10);
 
 			echo "<div class='col1'>
-					<a href='./$table/view.php?table=$table&num=$num'>$subject</a>
+					<a href='../$table/view.php?table=$table&num=$num'>$subject</a>
 				  </div>
 				  <div class='col2'>$regist_day</div>
 				  <div class='clear'></div>";

@@ -33,7 +33,7 @@
 					<? include "../lib/func.php"; ?>
 					<div id="latest">
 						<div id="latest1">
-							<div id="title_latest1"><img src="../img/board/title_latest1.gif"></div>
+							<div id="title_latest1"><h3>자유 게시판</h3></div>
 							<div class="latest_box">
 							<? latest_article("free", 10, 30); ?>
 							</div>
