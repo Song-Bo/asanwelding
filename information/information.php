@@ -40,7 +40,7 @@ function change() {
 
 <!-- start of header -->
 <div id="header" class="header">
-	<? include "../lib/header1.php"; ?>	
+	<? include "../lib/header.php"; ?>	
 </div><!-- end of Header -->
 
 
@@ -84,10 +84,6 @@ function change() {
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
 
-
-<!-- start of footer-->
-<div id="footer" align="center">
-<img src="../img/footercopyrighter.png" alt="푸터">
-</div><!-- end of footer -->	
-</body>
-</html>
+<?
+	include "../lib/footer.php";
+?>

@@ -1,30 +1,10 @@
 <?
 	session_start();
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../css/common.css">
-<title>학원소개</title>
-<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-<script>
-</script>
-</head>
-<body>
 
-<!-- start of header -->
-<div id="header" class="header">
-	<? include "../lib/header1.php"; ?>	
-</div><!-- end of Header -->
-
-
+<?
+	include "../lib/header.php";
+?>
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
@@ -72,10 +52,6 @@
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
 
-
-<!-- start of footer-->
-<div id="footer" align="center">
-<img src="../img/footercopyrighter.png" alt="푸터">
-</div><!-- end of footer -->	
-</body>
-</html>
+<?
+	include "../lib/footer.php";
+?>

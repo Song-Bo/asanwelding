@@ -11,25 +11,10 @@
 	$search = $_POST[search];
 	$find = $_POST[find];
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../../css/common.css" media="all">
-<link rel="stylesheet" type="text/css" href="../../css/freeboard.css" media="all">
-<title>커뮤니티 - 자유게시판</title>
-<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-<script>
-</script>
-</head>
+
 <?
-	include "../../lib/dbconn.php";
+	include "../lib/header.php";
+	include "../lib/dbconn.php";
 
 	$scale = 10; // 한 화면에 표시되는 글 수
 
@@ -64,12 +49,6 @@
 	$start = ($page-1) * $scale;
 	$number = $total_record - $start;
 ?>
-<body>
-
-<!-- start of header -->
-<div id="header" class="header">
-	<? include "../../lib/header2.php"; ?>
-</div><!-- end of Header -->
 
 <!-- start of container -->
 <div id="container">
@@ -77,7 +56,7 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
+				<img src="../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1" style="padding: 30px 20px 20px">
@@ -110,14 +89,14 @@
 
 						<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
 						<div class="list_search_form">
-						<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
+						<div class="list_search2"><img src="../img/board/select_search.gif"></div>
 						<div class="list_search3"><select name="find">
 													<option value="subject">제목</option>
 													<option value="content">내용</option>
 													<option value="nick">작성자</option>
 												  </select></div>						
 						<div class="list_search4"><input type="text" name="search"></div>
-						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
+						<div class="list_search5"><input type="image" src="../img/board/list_search_button.gif"></div>
 						</div><!-- end of list_search_form -->
 					</div> <!-- end of #list_search -->
 					</form>
@@ -129,11 +108,11 @@
 
 					<div id="list_top_title">
 						<ul>
-							<li class="list_title1"><img src="../../img/board/list_title1.gif"></li>
-							<li class="list_title2"><img src="../../img/board/list_title2.gif"></li>
-							<li class="list_title3"><img src="../../img/board/list_title3.gif"></li>
-							<li class="list_title4"><img src="../../img/board/list_title4.gif"></li>
-							<li class="list_title5"><img src="../../img/board/list_title5.gif"></li>
+							<li class="list_title1"><img src="../img/board/list_title1.gif"></li>
+							<li class="list_title2"><img src="../img/board/list_title2.gif"></li>
+							<li class="list_title3"><img src="../img/board/list_title3.gif"></li>
+							<li class="list_title4"><img src="../img/board/list_title4.gif"></li>
+							<li class="list_title5"><img src="../img/board/list_title5.gif"></li>
 						</ul>
 					</div><!-- end of #list_top_title -->
 
@@ -159,10 +138,11 @@
 				?>
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
-						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a></div>
+						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>
 				<?
 					if ($num_ripple) echo "[$num_ripple]";
 				?>						
+						</div>
 						<div class="list_item3"><?= $item_nick ?></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>
@@ -189,10 +169,10 @@
 						<div class="button">
 							<!-- 목록 -->
 							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
-							<img src="../../img/board/list.png"></a> &nbsp;
+							<img src="../img/board/list.png"></a> &nbsp;
 							<!-- 글쓰기 -->
 							<a href="write_form.php?table=<?= $table ?>">
-							<img src="../../img/board/write.png"></a>
+							<img src="../img/board/write.png"></a>
 
 				<!--
 				<?
@@ -215,10 +195,6 @@
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
 
-
-<!-- start of footer-->
-<div id="footer" align="center">
-<img src="../../img/footercopyrighter.png" alt="푸터">
-</div><!-- end of footer -->	
-</body>
-</html>
+<?
+	include "../lib/footer.php";
+?>

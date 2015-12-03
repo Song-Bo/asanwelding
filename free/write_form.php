@@ -17,7 +17,7 @@
 	$subject= $_POST[subject];
 	$content= $_POST[content];
 
-	include "../../lib/dbconn.php";
+	include "../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$sql = "select * from $table where num=$num";
@@ -34,20 +34,9 @@
 		$copied_file_2 = $row[file_copied_2];
 	}
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../../css/common.css" media="all">
-<link rel="stylesheet" type="text/css" href="../../css/freeboard.css" media="all">
-<title>커뮤니티 - 자유게시판</title>
-<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<?
+	include "../lib/header.php";
+?>
 <script>
 	function check_input() {
 		if (!document.board_form.writer.value) {
@@ -68,20 +57,13 @@
 		document.board_form.submit();
 	}
 </script>
-</head>
-<body>
-<!-- start of header -->
-<div id="header" class="header">
-	<? include "../../lib/header2.php"; ?>
-</div><!-- end of Header -->
-
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">
-				<img src="../../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
+				<img src="../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1" style="padding: 30px 20px 20px">
@@ -109,7 +91,7 @@
 					</div>
 
 					<div id="write_form_title">
-						<img src="../../img/board/write_form_title.gif">
+						<img src="../img/board/write_form_title.gif">
 					</div>
 
 					<div class="clear"></div>
@@ -211,9 +193,9 @@
 				</div><!-- end of #write_form -->
 
 				<!-- start of #write_button -->
-				<div id="write_button"><a href="#"><img src="../../img/board/ok.png" onclick="check_input()"></a>
+				<div id="write_button"><a href="#"><img src="../img/board/ok.png" onclick="check_input()"></a>
 								&nbsp; <a href="list.php?table=<?=$table?>&page=<?=$page?>">
-										<img src="../../img/board/list.png"></a>
+										<img src="../img/board/list.png"></a>
 
 				</div><!-- end of #write_button -->
 				</form><!-- end of form -->
@@ -224,10 +206,6 @@
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
 
-
-<!-- start of footer-->
-<div id="footer" align="center">
-<img src="../../img/footercopyrighter.png" alt="푸터">
-</div><!-- end of footer -->	
-</body>
-</html>
+<?
+	include "../lib/footer.php";
+?>

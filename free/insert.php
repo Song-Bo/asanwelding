@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?
 	session_start();
 	$num = $_GET[num];
@@ -89,7 +90,7 @@
 
 	/* adding dbconn.php, SQL query START !! */
 
-	include "../../lib/dbconn.php";
+	include "../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$num_checked = count($_POST['del_file']);

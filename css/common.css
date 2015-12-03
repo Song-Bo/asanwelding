@@ -204,6 +204,7 @@ ul, li {
 .nav {
 	width: 200px;
 	max-width: 200px;
+	height:200px;
 }
 
 .sub_nav {

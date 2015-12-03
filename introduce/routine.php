@@ -1,19 +1,7 @@
 <?
 	session_start();
+	include "../lib/header.php";
 ?>
-<!DOCTYPE html>
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<title>오시는 길</title>
-<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-<!-- Naver MAP API start -->
 <script type="text/javascript">
 try {
 	document.execCommand('BackgroundImageCache', false, true);
@@ -22,14 +10,6 @@ try {
 <script type="text/javascript" 
 	src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=0139a2ddedc8f337ca3d736be8b3f86d">
 </script>
-</head>
-<body>
-  
-<!-- start of header -->
-<div id="header" class="header">
-	<? include "../lib/header1.php"; ?>	
-</div><!-- end of Header -->
-
 
 <!-- start of container -->
 <div id="container">
@@ -65,11 +45,6 @@ try {
 	</div><!-- end of wrap -->
 </div><!-- end of container -->
 
-
-<!-- start of footer-->
-<div id="footer" align="center">
-<img src="../img/footercopyrighter.png" alt="푸터">
-</div><!-- end of footer -->	
-</body>
-</html>
-
+<?
+	include "../lib/footer.php";
+?>

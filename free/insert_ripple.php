@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?
 	session_start();
 
@@ -19,7 +20,7 @@
 	 exit;
    	} */   
 
-   	include "../../lib/dbconn.php";
+   	include "../lib/dbconn.php";
 
    	$regist_day = date("Y-m-d (H:i)");
 

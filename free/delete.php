@@ -1,9 +1,10 @@
+<meta charset="UTF-8">
 <?
 	$num = $_GET[num];
 	$page = $_GET[page];
 	$table = "free";
 
-	include "../../lib/dbconn.php";
+	include "../lib/dbconn.php";
 
 	$sql = "select * from $table where num=$num";
 	$result = $conn->query($sql);
@@ -27,7 +28,6 @@
 
 	echo "
 		<script>
-			window.alert('삭제 되었습니다.');
 			location.href='list.php?table=$table';
 		</script>
 	";
