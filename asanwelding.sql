@@ -62,6 +62,7 @@ create table job (
 	primary key(num)
 );
 
+
 /* 취업소식 댓글 */
 create table job_ripple (
 	num int not null auto_increment,
@@ -73,3 +74,54 @@ create table job_ripple (
 	regist_day char(20),
 	primary key(num)
 );
+
+
+
+/* 자료실 */
+create table download (
+   num int not null auto_increment,
+   /*id char(15) not null,
+   name  char(10) not null,*/
+   nick  char(10) not null,
+   subject char(100) not null,
+   content text not null,
+   regist_day char(20),
+   hit int,
+   file_name_0 char(40),
+   file_name_1 char(40),
+   file_name_2 char(40),
+   file_name_3 char(40),
+   file_name_4 char(40),
+   file_copied_0 char(30),
+   file_copied_1 char(30),
+   file_copied_2 char(30),
+   file_copied_3 char(30),
+   file_copied_4 char(30), 
+   file_type_0 char(30),
+   file_type_1 char(30),
+   file_type_2 char(30),
+   file_type_3 char(30),
+   file_type_4 char(30),
+   primary key(num)
+);
+
+
+
+/*갤러리*/
+
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `num` int(11) NOT NULL AUTO_INCREMENT,
+  `nick` char(16) NOT NULL,
+  `subject` char(100) NOT NULL,
+  `content` text NOT NULL,
+  `regist_day` char(20) DEFAULT NULL,
+  `hit` int(11) DEFAULT NULL,
+  `file_name_0` char(40) DEFAULT NULL,
+  `file_name_1` char(40) DEFAULT NULL,
+  `file_name_2` char(40) DEFAULT NULL,
+  `file_copied_0` char(30) DEFAULT NULL,
+  `file_copied_1` char(30) DEFAULT NULL,
+  `file_copied_2` char(30) DEFAULT NULL,
+  PRIMARY KEY (`num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
