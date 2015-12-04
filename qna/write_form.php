@@ -35,7 +35,26 @@
 		$conn->close();
 	}
 ?>
-
+<script>
+	function check_input() {
+		if (!document.board_form.writer.value) {
+			alert('작성자명을 입력하세요 !');
+			document.board_form.writer.focus();
+			return;
+		}
+		if (!document.board_form.subject.value) {
+			alert('제목을 입력하세요 !');
+			document.board_form.subject.focus();
+			return;
+		}
+		if (!document.board_form.content.value) {
+			alert('내용을 입력하세요 !');
+			document.board_form.content.focus();
+			return;
+		}
+		document.board_form.submit();
+	}
+</script>
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
@@ -83,9 +102,13 @@
 			?>
 				<form name="board_form" method="post" action="insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data">
 			<?
+				} else if ($mode == "response") {
+			?>
+				<form name="board_form" method="post" action="insert.php?mode=response&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>">
+			<?
 				} else {
 			?>
-				<form name="board_form" method="post" action="insert.php?table=<?=$table?>" enctype="multipart/form-data">
+				<form name="board_form" method="post" action="insert.php?table=<?=$table?>">
 			<?
 				}
 			?>
@@ -95,19 +118,11 @@
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
 												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
-			
-			<?
-				if ($mode != "modify") {
-			?>
-							<div class="col3"><input type="checkbox" name="html_ok" value="y"> HTML 쓰기 </div>
-			<?
-				}
-			?>
-			
+									
 						</div><!-- end of write_row1 -->
 			
 					<div class="write_line"></div>
-						<div class="write_row2"><div class="col1"> 제목 </div>
+						<div class="write_row2"><div class="col1"> 질문하기 </div>
 												<div class="col2"><input type="text" name="subject" size="73" value="<?=$item_subject?>"></div>
 						</div><!-- end of write_row2 -->
 					<div class="write_line"></div>
@@ -118,60 +133,9 @@
 
 					<div class="write_line"></div>
 
-
-						<div class="write_row4"><div class="col1"> 이미지파일 1 </div>
-												<div class="col2"><input type="file" name="upfile[]"></div>
-						</div><!-- end of write_row4 -->
-
 					<div class="clear"></div>
 
-			<?
-				if ($mode == "modify" && $item_file_0) {
-			?>
-					<div class="delete_ok"><?=$item_file_0?> 파일이 등록 되어 있습니다.
-					<input type="checkbox" name="del_file[]" value="0"> 삭제 </div>
-					<div class="clear"></div>
-			<?
-				}		
-			?>
-					<div class="write_line"></div>
-
-
-						<div class="write_row5"><div class="col1"> 이미지파일 2 </div>
-												<div class="col2"><input type="file" name="upfile[]"></div>
-						</div><!-- end of write_row5 -->
-
-					<!-- <div class="clear"></div> -->
-
-			<?
-				if ($mode == "modify" && $item_file_1) {
-			?>
-					<div class="delete_ok"><?=$item_file_1?> 파일이 등록 되어 있습니다.
-					<input type="checkbox" name="del_file[]" value="1"> 삭제 </div>
-					<div class="clear"></div>
-			<?
-				}		
-			?>
-					<div class="write_line"></div>
-					<div class="clear"></div>
-
-						<div class="write_row6"><div class="col1"> 이미지파일 3 </div>
-												<div class="col2"><input type="file" name="upfile[]"></div>
-						</div><!-- end of write_row6 -->
-
-					<!-- <div class="clear"></div> -->
-
-			<?
-				if ($mode == "modify" && $item_file_2) {
-			?>
-					<div class="delete_ok"><?=$item_file_2?> 파일이 등록 되어 있습니다.
-					<input type="checkbox" name="del_file[]" value="2"> 삭제 </div>
-					<div class="clear"></div>
-			<?
-				}		
-			?>
-					<div class="write_line"></div>
-					<div class="clear"></div>
+		
 				</div><!-- end of #write_form -->
 
 				<!-- start of #write_button -->
