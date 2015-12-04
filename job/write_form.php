@@ -1,7 +1,7 @@
 <?
 	session_start();
 
-	$table = "free";
+	$table = "job";
 
 	$num = $_GET[num];
 	$page = $_GET[page];
@@ -66,11 +66,11 @@
 					<a href="../job/list.php"><h3>취업소식</h3></a>
 				</div>
 			</div><!-- end of sub_nav -->
-			</div><!-- end of nav_wrap -->
+			</div><!-- end of nav_wrap -->								
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
-					<h3> 자유 게시판&nbsp;&nbsp;-&nbsp;&nbsp;글쓰기 </h3>
+					<h3> 취업소식&nbsp;&nbsp;-&nbsp;&nbsp;글쓰기 </h3>
 				</div>
 
 

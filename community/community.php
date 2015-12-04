@@ -13,8 +13,11 @@
 				<img src="../img/nav_menu3.png" width="200" height="200" alt="커뮤니티">
 			</div>
 			<div class="sub_nav">
-				<div class="sub_nav1" style="padding: 30px 20px 20px">
+				<div class="sub_nav1" style="padding: 30px 20px 10px">
 					<a href="../free/list.php"><h3>자유 게시판</h3></a>
+				</div>
+				<div class="sub_nav2" style="padding: 10px 20px 10px">
+					<a href="../job/list.php"><h3>취업소식</h3></a>
 				</div>
 				<!-- <div class="sub_nav1">
 					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>
@@ -26,18 +29,25 @@
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					
+					<h3>최근 게시물</h3>
 				</div>
 				<div class="main_co2">
 				<!-- 최근글 불러오기 -->
 					<? include "../lib/func.php"; ?>
 					<div id="latest">
 						<div id="latest1">
-							<div id="title_latest1"><h3>자유 게시판</h3></div>
+							<div id="title_latest1"><h4>자유 게시판</h4></div>
 							<div class="latest_box">
-							<? latest_article("free", 7, 30); ?>
+							<? latest_article("free", 5, 30); ?>
 							</div>
-						</div>						
+						</div>	
+
+						<div id="latest2">
+							<div id="title_latest2"><h4>취업소식</h4></div>
+							<div class="latest_box">
+							<? latest_article("job", 5, 30); ?>					
+							</div>
+						</div>
 					</div>
 				<!-- 최근글 불러오기 -->
 				</div><!-- end of main_co2 -->

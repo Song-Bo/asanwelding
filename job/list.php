@@ -1,7 +1,7 @@
 <?
 	session_start();
-	$table = "free";
-	$ripple = "free_ripple";
+	$table = "job";
+	$ripple = "job_ripple";
 
 	$page = $_GET[page];
 	$num = $_GET[num];
@@ -70,7 +70,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> 자유 게시판 </h3>
+					<h3> 취업소식 </h3>
 				</div>
 
 				<!-- 메인 시작 -->

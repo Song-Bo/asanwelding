@@ -1,6 +1,7 @@
 <?
 	session_start();
-	$table = "free";
+	$table = "job";
+	$ripple = "job_ripple";
 	$page = $_GET[page];
 	$num = $_GET[num];
 	/*
@@ -100,7 +101,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> 자유 게시판 </h3>
+					<h3> 취업소식 </h3>
 				</div>
 
 				<div class="main_co2" style="padding:0px 32px 50px">
@@ -135,7 +136,7 @@
 
 				<div id="ripple">
 			<?
-				$sql = "select * from free_ripple where parent='$item_num'";
+				$sql = "select * from $ripple where parent='$item_num'";
 				$ripple_result = $conn->query($sql);
 
 				while ($row_ripple = ($ripple_result->fetch_assoc())) {

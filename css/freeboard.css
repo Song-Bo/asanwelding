@@ -468,7 +468,7 @@ a {
 
 #latest1 {
 	width:46%;
-	height:250px;	
+	height:220px;	
 	float:left;
 	padding-right:20px;
 	margin:0px 0 0 0px;
@@ -476,13 +476,10 @@ a {
 }
 
 #title_latest1 {
+	padding-left: 0px;
 	height:30px;
 	border-bottom:solid 2px #dddddd;
 }
-
-/*#title_latest1 img {
-	padding-bottom:5px;
-}*/
 
 
 .latest_box {
@@ -509,15 +506,14 @@ a {
 
 #latest2 {
 	width:46%;
+	height:220px;
 	float:left;
-	margin:15px 0 0 18px;
+	padding-left:20px;
+	margin:0px 0px 0 0px;
 }
 
 #title_latest2 {
+	padding-left:0px;
 	height:30px;
 	border-bottom:solid 2px #dddddd;
-}
-
-#title_latest2 img {
-	padding-bottom:5px;
 }

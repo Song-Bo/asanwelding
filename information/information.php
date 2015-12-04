@@ -1,19 +1,9 @@
 <?
 	session_start();
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../css/common.css">
-<script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-<title>수강안내</title>
+<?
+	include "../lib/header.php";
+?>
 <script>	
 function change() {
 	var c = document.getElementById("class").value;
@@ -35,15 +25,6 @@ function change() {
 		document.getElementById("info").innerHTML ="<img src='../img/information/info_8.jpg' alt='산업현장속성과정'>";
 }
 </script>
-</head>
-<body>
-
-<!-- start of header -->
-<div id="header" class="header">
-	<? include "../lib/header.php"; ?>	
-</div><!-- end of Header -->
-
-
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
