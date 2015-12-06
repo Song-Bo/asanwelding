@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/common.css">
-<link rel="stylesheet" type="text/css" href="css/freeboard.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/freeboard.css"> -->
 <title>아산용접배관학원</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script>
@@ -38,28 +38,28 @@
 	<!-- header of center -->
 	<div class="center">
 		<div class="logo">
-			<a href="index.php"><img src="img/logo.png" width="380" height="48" alt="메인로고"></a>
+			<a href="index.php" class="logo_txt">아산용접배관학원</a>
 		</div>
 		<div class="menu">
 			<ul>
 				<li class="menu1">
 					<div class="menu1">
-						<a href="introduce/introduce.php"><img src="img/menu1.png" width="70" height="19" alt="학원소개"></a>
+						<a href="./introduce/introduce/introduce.php" class="menu">학원소개</a>
 					</div>
 				</li>
 				<li class="menu2">
 					<div class="menu2">
-						<a href="information/information.php"><img src="img/menu2.png" width="70" height="19" alt="수강안내"></a>
+						<a href="./information/information/information.php" class="menu"> 수강안내</a>
 					</div>
 				</li>
 				<li class="menu3">
 					<div class="menu3">
-					<a href="community/community.php"><img src="img/menu3.png" width="69" height="19" alt="커뮤니티"></a>
+					<a href="./community/community/community.php" class="menu">커뮤니티</a>
 					</div>
 				</li>
 				<li class="menu4">
 					<div class="menu4">
-						<a href="gallery/gallery.php"><img src="img/menu4.png" width="52" height="19" alt="갤러리"></a>
+						<a href="./gallery/gallery/gallery.php" class="menu">갤러리</a>
 					</div>
 				</li>
 			</ul>
@@ -73,21 +73,21 @@
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
-			<div class="nav">
-				<img src="img/nav_menu1.png" width="200" height="200" alt="학원소개">
-			</div>
+			<div class="nav">학원소개</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<a href="introduce/introduce.php"><img src="img/menu1_sub_nav_1.png" width="200" height="66" alt="인사말"></a>
-				</div>
-				<div class="sub_nav2">
-					<img src="img/menu1_sub_nav_2.png" width="200" height="56" alt="오시는 길">
+					<!-- <ul>
+						<li class="sub_nav1">
+							<a href="">
+						</li>
+						<li class="sub_nav2">오시는 길</li>
+					</ul> -->
 				</div>
 			</div>
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="img/centerimg1.png" width="700" height="300" alt="용접즁">
+					<img src="./img/centerimg1.png" width="700" height="300" alt="용접중">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -106,8 +106,6 @@
 현장 실무와 경험을 통한 용접과 배관 기능에 대한 모든 것을 전수할 수 있도록 최선을 다하겠습니다.
 					
 감사합니다.
-				
-							아산 용접배관학원 임직원 일동 올림.
 					</pre>
 				</div>
 			</div>
@@ -118,7 +116,7 @@
 
 <!-- start of footer-->
 <div id="footer" align="center">	
-	<img src="img/footercopyrighter.png" alt="푸터">
+	<img src="./img/footercopyrighter.png" alt="푸터">
 </div><!-- end of footer -->	
 </body>
 </html>

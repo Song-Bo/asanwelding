@@ -1,3 +1,25 @@
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+input,select,textarea{vertical-align:middle}
+fieldset,img,button{border:0 none;vertical-align:top}
+button{overflow:visible;margin:0;padding:0;border:0;background:none;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+table{border:0;border-collapse:collapse;vertical-align:top}
+html{width:100%;height:100%}
+body{min-height:100%;background:#fff}
+body,th,td,input,select,textarea,button{font-family:'나눔고딕',NanumGothic,ng,'돋움',dotum,Helvetica,sans-serif;font-size:16px;line-height:1.27;letter-spacing:-1px;color:#2a303a}
+a{color:#767676;text-decoration:none;cursor:pointer}
+/* 활성화 하면 로고 밑에 밑줄 생김a:focus,a:active,a:hover,a:focus{color:#767676;text-decoration:underline}*/
+::-webkit-input-placeholder{color:#999}
+:-moz-placeholder{color:#999}
+::-moz-placeholder{color:#999}
+:-ms-input-placeholder{color:#999}
+input[type='checkbox']{width:13px;height:13px;vertical-align:top;-webkit-appearance:checkbox}
+
 /* Body */
 body {
 	position: relative;
@@ -8,28 +30,9 @@ body {
 	background: #fff;
 }
 
-body, th, td, input, select, textarea, button, pre {
-	font-family: 'Apple SD Gothic Neo', '나눔고딕', NanumGothic, ng, '돋움', dotum, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.27;
-	letter-spacing: -1px;
-	color: #2a303a;
-}
-
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
-code, form, fieldset, legend, textarea, p, blockquote, th, td, 
-input, select, textarea, button {
-    margin: 0;
-    padding: 0;
-    -webkit-text-size-adjust: none;
-}
 
 div {
 	display:block;
-}
-
-a {
-	text-decoration: none;
 }
 
 
@@ -201,11 +204,6 @@ ul, li {
 	background:#f4f4f4;
 }
 
-.nav {
-	width: 200px;
-	max-width: 200px;
-	height:200px;
-}
 
 .sub_nav {
 	width: 200px;
@@ -237,6 +235,22 @@ ul, li {
 	padding: 20px 32px 50px;	
 }
 
+.gallery div{
+	float: left;
+	width: 266px;
+	height: 250px;
+	border: 1px solid red;
+	margin: 3px;
+	background-repeat: no-repeat;
+}
+.gallery{
+	
+	
+}
+.add a{
+	float: right;
+	margin-right: 300px;
+}
 
 
 
@@ -248,4 +262,53 @@ ul, li {
 	
 	margin-left: 150px;
 	margin-top: 30px;
+}
+
+/*151204 seokju*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.logo_txt, .menu, .menu:link, .menu:visited, .menu:active, .menu:hover, .nav {
+	display: block; /*이거 해놔야 이미지를 네모처럼 인식해서 깔금하게 수정됨*/
+	font-family: 'Nanum Gothic', sans-serif;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.logo_txt {
+	width: 353px;
+	height: 46px;
+	font-size: 44px;
+	color: #fa2828;
+}
+
+.menu, .menu:link, .menu:visited, .menu:active {
+	font-size: 20px;
+	color: #333;
+}
+
+.menu:hover {
+	font-size: 20px;
+	color: #fa2828;
+
+}
+.nav {
+	width: 180px;
+	height:180px;
+	background-color: #fa2828;
+	font-size: 30px;
+	color: #fff;
+	padding: 20px 0 0 20px;
+}
+
+pre {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 16px;
+	color: #333;
+	/*font-weight: 600;*/
+	line-height: 1;
+}
+
+.sub_nav1 {
+	width: 200px;
+	/*height: 66px;*/	
 }

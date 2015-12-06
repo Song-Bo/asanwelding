@@ -145,3 +145,17 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   PRIMARY KEY (`num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+/* 갤러리 리플 */
+CREATE TABLE `gallery_ripple` (
+	`num` INT(11) NOT NULL AUTO_INCREMENT,
+	`parent` INT(11) NOT NULL,
+	`nick` CHAR(10) NOT NULL,
+	`content` TEXT NOT NULL,
+	`regist_day` CHAR(20) NULL DEFAULT NULL,
+	PRIMARY KEY (`num`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
