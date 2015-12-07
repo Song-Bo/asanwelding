@@ -74,15 +74,16 @@
 		<div class="content" id="content">
 			<div class="nav_wrap">
 			<div class="nav">학원소개</div>
-			<div class="sub_nav">
-				<div class="sub_nav1">
-					<!-- <ul>
+			
+					<ul class="sub_nav">
 						<li class="sub_nav1">
-							<a href="">
+						<a href="" class="sub_nav_txt">인사말</a>
 						</li>
-						<li class="sub_nav2">오시는 길</li>
-					</ul> -->
-				</div>
+						<li class="sub_nav2">
+						<a href="" class="sub_nav_txt">오시는 길</a>
+						</li>
+					</ul>
+			
 			</div>
 			</div>
 			<div class="main_content">

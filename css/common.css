@@ -43,7 +43,7 @@ div {
 	max-width: 2560px;
 	margin: 0 auto;
 	margin-top: 10px;
-	border-bottom: 1px solid #d9d9d9;
+	border-bottom: 1px solid #f0f0f0;
 }
 
 #header:after {
@@ -265,7 +265,7 @@ ul, li {
 /*151204 seokju*/
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-.logo_txt, .menu, .menu:link, .menu:visited, .menu:active, .menu:hover, .nav {
+.logo_txt, .menu, .menu:link, .menu:visited, .menu:active, .menu:hover, .nav, .sub_nav_txt {
 	display: block; /*이거 해놔야 이미지를 네모처럼 인식해서 깔금하게 수정됨*/
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: bolder;
@@ -285,7 +285,6 @@ ul, li {
 }
 
 .menu:hover {
-	font-size: 20px;
 	color: #fa2828;
 
 }
@@ -300,14 +299,33 @@ ul, li {
 }
 
 pre {
+	display:inline-block;
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 16px;
 	color: #333;
 	/*font-weight: 600;*/
 	line-height: 1;
+	text-align: justify; /*양쪽정렬*/
 }
 
-.sub_nav1 {
-	width: 200px;
-	/*height: 66px;*/	
+/*151207 seokju div따로 안나누고 ul이랑 li 태그로만 sub_nav 구성*/
+
+.sub_nav {
+	margin: 15px 0;
+	padding: 0 0 0 25px;
+	width: 150px;
 }
+
+.sub_nav>li {
+	padding: 20px 0 20px 0px;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.sub_nav_txt {
+	display:inline-block; /*블럭이랑 텍스트개념 동시에*/
+	font-size: 20px;
+	color: #333;
+}
+
+.sub_nav_txt:hover {
+	color: #fa2828;
