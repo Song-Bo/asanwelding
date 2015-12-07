@@ -27,7 +27,7 @@
 			[공지]  홈페이지 개설중.....
 		</div>
 		<ul class="util">
-			<li>로그인</li>
+			<li><a href="">로그인</a></li>
 			<li>회원가입</li>
 		</ul>		
 		</div>

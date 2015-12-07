@@ -1,5 +1,8 @@
 <?
 	session_start();
+	require_once "../../lib/header.php";
+	require_once "../../lib/dbconn.php";
+
 	$table = "notice";
 	$ripple = "notice_ripple";
 
@@ -10,11 +13,14 @@
 
 	$search = $_POST[search];
 	$find = $_POST[find];
+
+	$sql = "select * from $table";
+	$result = $conn->query($sql);
+	$total_record = mysqli_num_rows($result);
 ?>
 
 <?
-	require_once "../../lib/header.php";
-	require_once "../../lib/dbconn.php";
+	
 
 	$scale = 10; // 한 화면에 표시되는 글 수
 
