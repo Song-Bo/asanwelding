@@ -10,7 +10,7 @@
     $userlevel = $_SESSION[userlevel];
 	*/	
 
-	require_once "../lib/dbconn.php";
+	require_once "../../lib/dbconn.php";
 
 	$sql = "select * from $table where num=$num";
 	$result = $conn->query($sql);
@@ -62,7 +62,7 @@
 	$conn->query($sql);
 ?>
 <?
-	require_once "../lib/header.php";
+	require_once "../../lib/header.php";
 ?>
 <script>
 	function check_input() {
@@ -195,5 +195,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../lib/footer.php";
+	require_once "../../lib/footer.php";
 ?>

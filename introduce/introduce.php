@@ -13,8 +13,8 @@
 				학원소개
 			</div>
 			<ul class="sub_nav">
-				<li class="sub_nav1"><a href="" class="sub_nav_txt">인사말</a></li>
-				<li class="sub_nav2"><a href="" class="sub_nav_txt">오시는 길</a></li>
+				<li class="sub_nav1"><a href="introduce.php" class="sub_nav_txt">인사말</a></li>
+				<li class="sub_nav2"><a href="routine.php" class="sub_nav_txt">오시는 길</a></li>
 			</ul>		
 			</div>
 			<div class="main_content">

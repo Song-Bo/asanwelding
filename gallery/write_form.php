@@ -82,7 +82,7 @@
 					</div>
 
 					<div id="write_form_title">
-						<img src="../../img/board/write_form_title.gif">
+						<img src="../img/board/write_form_title.gif">
 					</div>
 
 					<div class="clear"></div>
@@ -184,9 +184,9 @@
 				</div><!-- end of #write_form -->
 
 				<!-- start of #write_button -->
-				<div id="write_button"><a href="#"><img src="../../img/board/ok.png" onclick="check_input()"></a>
+				<div id="write_button"><a href="#"><img src="../img/board/ok.png" onclick="check_input()"></a>
 								&nbsp; <a href="gallery.php?table=<?=$table?>&page=<?=$page?>">
-										<img src="../../img/board/list.png"></a>
+										<img src="../img/board/list.png"></a>
 
 				</div><!-- end of #write_button -->
 				</form><!-- end of form -->

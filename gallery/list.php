@@ -13,8 +13,8 @@
 ?>
 
 <?
-	require_once "../../lib/header.php";
-	require_once "../../lib/dbconn.php";
+	require_once "../lib/header.php";
+	require_once "../lib/dbconn.php";
 
 	$scale = 10; // 한 화면에 표시되는 글 수
 
@@ -60,7 +60,7 @@
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1" style="padding: 30px 20px 20px">
-					<a href="list.php"><h3>갤러리</h3></a>
+					<li class="sub_nav1"><a href="list.php" class="sub_nav_txt">갤러리</a></li>
 				</div>
 				<!-- <div class="sub_nav1">
 					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>

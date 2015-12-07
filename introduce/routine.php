@@ -19,14 +19,10 @@ try {
 			<div class="nav">
 				학원소개
 			</div>
-			<div class="sub_nav">
-				<div class="sub_nav1">
-					<a href="./introduce.php"><img src="../img/menu1_sub_nav_1.png" width="200" height="66" alt="인사말"></a>
-				</div>
-				<div class="sub_nav2">
-					<a href="#"><img src="../img/menu1_sub_nav_2.png" width="200" height="56" alt="오시는 길"></a>
-				</div>
-			</div>
+			<ul class="sub_nav">
+				<li class="sub_nav1"><a href="introduce.php" class="sub_nav_txt">인사말</a></li>
+				<li class="sub_nav2"><a href="routine.php" class="sub_nav_txt">오시는 길</a></li>
+			</ul>	
 			</div>
 			<div class="main_content">
 				<div class="main_co1">

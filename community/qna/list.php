@@ -10,8 +10,8 @@
 	$find = $_POST[find];
 ?>
 <?
-	require_once "../lib/header.php";
-	require_once "../lib/dbconn.php";
+	require_once "../../lib/header.php";
+	require_once "../../lib/dbconn.php";
 
 	$scale = 10; // 한 화면에 표시되는 글 수
 
@@ -176,5 +176,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../lib/footer.php";
+	require_once "../../lib/footer.php";
 ?>

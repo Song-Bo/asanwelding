@@ -1,5 +1,6 @@
 <?
 	session_start();
+	$url = "http://$_SERVER[HTTP_HOST]/asan"; 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
@@ -11,7 +12,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="<?=$url?>/css/common.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/freeboard.css"> -->
 <title>아산용접배관학원</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
@@ -19,7 +20,6 @@
 </script>
 </head>
 <body>
-
 <!-- start of header -->
 <div id="header" class="header">
 	<!-- header of global -->
@@ -85,7 +85,7 @@
 			</div>			
 			<div class="main_content">
 				<div class="main_co1" style="padding:0px 0px 20px 0px">
-					<img src="./img/centerimg1.png" alt="용접중">
+					<img src="./img/introduce/centerimg2.png" alt="용접중">
 				</div>
 				<div class="main_co2">
 					<pre>

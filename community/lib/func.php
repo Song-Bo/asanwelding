@@ -1,6 +1,6 @@
 <?
 	function latest_article ($table, $loop, $char_limit) {
-		include "dbconn.php";
+		include "../lib/dbconn.php";
 
 		$sql = "select * from $table order by num desc limit $loop";
 		$result = $conn->query($sql);

@@ -90,7 +90,7 @@
 
 	/* adding dbconn.php, SQL query START !! */
 
-	require_once "../../lib/dbconn.php";
+	require_once "../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$num_checked = count($_POST['del_file']);

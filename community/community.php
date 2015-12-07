@@ -25,7 +25,7 @@
 				</div>
 				<div class="main_co2">
 				<!-- 최근글 불러오기 -->
-					<? require_once "lib/func.php"; ?>
+					<? require_once "./lib/func.php"; ?>
 					<div id="latest">
 						<div id="latest1">
 							<div id="title_latest1"><h4>자유 게시판</h4></div>
