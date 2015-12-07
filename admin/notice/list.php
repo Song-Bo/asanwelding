@@ -1,14 +1,17 @@
 <?
 	session_start();
-	$table = "qna";
+	$table = "notice";
+	$ripple = "notice_ripple";
 
 	$page = $_GET[page];
 	$num = $_GET[num];
+
 	$mode = $_GET[mode];
 
 	$search = $_POST[search];
 	$find = $_POST[find];
 ?>
+
 <?
 	require_once "../../lib/header.php";
 	require_once "../../lib/dbconn.php";
@@ -25,7 +28,7 @@
 		}
 		$sql = "select * from $table where $find like '%$search%' order by num desc";
 	} else {
-		$sql = "select * from $table order by group_num desc, ord asc";
+		$sql = "select * from $table order by num desc";
 	}
 
 	$result = $conn->query($sql);
@@ -46,6 +49,7 @@
 	$start = ($page-1) * $scale;
 	$number = $total_record - $start;
 ?>
+
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
@@ -54,7 +58,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> Q & A </h3>
+					<h3> 공지사항 </h3>
 				</div>
 
 				<!-- 메인 시작 -->
@@ -112,17 +116,18 @@
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);
 						$item_subject = str_replace(" ", "&nbsp;", $row[subject]);
-						$item_depth = $row[depth];
 
-						$space = "";
-
-						for ($i=0; $i < $item_depth; $i++) {
-							$space = "&nbsp;&nbsp;".$space;						
-						}
+						$sql = "select * from $ripple where parent=$item_num";
+						$result2 = $conn->query($sql);
+						$num_ripple = $result2->num_rows;
 				?>
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
-						<div class="list_item2"><?=$space?><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a></div>
+						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>
+				<?
+					if ($num_ripple) echo "[$num_ripple]";
+				?>						
+						</div>
 						<div class="list_item3"><?= $item_nick ?></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>

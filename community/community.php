@@ -15,8 +15,9 @@
 			<ul class="sub_nav">
 				<li class="sub_nav1"><a href="../community/free/list.php" class="sub_nav_txt">자유 게시판</a></li>
 				<li class="sub_nav2"><a href="../community/job/list.php" class="sub_nav_txt">취업소식</a></li>
-				<li class="sub_nav2"><a href="../community/download/list.php" class="sub_nav_txt">자료실</a></li>
-				<li class="sub_nav2"><a href="../community/qna/list.php" class="sub_nav_txt">Q & A</a></li>
+				<li class="sub_nav3"><a href="../community/download/list.php" class="sub_nav_txt">자료실</a></li>
+				<li class="sub_nav4"><a href="../community/qna/list.php" class="sub_nav_txt">Q & A</a></li>
+				<li class="sub_nav5"><a href="../admin/notice/list.php" class="sub_nav_txt">공지사항</a></li>
 			</ul>
 			</div><!-- end of nav_wrap -->
 			<div class="main_content">
@@ -25,7 +26,7 @@
 				</div>
 				<div class="main_co2">
 				<!-- 최근글 불러오기 -->
-					<? require_once "./lib/func.php"; ?>
+					<? require_once "../lib/func.php"; ?>
 					<div id="latest">
 						<div id="latest1">
 							<div id="title_latest1"><h4>자유 게시판</h4></div>

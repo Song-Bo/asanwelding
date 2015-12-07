@@ -54,7 +54,7 @@
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
-			<? require_once "../lib/community_sub_nav.php"; ?>
+			<? require_once "../../lib/community_sub_nav.php"; ?>
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
