@@ -64,14 +64,9 @@
 			<div class="nav">
 				갤러리
 			</div>
-			<div class="sub_nav">
-				<!-- <div class="sub_nav1">
-					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>
-				</div>
-				<div class="sub_nav2">
-					<img src="../img/sub_nav_2.png" width="200" height="56">
-				</div> -->
-			</div>
+			<ul class="sub_nav">
+				<li class="sub_nav1"><a href="gallery.php" class="sub_nav_txt">갤러리</a></li>
+			</ul>
 			</div>
 			<div class="main_content">
 				<!-- start of main_co1 -->

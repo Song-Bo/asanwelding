@@ -73,8 +73,7 @@
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
-			<div class="nav">학원소개</div>
-			
+			<div class="nav">학원소개</div>			
 					<ul class="sub_nav">
 						<li class="sub_nav1">
 						<a href="" class="sub_nav_txt">인사말</a>
@@ -82,10 +81,8 @@
 						<li class="sub_nav2">
 						<a href="" class="sub_nav_txt">오시는 길</a>
 						</li>
-					</ul>
-			
-			</div>
-			</div>
+					</ul>			
+			</div>			
 			<div class="main_content">
 				<div class="main_co1" style="padding:0px 0px 20px 0px">
 					<img src="./img/centerimg1.png" alt="용접중">
