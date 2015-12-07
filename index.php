@@ -86,8 +86,8 @@
 			</div>
 			</div>
 			<div class="main_content">
-				<div class="main_co1">
-					<img src="./img/centerimg1.png" width="700" height="300" alt="용접중">
+				<div class="main_co1" style="padding:0px 0px 20px 0px">
+					<img src="./img/centerimg1.png" alt="용접중">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -106,6 +106,8 @@
 현장 실무와 경험을 통한 용접과 배관 기능에 대한 모든 것을 전수할 수 있도록 최선을 다하겠습니다.
 					
 감사합니다.
+					
+							아산 용접배관학원 임직원 일동 올림.
 					</pre>
 				</div>
 			</div>
