@@ -172,3 +172,33 @@ COLLATE='utf8_general_ci'
 ENGINE=InnoDB
 ;
 
+
+
+
+/* 공지 사항 */
+CREATE TABLE IF NOT EXISTS `notice` (
+  `num` int(11) NOT NULL AUTO_INCREMENT,
+  `id` char(15) NOT NULL,
+  `name` char(10) NOT NULL,
+  `nick` char(10) NOT NULL,
+  `subject` char(100) NOT NULL,
+  `content` text NOT NULL,
+  `regist_day` char(20) DEFAULT NULL,
+  `hit` int(11) DEFAULT NULL,
+  `file_name_0` char(40) DEFAULT NULL,
+  `file_name_1` char(40) DEFAULT NULL,
+  `file_name_2` char(40) DEFAULT NULL,
+  `file_name_3` char(40) DEFAULT NULL,
+  `file_name_4` char(40) DEFAULT NULL,
+  `file_copied_0` char(30) DEFAULT NULL,
+  `file_copied_1` char(30) DEFAULT NULL,
+  `file_copied_2` char(30) DEFAULT NULL,
+  `file_copied_3` char(30) DEFAULT NULL,
+  `file_copied_4` char(30) DEFAULT NULL,
+  `file_type_0` char(30) DEFAULT NULL,
+  `file_type_1` char(30) DEFAULT NULL,
+  `file_type_2` char(30) DEFAULT NULL,
+  `file_type_3` char(30) DEFAULT NULL,
+  `file_type_4` char(30) DEFAULT NULL,
+  PRIMARY KEY (`num`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
