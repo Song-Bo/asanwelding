@@ -2,7 +2,7 @@
 	session_start();
 ?>
 <?
-	require_once "../../lib/header.php";
+	require_once "../lib/header.php";
 ?>
 <!-- start of container -->
 <div id="container">
@@ -14,16 +14,16 @@
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1" style="padding: 30px 20px 10px">
-					<a href="../free/list.php"><h3>자유 게시판</h3></a>
+					<a href="../community/free/list.php"><h3>자유 게시판</h3></a>
 				</div>
 				<div class="sub_nav2" style="padding: 10px 20px 10px">
-					<a href="../job/list.php"><h3>취업소식</h3></a>
+					<a href="../community/job/list.php"><h3>취업소식</h3></a>
 				</div>
 				<div class="sub_nav3" style="padding: 10px 20px 10px">
-					<a href="../download/list.php"><h3>자료실</h3></a>
+					<a href="../community/download/list.php"><h3>자료실</h3></a>
 				</div>
 				<div class="sub_nav4" style="padding: 10px 20px 10px">
-					<a href="../qna/list.php"><h3>Q & A</h3></a>
+					<a href="../community/qna/list.php"><h3>Q & A</h3></a>
 				</div>
 			</div><!-- end of sub_nav -->
 			</div><!-- end of nav_wrap -->
@@ -33,7 +33,7 @@
 				</div>
 				<div class="main_co2">
 				<!-- 최근글 불러오기 -->
-					<? require_once "../../lib/func.php"; ?>
+					<? require_once "lib/func.php"; ?>
 					<div id="latest">
 						<div id="latest1">
 							<div id="title_latest1"><h4>자유 게시판</h4></div>
@@ -57,5 +57,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

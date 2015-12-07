@@ -10,7 +10,7 @@
     $userlevel = $_SESSION[userlevel];
 	*/	
 
-	require_once "../../lib/dbconn.php";
+	require_once "../lib/dbconn.php";
 
 	$sql = "select * from $table where num=$num";
 	$result = $conn->query($sql);
@@ -49,7 +49,7 @@
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
-			<? require_once "../../lib/community_sub_nav.php"; ?>
+			<? require_once "../lib/community_sub_nav.php"; ?>
 			<div class="main_content">
 
 				<div class="main_co1">
@@ -74,7 +74,7 @@
 				</div>
 
 				<div id="view_button">
-					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../img/board/list.png"></a>&nbsp;
+					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>&nbsp;
 			<?
 				// if ($userid && ($userid == $item_id) || $userlevel == 1) {
 			?>
@@ -104,5 +104,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

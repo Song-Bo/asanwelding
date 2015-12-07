@@ -2,27 +2,27 @@
 	session_start();
 ?>
 <?
-	require_once "../../lib/header.php";
+	require_once "../lib/header.php";
 ?>
 <script>	
 function change() {
 	var c = document.getElementById("class").value;
 	if (c == 1)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_1.gif' alt='용접기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_1.gif' alt='용접기능사'>";
 	if (c == 2)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_2.gif' alt='특수용접기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_2.gif' alt='특수용접기능사'>";
 	if (c == 3)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_3.gif' alt='가스기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_3.gif' alt='가스기능사'>";
 	if (c == 4)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_4.gif' alt='배관기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_4.gif' alt='배관기능사'>";
 	if (c == 5)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_5.gif' alt='에너지관리기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_5.gif' alt='에너지관리기능사'>";
 	if (c == 6)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_6.gif' alt='온수온돌기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_6.gif' alt='온수온돌기능사'>";
 	if (c == 7)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_7.gif' alt='공조냉동기계기능사'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_7.gif' alt='공조냉동기계기능사'>";
 	if (c == 8)
-		document.getElementById("info").innerHTML ="<img src='../../img/information/info_8.jpg' alt='산업현장속성과정'>";
+		document.getElementById("info").innerHTML ="<img src='../img/information/info_8.jpg' alt='산업현장속성과정'>";
 }
 </script>
 <!-- start of container -->
@@ -58,7 +58,7 @@ function change() {
 					</form>
 				</div>
 				<div class="main_co2">
-					<div id="info"><img src="../../img/information/info_1.gif" alt="용접기능사"></div> 
+					<div id="info"><img src="../img/information/info_1.gif" alt="용접기능사"></div> 
 				</div>
 			</div>
 		</div><!-- end of content -->
@@ -66,5 +66,5 @@ function change() {
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

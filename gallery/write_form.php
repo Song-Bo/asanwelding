@@ -17,7 +17,7 @@
 	$subject= $_POST[subject];
 	$content= $_POST[content];
 
-	require_once "../../lib/dbconn.php";
+	require_once "../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$sql = "select * from $table where num=$num";
@@ -35,7 +35,7 @@
 	}
 ?>
 <?
-	require_once "../../lib/header.php";
+	require_once "../lib/header.php";
 ?>
 <script>
 	function check_input() {
@@ -203,5 +203,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

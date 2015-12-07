@@ -11,17 +11,18 @@
 	$content= $_POST[content];	
 ?>
 <?
-	require_once "../../lib/header.php";	
+	require_once "../lib/header.php";	
 ?>
 <?
 	if ($mode=="modify" || $mode=="response") {
-		require_once "../../lib/dbconn.php";
+		require_once "../lib/dbconn.php";
 
 		$sql = "select * from $table where num=$num";
 
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 
+		$writer = $row[nick];
 		$item_subject = $row[subject];
 		$item_content = $row[content];
 
@@ -60,7 +61,7 @@
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
-			<? require_once "../../lib/community_sub_nav.php"; ?>
+			<? require_once "../lib/community_sub_nav.php"; ?>
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
@@ -100,7 +101,7 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
+												<div class="col2"><input type="text" name="writer" value="<?= $writer ?>"></div>
 									
 						</div><!-- end of write_row1 -->
 			
@@ -136,5 +137,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

@@ -1,9 +1,8 @@
 <?
 	session_start();
 ?>
-
 <?
-	require_once "../../lib/header.php";
+	require_once "../lib/header.php";
 ?>
 <!-- start of container -->
 <div id="container">
@@ -15,16 +14,16 @@
 			</div>
 			<div class="sub_nav">
 				<div class="sub_nav1">
-					<a href="./introduce.php"><img src="../../img/menu1_sub_nav_1.png" width="200" height="66" alt="인사말"></a>
+					<a href="./introduce.php"><img src="../img/menu1_sub_nav_1.png" width="200" height="66" alt="인사말"></a>
 				</div>
 				<div class="sub_nav2">
-					<a href="./routine.php"><img src="../../img/menu1_sub_nav_2.png" width="200" height="56" alt="오시는 길"></a>
+					<a href="./routine.php"><img src="../img/menu1_sub_nav_2.png" width="200" height="56" alt="오시는 길"></a>
 				</div>
 			</div>
 			</div>
 			<div class="main_content">
 				<div class="main_co1">
-					<img src="../../img/centerimg1.png" width="700" height="300" alt="용접즁">
+					<img src="../img/centerimg1.png" width="700" height="300" alt="용접즁">
 				</div>
 				<div class="main_co2">
 					<pre>
@@ -53,5 +52,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

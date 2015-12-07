@@ -44,22 +44,22 @@
 			<ul>
 				<li class="menu1">
 					<div class="menu1">
-						<a href="./introduce/introduce/introduce.php" class="menu">학원소개</a>
+						<a href="./introduce/introduce.php" class="menu">학원소개</a>
 					</div>
 				</li>
 				<li class="menu2">
 					<div class="menu2">
-						<a href="./information/information/information.php" class="menu"> 수강안내</a>
+						<a href="./information/information.php" class="menu"> 수강안내</a>
 					</div>
 				</li>
 				<li class="menu3">
 					<div class="menu3">
-					<a href="./community/community/community.php" class="menu">커뮤니티</a>
+					<a href="./community/community.php" class="menu">커뮤니티</a>
 					</div>
 				</li>
 				<li class="menu4">
 					<div class="menu4">
-						<a href="./gallery/gallery/gallery.php" class="menu">갤러리</a>
+						<a href="./gallery/gallery.php" class="menu">갤러리</a>
 					</div>
 				</li>
 			</ul>

@@ -11,10 +11,9 @@
 	$search = $_POST[search];
 	$find = $_POST[find];
 ?>
-
 <?
-	require_once "../../lib/header.php";
-	require_once "../../lib/dbconn.php";
+	require_once "../lib/header.php";
+	require_once "../lib/dbconn.php";
 
 	$scale = 9; // 한 화면에 표시되는 글 수
 
@@ -176,10 +175,10 @@
 				?>
 						&nbsp;&nbsp;&nbsp;&nbsp; 다음 ▶
 						</div>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
+					<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
 			</div><!-- end of button -->
 </div><!-- end of container -->
 
 <?
-	require_once "../../lib/footer.php";
+	require_once "../lib/footer.php";
 ?>

@@ -31,7 +31,7 @@
 
 	$regist_day = date("Y-m-i (H:i)");
 
-	require_once "../../lib/dbconn.php";
+	require_once "../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$sql = "update $table set subject='$subject', content='$content' where num=$num";

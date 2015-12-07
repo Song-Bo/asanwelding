@@ -1,3 +1,4 @@
+@chaset "UTF-8";
 /* reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none}
 dl,ul,ol,menu,li{list-style:none}
@@ -20,6 +21,7 @@ a{color:#767676;text-decoration:none;cursor:pointer}
 :-ms-input-placeholder{color:#999}
 input[type='checkbox']{width:13px;height:13px;vertical-align:top;-webkit-appearance:checkbox}
 
+
 /* Body */
 body {
 	position: relative;
@@ -29,7 +31,6 @@ body {
 	min-height: 100%;
 	background: #fff;
 }
-
 
 div {
 	display:block;
@@ -151,8 +152,6 @@ ul, li {
 }
 
 
-
-
 /* Container */
 #container {
 	background-color:#ececec;
@@ -204,14 +203,11 @@ ul, li {
 	background:#f4f4f4;
 }
 
-
 .sub_nav {
 	width: 200px;
 	max-width: 200px;
 	
 }
-
-/*151202*/
 
 
 /* Container - Content - mainContent */
@@ -243,10 +239,11 @@ ul, li {
 	margin: 3px;
 	background-repeat: no-repeat;
 }
+
 .gallery{
-	
-	
+		
 }
+
 .add a{
 	float: right;
 	margin-right: 300px;
@@ -263,6 +260,7 @@ ul, li {
 	margin-left: 150px;
 	margin-top: 30px;
 }
+
 
 /*151204 seokju*/
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
@@ -291,6 +289,7 @@ ul, li {
 	color: #fa2828;
 
 }
+
 .nav {
 	width: 180px;
 	height:180px;
