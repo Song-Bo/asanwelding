@@ -13,13 +13,9 @@
 				학원소개
 			</div>
 			<ul class="sub_nav">
-						<li class="sub_nav1">
-						<a href="" class="sub_nav_txt">인사말</a>
-						</li>
-						<li class="sub_nav2">
-						<a href="" class="sub_nav_txt">오시는 길</a>
-						</li>
-					</ul>		
+				<li class="sub_nav1"><a href="" class="sub_nav_txt">인사말</a></li>
+				<li class="sub_nav2"><a href="" class="sub_nav_txt">오시는 길</a></li>
+			</ul>		
 			</div>
 			<div class="main_content">
 				<div class="main_co1" style="padding: 0px 0px 20px 0px">
