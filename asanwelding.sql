@@ -1,5 +1,18 @@
-/* DataBase 생성 */
+﻿/* DataBase 생성 */
 create database asan_db;
+
+/* 회원가입 */
+CREATE TABLE IF NOT EXISTS `member` (
+  `id` varchar(15) NOT NULL,
+  `pass` char(15) NOT NULL,
+  `name` varchar(10) NOT NULL,
+  `sex` varchar(2) NOT NULL,
+  `birth` char(15) NOT NULL,
+  `phone` char(20) NOT NULL,
+  `email` char(80) DEFAULT NULL,
+  `regist_day` char(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /* 자유게시판 */
 create table free (
