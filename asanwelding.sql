@@ -6,7 +6,6 @@ CREATE TABLE IF NOT EXISTS `member` (
   `id` varchar(15) NOT NULL,
   `pass` char(15) NOT NULL,
   `name` varchar(10) NOT NULL,
-  `sex` varchar(2) NOT NULL,
   `birth` char(15) NOT NULL,
   `phone` char(20) NOT NULL,
   `email` char(80) DEFAULT NULL,
