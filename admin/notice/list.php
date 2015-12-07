@@ -161,19 +161,14 @@
 							<!-- 목록 -->
 							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
 							<img src="../../img/board/list.png"></a> &nbsp;
-							<!-- 글쓰기 -->
-							<a href="write_form.php?table=<?= $table ?>">
-							<img src="../../img/board/write.png"></a>
-
-				<!--
 				<?
-					if($userid) {
+					if($userid == 'admin') {
 				?>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
+					<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
 				<?
 					}
 				?>
-				-->
+				
 						</div><!-- end of button -->
 					</div><!-- end of page_button -->
 				</div><!-- end of list content -->
