@@ -21,7 +21,6 @@
 		}
 	}
 
-
 	$sql = "delete from $table where num=$num";
 	$conn->query($sql);
 	$conn->close();

@@ -5,9 +5,12 @@
 	$page = $_GET[page];
 	$num = $_GET[num];	
 	$mode = $_GET[mode];
+
 	$subject = $_POST[subject];
 	$content = $_POST[content];
 	$writer = $_POST[writer];
+
+	$pass = $_POST[pass];
 
 	if(!$subject) {
 		echo("
@@ -29,12 +32,12 @@
 	   exit;
 	}
 
-	$regist_day = date("Y-m-i (H:i)");
+	$regist_day = date("Y-m-d (H:i)");
 
-	require_once "../lib/dbconn.php";
+	require_once "../../lib/dbconn.php";
 
 	if ($mode == "modify") {
-		$sql = "update $table set subject='$subject', content='$content' where num=$num";
+		$sql = "update $table set name='$writer', subject='$subject', content='$content' where num=$num";
 		$conn->query($sql);
 	} else {
 		if ($mode == "response") {	
@@ -62,8 +65,9 @@
 			$ord = 0;
 
 			// 레코드 삽입 (group_num 제외)
-			$sql = "insert into $table (depth, ord, nick, subject, content, regist_day, hit) ";
-			$sql.= "values($depth, $ord, '$writer', '$subject', '$content', '$regist_day', 0)";
+			$sql = "insert into $table (depth, ord, id, name, pass, subject, content, regist_day, hit) ";
+			$sql.= "values($depth, $ord, 'root', '$writer', '$pass', '$subject', '$content', '$regist_day', 0)";
+			
 			$conn->query($sql);
 
 			// 최근 auto_increment 필드(num)값 가져오기

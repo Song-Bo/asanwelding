@@ -99,7 +99,7 @@
 						$item_num = $row[num];
 						/* $item_id = $row[id] */
 						/* $item_name = $row[name] */
-						$item_nick = $row[nick];
+						$item_nick = $row[name];
 						$item_hit = $row[hit];
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);

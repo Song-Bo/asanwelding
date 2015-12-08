@@ -105,9 +105,9 @@
 						$row = $result->fetch_assoc();    // 하나의 레코드 가져오기
 
 						$item_num = $row[num];
-						/* $item_id = $row[id] */
-						/* $item_name = $row[name] */
-						$item_nick = $row[nick];
+						$item_id = $row[id];
+						$item_name = $row[name];
+						$pass = $row[pass];
 						$item_hit = $row[hit];
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);
@@ -123,13 +123,15 @@
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
 						<div class="list_item2"><?=$space?><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a></div>
-						<div class="list_item3"><?= $item_nick ?></div>
+						<div class="list_item3"><?= $item_name ?></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>
 					</div><!-- end of #list_item -->
 				<?
-					$number--;
-				}
+						if($number>1)
+							$number--;
+						else break;
+					}
 				?>
 
 					<div id="page_button">

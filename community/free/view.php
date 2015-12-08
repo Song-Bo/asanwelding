@@ -17,9 +17,9 @@
 	$row = $result->fetch_assoc();
 
 	$item_num = $row[num];
-  /*$item_id = $row[id];
-	$item_name = $row[name];*/
-	$item_nick = $row[nick];
+  	$item_id = $row[id];
+	$item_name = $row[name];
+	$item_nick = $row[name];
 	$item_hit = $row[hit];
 
 	$image_name[0] = $row[file_name_0];
@@ -33,12 +33,6 @@
 	$item_date = $row[regist_day];
 	$item_subject = str_replace(" ", "&nbsp", $row[subject]);
 	$item_content = $row[content];
-	// $is_html = $row[is_html];
-
-  /*if ($is_html!="y") {
-		$item_content = str_replace(" ", "&nbsp", $item_content);
-		$item_content = str_replace("\n", "<br>", $item_content);
-	} */
 
 	for ($i=0; $i < 3; $i++) { 		
 		if ($image_copied[$i]) {
@@ -75,6 +69,8 @@
 	}
 
 	function del(href) {
+		
+
 		if (confirm("한번 삭제한 자료는 복구할 방법이 없습니다. \n\n 정말 삭제 하시겠습니까?")) {
 			document.location.href = href;
 		}
@@ -119,7 +115,9 @@
 						<?= $item_content ?>
 				</div>
 
+
 <!-- start of ripple -->
+
 
 				<div id="ripple">
 			<?

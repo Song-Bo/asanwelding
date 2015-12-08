@@ -106,7 +106,7 @@ $(document).ready(function(){
 	<div class="p_c_text">회원이 되시면 여러 혜택을 누리실 수 있습니다.</div>
 
 	<!-- start of form -->
-	<form method="POST" action="../login/login.php">
+	<form method="POST" action="<?=$url?>/login/login.php">
 	<div class="login_line">
 		<div class="box_in1">
 			 <input type="text" name="id" id="id" placeholder="아이디" size="30">

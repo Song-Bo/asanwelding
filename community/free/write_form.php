@@ -16,7 +16,8 @@
 		$sql = "select * from $table where num=$num";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-		$item_nick = $row[nick];
+		$item_name = $row[name];
+		$pass = $row[pass];
 		$item_subject = $row[subject];
 		$item_content = $row[content];
 		$item_file_0 = $row[file_name_0];
@@ -47,6 +48,11 @@
 			document.board_form.content.focus();
 			return;
 		}
+		if (!document.board_form.pass.value) {
+			alert('비밀번호를 입력하세요 !');
+			document.baord_form.pass.focus();
+			return;
+		}		
 		document.board_form.submit();
 	}
 </script>
@@ -90,16 +96,9 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
+												<div class="col2"><input type="text" name="writer" value="<?= $item_name ?>"></div>
 			
-			<?
-				if ($mode != "modify") {
-			?>
-							<div class="col3"><input type="checkbox" name="html_ok" value="y"> HTML 쓰기 </div>
-			<?
-				}
-			?>
-			
+					
 						</div><!-- end of write_row1 -->
 			
 					<div class="write_line"></div>
@@ -113,6 +112,16 @@
 						</div><!-- end of write_row3 -->
 
 					<div class="write_line"></div>
+
+					
+					<!-- 비밀번호 란 추가 write_row7 -->
+						<div class="write_row7"><div class="col1">비밀번호</div>
+												<div class="col2"><input type="password" name="pass" value=""></div>
+						</div> 
+
+					<div class="write_line"></div>
+
+					<!-- end of 비밀번호 란 write_row7 -->
 
 
 						<div class="write_row4"><div class="col1"> 이미지파일 1 </div>
@@ -169,6 +178,8 @@
 					<div class="write_line"></div>
 					<div class="clear"></div>
 				</div><!-- end of #write_form -->
+
+
 
 				<!-- start of #write_button -->
 				<div id="write_button"><a href="#"><img src="../../img/board/ok.png" onclick="check_input()"></a>
