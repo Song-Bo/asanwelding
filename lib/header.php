@@ -43,7 +43,7 @@ $(document).ready(function(){
 		<div class="notice">		
 		
 			<div class="global_notice fl">
-				<div class="notice_title fl"><a href="<?=$url?>/admin/notice/list.php">[공지사항]</a></div>
+				<div class="notice_title fl"><a href="<?=$url?>/admin/notice/list.php"><b>[공지사항]</b></a></div>
 				
 				<div class="notice_top3" id="roll" style="overflow:hidden;">
 					<ul>
@@ -54,7 +54,7 @@ $(document).ready(function(){
 						죽지 못해 사는 한석주와 잠자기 위해 사는 김홍만</a>
 						</li>
 						<li class="notice_subject"><a href="/gnuboard4/bbs/board.php?bo_table=notice&wr_id=9115">
-						 Oh Captine ~ my captine ~  </a>
+						 Oh Captain ~ my captain ~  </a>
 						</li>
 					</ul>
 				</div>
@@ -72,7 +72,7 @@ $(document).ready(function(){
 			} else if ($userid == "admin") {
 		?>
 			<li><?=$username?> 님 반갑습니다.</li>
-			<li><a href="<?=$url?>/admin/list.php">관리자 페이지</a></li>
+			<li><a href="<?=$url?>/admin/administration.php">관리자 모드</a></li>
 			<li><a href="<?=$url?>/login/logout.php">로그아웃</a></li>
 		<?
 			}
@@ -118,8 +118,9 @@ $(document).ready(function(){
 <div id="loginmodal" style="display:none;">
 	<h2>아산용접배관학원</h2>
 	<div class="p_c_text">회원이 되시면 여러 혜택을 누리실 수 있습니다.</div>
+
 	<!-- start of form -->
-	<form method="post" action="<?=$url?>/login/login.php">
+	<form method="post" action="#">
 	<div class="login_line">
 		<div class="box_in1">
 			 <input type="text" name="id" id="id" placeholder="아이디" size="30">
@@ -127,18 +128,19 @@ $(document).ready(function(){
 		</div>		
 	</div>
 	<div class="box_in2"><input type="submit" title="로그인" alt="로그인" value="로그인" class="lgn" /></div>
-	<div class="find_join"><a href="">아이디 / 비밀번호 찾기</a> | <a href="">회원가입</a></div>
+	<div class="find_join"><a href="">아이디 / 비밀번호 찾기</a> &nbsp;|&nbsp; <a href="">회원가입</a></div>
 	</form>
 	<!-- end of form -->
+
 </div>
+
 
 
 <!-- Modal Window Part -->
 <script type="text/javascript">
 $(function(){
-  $('#loginform').submit(function(e){
-  	return false;
-    
+  $("form").submit(function(e){	
+  	 return false;    
   });
   
   $('#modaltrigger').leanModal({ top: 110, overlay: 0.8, closeButton: ".hidemodal" });

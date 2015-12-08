@@ -19,8 +19,8 @@
 			</div>
 			<div class="main_content">
 				<div class="main_co1" style="padding: 0px 0px 20px 0px">
-					<? //include "./wheelslide.html"; ?>
-					<img src="../img/introduce/centerimg3.png" alt="용접즁">
+					<? include "./wheelslide.html"; ?>
+					<!-- <img src="../img/introduce/centerimg3.png" alt="용접즁"> -->
 				</div>
 				<div class="main_co2">
 					<pre>

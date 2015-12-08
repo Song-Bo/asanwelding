@@ -7,7 +7,6 @@
 	if (!$id) {
 		echo "<script>
 				window.alert('아이디를 입력 하세요.');
-				history.go(-1);
 			  </script>";
 		exit;
 	}

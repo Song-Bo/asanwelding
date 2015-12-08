@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `notice` (
   `num` int(11) NOT NULL AUTO_INCREMENT,
   `id` char(15) NOT NULL,
   `name` char(10) NOT NULL,
-  `nick` char(10) NOT NULL,
+<!--  `nick` char(10) NOT NULL, -->
   `subject` char(100) NOT NULL,
   `content` text NOT NULL,
   `regist_day` char(20) DEFAULT NULL,
@@ -201,3 +201,18 @@ CREATE TABLE IF NOT EXISTS `notice` (
   `file_type_4` char(30) DEFAULT NULL,
   PRIMARY KEY (`num`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+
+
+
+/* 공지 사항 리플 */
+CREATE TABLE IF NOT EXISTS `notice_ripple` (
+  `num` int(11) NOT NULL AUTO_INCREMENT,
+  `parent` int(11) NOT NULL,
+  `id` char(15) NOT NULL,
+  `name` char(10) NOT NULL,
+  `nick` char(10) NOT NULL,
+  `content` text NOT NULL,
+  `regist_day` char(20) DEFAULT NULL,
+  PRIMARY KEY (`num`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
