@@ -22,7 +22,7 @@
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 
-		$writer = $row[nick];
+		$writer = $row[name];
 		$item_subject = $row[subject];
 		$item_content = $row[content];
 
@@ -51,6 +51,11 @@
 		if (!document.board_form.content.value) {
 			alert('내용을 입력하세요 !');
 			document.board_form.content.focus();
+			return;
+		}
+		if (!document.board_form.pass.value) {
+			alert('비밀번호를 입력하세요 !');
+			document.board_form.pass.focus();
 			return;
 		}
 		document.board_form.submit();
@@ -117,6 +122,14 @@
 
 					<div class="write_line"></div>
 
+
+					<!-- start of Password -->
+						<div class="write_row7"><div class="col1"> 비밀번호 </div>
+												<div class="col2"><input type="password" name="pass"/></div>
+						</div> 
+					<!-- end of Password -->
+
+					<div class="write_line"></div>
 					<div class="clear"></div>
 
 		

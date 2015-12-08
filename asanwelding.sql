@@ -21,6 +21,7 @@ insert into member values ('admin', '1234', '관리자', '861021-1', '010-9048-9
 create table free (
 	num int not null auto_increment,
 	id char(15) not null, 
+  pass char(15) not null,
 	name char(15) not null, 
 	/*nick char(10) not null,*/
 	subject char(100) not null,
@@ -132,7 +133,8 @@ create table qna (
    depth int not null,
    ord int not null,
    id char(15) not null,
-   name  char(10) not null,
+   name  char(15) not null,
+   pass char(15) not null,   
    /*nick  char(10) not null,*/
    subject char(100) not null,
    content text not null,

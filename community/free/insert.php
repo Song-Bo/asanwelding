@@ -7,18 +7,15 @@
 	$subject = $_POST[subject];
 	$content = $_POST[content];
 	$writer = $_POST[writer];
+	$pass = $_POST[pass];
 
-	/*
 	$userid = $_SESSION[userid];
     $username = $_SESSION[username];
-    $usernick = $_SESSION[usernick];
-    $userlevel = $_SESSION[userlevel];
-	*/
 
 	$mode = $_GET[mode];
 	$page = $_GET[page];
 
-	 /*
+	/*
 	if(!$userid) {
 		echo("
 		<script>
@@ -53,9 +50,9 @@
 			$copied_file_name[$i] = $new_file_name.".".$file_ext;
 			$uploaded_file[$i] = $upload_dir.$copied_file_name[$i];
 
-			if ($upfile_size[$i] > 500000) {
+			if ($upfile_size[$i] > 5000000) {
 				echo "<script>
-						alert('업로드 파일 크기가 지정된 용량(500kb)을 초과합니다!<br>
+						alert('업로드 파일 크기가 지정된 용량(5mb)을 초과합니다!<br>
 						파일 크기를 체크해 주세요! ');
 						history.go(-1);
 					  </script>";
@@ -92,7 +89,9 @@
 
 	require_once "../../lib/dbconn.php";
 
+	/* mode == modify */	
 	if ($mode == "modify") {
+
 		$num_checked = count($_POST['del_file']);
 		$position = $_POST['del_file'];
 
@@ -106,6 +105,17 @@
 		$sql = "select * from $table where num=$num";   // get target record
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
+
+		$db_pass = $row[pass];
+				
+
+
+		if ($pass != $db_pass) {
+			echo "<script>
+	       			window.alert('비밀번호가 틀립니다 !');
+	      			history.go(-1);
+	   			   </script>";
+		} else {
 
 
 		// update DB with the value of file input box
@@ -131,33 +141,39 @@
 					$sql = "update $table set $field_org_name = '$org_name_value', $field_real_name='$org_real_value' where num=$num";
 					$conn->query($sql);
 				}
-			}
-		}
-
-		$sql = "update $table set subject='$subject', content='$content' where num=$num";
+			}		
+		} 
+			
+		$sql = "update $table set name='$writer', subject='$subject', content='$content' where num=$num";
 		$conn->query($sql); 
 
-	} else {
-		if ($html_ok == "y") {
-			$is_html = "y";
-		} else {
-			$is_html = "";
-			$content = htmlspecialchars($content);
-		}
+		echo "<script>
+	       window.alert('수정 되었습니다 !');
+	       location.href = 'list.php?table=$table&page=$page';
+	      </script>";
 
-		$sql = "insert into $table (nick, subject, content, regist_day, hit, ";
+	  } //
+		
+	}		
+
+	/* mode != modify */
+	else {		
+
+		$sql = "insert into $table (name, id, pass, subject, content, regist_day, hit, ";
 		$sql.= "file_name_0, file_name_1, file_name_2, file_copied_0, file_copied_1, file_copied_2) ";
-		$sql.= "values ('$writer', '$subject', '$content', '$regist_day', 0, ";
+		$sql.= "values ('$writer','$userid','$pass', '$subject', '$content', '$regist_day', 0, ";
 		$sql.= "'$upfile_name[0]', '$upfile_name[1]', '$upfile_name[2]', '$copied_file_name[0]', ";
 		$sql.= "'$copied_file_name[1]', '$copied_file_name[2]')";
 		
 		$conn->query($sql); 
+
+		echo "<script>
+	       window.alert('등록 되었습니다 !');
+	       location.href = 'list.php?table=$table&page=$page';
+	      </script>";
 	}
 
 	$conn->close();
 
-	echo "<script>
-	       window.alert('등록 되었습니다 !');
-	       location.href = 'list.php?table=$table&page=$page';
-	      </script>";
+	
 ?>

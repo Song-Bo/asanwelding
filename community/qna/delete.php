@@ -4,7 +4,7 @@
 	$num = $_GET[num];
 	$table = "qna";
 
-	include "../lib/dbconn.php";
+	include "../../lib/dbconn.php";
 
 	$sql = "delete from $table where num=$num";
 	$conn->query($sql);
