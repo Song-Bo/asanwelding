@@ -64,16 +64,16 @@
 				<!-- 메인 시작 -->
 				<div class="main_co2" style="padding:0px 32px 50px">
 					<table>
-    <tr class="list_top_title">
-        <th class="num">번호</th>
-        <th class="subject">제목</th>
-        <th class="writer">작성자</th>
-        <th class="regist_day">작성일</th>
-        <th class="hit">조회</th>
-    </tr>
+   					 <tr class="list_top_title">
+        				<th class="num">번호</th>
+        				<th class="subject">제목</th>
+        				<th class="writer">작성자</th>
+        				<th class="regist_day">작성일</th>
+        				<th class="hit">조회</th>
+    				</tr>
 
-</table>
-					<!-- form END !!! -->
+					</table>
+				<!-- form END !!! -->
 
 
 					<div class="clear"></div>

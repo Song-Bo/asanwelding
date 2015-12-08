@@ -71,7 +71,7 @@ div {
 
 
 /* 공지사항 - 상단 롤링 2015 12 08 01:10 */
-#header .global .global_notice {
+.global_notice {
     height: 19px;
     /*padding-left: 10px; */
     padding-top: 1px;
@@ -123,7 +123,7 @@ li {
 	position: relative;
 	float:left;	
 	height:30px;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 
 .global ul {  
@@ -168,28 +168,6 @@ li {
 
 ul, li {
 	list-style:none;
-}
-
-/* Container */
-#container {
-	background-color:#ececec;
-	position: relative;
-	padding: 30px 0 80px;
-
-	min-width: 1024px;
-	max-width: 2560px;
-
-	min-height: 500px;
-	max-height: 100%;
-	margin: 0 auto;
-}
-
-.wrap {
-	position: relative;
-	background-color:#fff;
-	
-	width: 1024px;
-	margin: 0 auto;
 }
 
 
@@ -318,7 +296,7 @@ ul, li {
 	height: 50px;
 	font-size: 50px;
 	color: #fa2828;
-	padding: 0 0 0 23px;
+	padding: 0 0 0 13px;
 }
 
 .logo_wrap {
@@ -424,11 +402,13 @@ pre {
 	float: left;
 }
 
+
+
 /*151208*/
 
 /*게시판 디자인*/
 
-tr {
+/*tr {
 	border-top: 1px solid #ececec;
 	float: left;
 	border-bottom: 1px solid #f0f0f0;
@@ -507,7 +487,7 @@ table.type01 td {
 .h1 {
 	font-size: 16px;
 }
-
+*/
 
 
 

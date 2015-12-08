@@ -70,6 +70,7 @@ $(document).ready(function(){
 			if (!$userid) {
 		?>
 			<li><a href="#loginmodal" class="flatbtn" id="modaltrigger">로그인</a></li>
+			<li>|</li>
 			<li><a href="">회원가입</a></li>
 		<?
 			} else if ($userid == "admin") {
@@ -87,7 +88,7 @@ $(document).ready(function(){
 	<!-- header of center -->
 	<div class="center">
 		<div class="logo_wrap">
-			<a href="../index.php" class="logo_txt">아산용접배관학원</a>			
+			<a href="<?=$url?>/index.php" class="logo_txt">아산용접배관학원</a>			
 		</div>
 		<div class="menu_wrap">
 			<ul class="menu">
@@ -99,6 +100,11 @@ $(document).ready(function(){
 		</div>
 	</div><!-- end of center -->
 </div><!-- end of Header -->
+
+
+
+
+
 
 <!-- start of Modal Login Part -->
 <div id="loginmodal" style="display:none;">
