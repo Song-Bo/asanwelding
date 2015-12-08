@@ -120,7 +120,7 @@ $(document).ready(function(){
 	<div class="p_c_text">회원이 되시면 여러 혜택을 누리실 수 있습니다.</div>
 
 	<!-- start of form -->
-	<form method="post" action="#">
+	<form method="POST" action="../login/login.php">
 	<div class="login_line">
 		<div class="box_in1">
 			 <input type="text" name="id" id="id" placeholder="아이디" size="30">
@@ -136,14 +136,48 @@ $(document).ready(function(){
 
 
 
+
 <!-- Modal Window Part -->
 <script type="text/javascript">
 $(function(){
-  $("form").submit(function(e){	
+
+  $("#dsaform").submit(function(e){	
+
+	if (!$('#id').val()) {
+		alert('아이디를 입력하세요.');
+		$('#id').val();
+		$('#id').focus();
+			
+	}
+
+	else if (!$('#pw').val()) {
+		alert('비밀번호를 입력하세요.');
+		$('#pw').val();
+		$('#pw').focus();		
+	}
+
+	<? require_once "../lib/dbconn.php"; ?>
+
+	<?
+		$id = $_POST[id];
+		echo "alert($id);
+				";
+		$pw = $_POST[pw];
+		$sql = "select * from member where id='$id'";
+		$result = $conn->query($sql);
+		// $num_match = $result->fetch_assoc();
+		$num_match = mysqli_num_rows($result);
+
+		
+		
+	?>
   	 return false;    
   });
   
   $('#modaltrigger').leanModal({ top: 110, overlay: 0.8, closeButton: ".hidemodal" });
 });
+
 </script>
+
+
 <!-- end of Modal Login Part -->

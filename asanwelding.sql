@@ -1,4 +1,6 @@
-﻿/* DataBase 생성 */
+﻿/* TABLE = 11 개 */
+
+/* DataBase 생성 */
 create database asan_db;
 
 /* 회원가입 */
@@ -13,12 +15,14 @@ CREATE TABLE IF NOT EXISTS `member` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+insert into member values ('admin', '1234', '관리자', '861021-1', '010-9048-9903', 'maxonizuka@naver.com', now());
+
 /* 자유게시판 */
 create table free (
 	num int not null auto_increment,
-	/*id char(15) not null, */
-	/*name char(15) not null, */
-	nick char(10) not null,
+	id char(15) not null, 
+	name char(15) not null, 
+	/*nick char(10) not null,*/
 	subject char(100) not null,
 	content text not null,
 	regist_day char(20),
@@ -37,13 +41,15 @@ create table free (
 	primary key(num)
 );
 
+insert into free (id, name, subject, content, regist_day, hit) values ('admin', '관리자', '테스트', '테스트입니다.', now(), 0);
+
 /* 자유게시판 댓글 */
 create table free_ripple (
 	num int not null auto_increment,
 	parent int not null,
-	/*id char(15) not null, */
-	/*name char(15) not null, */
-	nick char(10) not null,
+	id char(15) not null, 
+	name char(15) not null, 
+	/*nick char(10) not null,*/
 	content text not null,
 	regist_day char(20),
 	primary key(num)
@@ -53,9 +59,9 @@ create table free_ripple (
 /* 취업소식 */
 create table job (
 	num int not null auto_increment,
-	/*id char(15) not null, */
-	/*name char(15) not null, */
-	nick char(10) not null,
+	id char(15) not null, 
+	name char(15) not null, 
+	/*nick char(10) not null,*/
 	subject char(100) not null,
 	content text not null,
 	regist_day char(20),
@@ -79,9 +85,9 @@ create table job (
 create table job_ripple (
 	num int not null auto_increment,
 	parent int not null,
-	/*id char(15) not null, */
-	/*name char(15) not null, */
-	nick char(10) not null,
+	id char(15) not null, 
+	name char(15) not null, 
+	/*nick char(10) not null,*/
 	content text not null,
 	regist_day char(20),
 	primary key(num)
@@ -92,9 +98,9 @@ create table job_ripple (
 /* 자료실 */
 create table download (
    num int not null auto_increment,
-   /*id char(15) not null,
-   name  char(10) not null,*/
-   nick  char(10) not null,
+   id char(15) not null,
+   name  char(10) not null,
+   /*nick  char(10) not null,*/
    subject char(100) not null,
    content text not null,
    regist_day char(20),
@@ -118,21 +124,21 @@ create table download (
 );
 
 
-/* Q & A */
 
+/* Q & A */
 create table qna (
    num int not null auto_increment,
    group_num int not null,
    depth int not null,
    ord int not null,
-   -- id char(15) not null,
-   -- name  char(10) not null,
-   nick  char(10) not null,
+   id char(15) not null,
+   name  char(10) not null,
+   /*nick  char(10) not null,*/
    subject char(100) not null,
    content text not null,
    regist_day char(20),
    hit int,
-   -- is_html char(1),
+   /*is_html char(1),*/
    primary key(num)
 );
 
@@ -143,7 +149,7 @@ create table qna (
 
 CREATE TABLE IF NOT EXISTS `gallery` (
   `num` int(11) NOT NULL AUTO_INCREMENT,
-  `nick` char(16) NOT NULL,
+  /*`nick` char(16) NOT NULL,*/
   `subject` char(100) NOT NULL,
   `content` text NOT NULL,
   `regist_day` char(20) DEFAULT NULL,
@@ -162,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
 CREATE TABLE `gallery_ripple` (
 	`num` INT(11) NOT NULL AUTO_INCREMENT,
 	`parent` INT(11) NOT NULL,
-	`nick` CHAR(10) NOT NULL,
+	/*`nick` CHAR(10) NOT NULL,*/
 	`content` TEXT NOT NULL,
 	`regist_day` CHAR(20) NULL DEFAULT NULL,
 	PRIMARY KEY (`num`)
@@ -179,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `notice` (
   `num` int(11) NOT NULL AUTO_INCREMENT,
   `id` char(15) NOT NULL,
   `name` char(10) NOT NULL,
-<!--  `nick` char(10) NOT NULL, -->
+  /*`nick` char(10) NOT NULL, */
   `subject` char(100) NOT NULL,
   `content` text NOT NULL,
   `regist_day` char(20) DEFAULT NULL,
@@ -211,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `notice_ripple` (
   `parent` int(11) NOT NULL,
   `id` char(15) NOT NULL,
   `name` char(10) NOT NULL,
-  `nick` char(10) NOT NULL,
+  /*`nick` char(10) NOT NULL,*/
   `content` text NOT NULL,
   `regist_day` char(20) DEFAULT NULL,
   PRIMARY KEY (`num`)
