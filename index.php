@@ -37,33 +37,17 @@
 
 	<!-- header of center -->
 	<div class="center">
-		<div class="logo">
-			<a href="index.php" class="logo_txt">아산용접배관학원</a>
+		<div class="logo_wrap">
+			<a href="index.php" class="logo_txt">아산용접배관학원</a>			
 		</div>
-		<div class="menu">
-			<ul>
-				<li class="menu1">
-					<div class="menu1">
-						<a href="./introduce/introduce.php" class="menu">학원소개</a>
-					</div>
-				</li>
-				<li class="menu2">
-					<div class="menu2">
-						<a href="./information/information.php" class="menu"> 수강안내</a>
-					</div>
-				</li>
-				<li class="menu3">
-					<div class="menu3">
-					<a href="./community/community.php" class="menu">커뮤니티</a>
-					</div>
-				</li>
-				<li class="menu4">
-					<div class="menu4">
-						<a href="./gallery/gallery.php" class="menu">갤러리</a>
-					</div>
-				</li>
+		<div class="menu_wrap">
+			<ul class="menu">
+				<li class="menu_item"><a href="./introduce/introduce.php" class="menu_item_txt tit1">학원소개</a></li>
+				<li class="menu_item"><a href="./information/information.php" class="menu_item_txt tit2"> 수강안내</a></li>
+				<li class="menu_item"><a href="./community/community.php" class="menu_item_txt tit3">커뮤니티</a></li>
+				<li class="menu_item"><a href="./gallery/gallery.php" class="menu_item_txt tit4">갤러리</a></li>
 			</ul>
-		</div><!-- end of menu -->
+		</div>
 	</div><!-- end of center -->
 </div><!-- end of Header -->
 
@@ -73,19 +57,15 @@
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
-			<div class="nav">학원소개</div>			
+				<div class="nav">학원소개</div>
 					<ul class="sub_nav">
-						<li class="sub_nav1">
-						<a href="" class="sub_nav_txt">인사말</a>
-						</li>
-						<li class="sub_nav2">
-						<a href="" class="sub_nav_txt">오시는 길</a>
-						</li>
-					</ul>			
-			</div>			
+						<li class="sub_item"><a href="" class="sub_item_txt tit1">인사말</a></li>
+						<li class="sub_item"><a href="" class="sub_item_txt tit2">오시는 길</a></li>
+					</ul>		
+			</div>
 			<div class="main_content">
 				<div class="main_co1" style="padding:0px 0px 20px 0px">
-					<img src="./img/introduce/centerimg2.png" alt="용접중">
+					<img src="./img/centerimg1.png" alt="용접중">
 				</div>
 				<div class="main_co2">
 					<pre>

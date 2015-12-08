@@ -43,17 +43,20 @@ $(document).ready(function(){
 		<div class="notice">		
 		
 			<div class="global_notice fl">
-				<div class="notice_title fl"><a href="<?=$url?>/admin/notice/list.php"><b>[공지사항]</b></a></div>
+				<div class="notice_title fl"><a href="<?=$url?>/admin/notice/list.php"></a></div>
 				
 				<div class="notice_top3" id="roll" style="overflow:hidden;">
 					<ul>
 						<li class="notice_subject"><a href="<?=$url?>/community/free/view.php?table=free&num=17&page=1">
-						욤마 하~~~~~~~~~ 브레이꺼~~~~~                        </a>
+						<em>[공지]</em>
+						욤마 하~~~~~~~~~ 브레이꺼~~~~~</a>
 						</li>
 						<li class="notice_subject"><a href="/gnuboard4/bbs/board.php?bo_table=notice&wr_id=9155">
+						<em>[공지]</em>
 						죽지 못해 사는 한석주와 잠자기 위해 사는 김홍만</a>
 						</li>
 						<li class="notice_subject"><a href="/gnuboard4/bbs/board.php?bo_table=notice&wr_id=9115">
+						<em>[공지]</em>
 						 Oh Captain ~ my captain ~  </a>
 						</li>
 					</ul>
@@ -83,36 +86,19 @@ $(document).ready(function(){
 
 	<!-- header of center -->
 	<div class="center">
-		<div class="logo">
-			<a href="<?=$url?>/index.php" class="logo_txt">아산용접배관학원</a>
+		<div class="logo_wrap">
+			<a href="../index.php" class="logo_txt">아산용접배관학원</a>			
 		</div>
-		<div class="menu">
-			<ul>
-				<li class="menu1">
-					<div class="menu1">
-						<a href="<?=$url?>/introduce/introduce.php" class="menu">학원소개</a>
-					</div>
-				</li>
-				<li class="menu2">
-					<div class="menu2">
-						<a href="<?=$url?>/information/information.php" class="menu">수강안내</a>
-					</div>
-				</li>
-				<li class="menu3">
-					<div class="menu3">
-					<a href="<?=$url?>/community/community.php" class="menu">커뮤니티</a>
-					</div>
-				</li>
-				<li class="menu4">
-					<div class="menu4">
-						<a href="<?=$url?>/gallery/gallery.php" class="menu">갤러리</a>
-					</div>
-				</li>
+		<div class="menu_wrap">
+			<ul class="menu">
+				<li class="menu_item"><a href="<?=$url?>/introduce/introduce.php" class="menu_item_txt tit1">학원소개</a></li>
+				<li class="menu_item"><a href="<?=$url?>/information/information.php" class="menu_item_txt tit2"> 수강안내</a></li>
+				<li class="menu_item"><a href="<?=$url?>/community/community.php" class="menu_item_txt tit3">커뮤니티</a></li>
+				<li class="menu_item"><a href="<?=$url?>/gallery/gallery.php" class="menu_item_txt tit4">갤러리</a></li>
 			</ul>
-		</div><!-- end of menu -->
+		</div>
 	</div><!-- end of center -->
 </div><!-- end of Header -->
-
 
 <!-- start of Modal Login Part -->
 <div id="loginmodal" style="display:none;">
@@ -155,22 +141,7 @@ $(function(){
 		$('#pw').val();
 		$('#pw').focus();		
 	}
-
-	<? require_once "../lib/dbconn.php"; ?>
-
-	<?
-		$id = $_POST[id];
-		echo "alert($id);
-				";
-		$pw = $_POST[pw];
-		$sql = "select * from member where id='$id'";
-		$result = $conn->query($sql);
-		// $num_match = $result->fetch_assoc();
-		$num_match = mysqli_num_rows($result);
-
-		
-		
-	?>
+	
   	 return false;    
   });
   

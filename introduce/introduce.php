@@ -9,13 +9,11 @@
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
-			<div class="nav">
-				학원소개
-			</div>
-			<ul class="sub_nav">
-				<li class="sub_nav1"><a href="introduce.php" class="sub_nav_txt">인사말</a></li>
-				<li class="sub_nav2"><a href="routine.php" class="sub_nav_txt">오시는 길</a></li>
-			</ul>		
+				<div class="nav">학원소개</div>
+					<ul class="sub_nav">
+						<li class="sub_item"><a href="introduce.php" class="sub_item_txt tit1">인사말</a></li>
+						<li class="sub_item"><a href="routine.php" class="sub_item_txt tit2">오시는 길</a></li>
+					</ul>			
 			</div>
 			<div class="main_content">
 				<div class="main_co1" style="padding: 0px 0px 20px 0px">
