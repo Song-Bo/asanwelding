@@ -54,7 +54,7 @@ a {
 
 #list_search .list_search4 input {
 	width:120px;
-	height:18px;
+	height:20px;
 	border:solid 1px #cccccc;
 }
 
@@ -67,6 +67,7 @@ a {
 
 /* #list_content */
 #list_content {
+	margin-top: 5px;
 	/*height:380px;*/
 }
 
@@ -460,15 +461,16 @@ a {
 }
 
 
+
 /*151208*/
 
 /*게시판 디자인*/
 
 tr {
-	border-top: 1px solid #ececec;
+	border-top: 1px solid #fa2828;
 	float: left;
-	border-bottom: 1px solid #f0f0f0;
-	padding: 10px 0 0 0;
+	border-bottom: 1px solid #fa2828;
+	padding: 0px 0 0 0;
 	vertical-align: middle;
 }
 
@@ -535,7 +537,7 @@ table.type01 td {
 }*/
 
 .button {
-	width: 122px;
+	width: 150px;
 	height: 30px;
 	margin: 10px 0 0 0;
 }

@@ -58,7 +58,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h1> 취업소식 </h1>
+					<h2> 취업소식 </h2>
 				</div>
 
 				<!-- 메인 시작 -->

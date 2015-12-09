@@ -3,6 +3,8 @@
 	require_once "../../lib/header.php";
 	require_once "../../lib/dbconn.php";
 
+	$userid = $_SESSION[userid];
+
 	$table = "notice";
 	$ripple = "notice_ripple";
 
@@ -19,8 +21,7 @@
 	$total_record = mysqli_num_rows($result);
 ?>
 
-<?
-	
+<?	
 
 	$scale = 10; // 한 화면에 표시되는 글 수
 
@@ -60,11 +61,11 @@
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
-			<? require_once "../../lib/community_sub_nav.php"; ?>
+			<? require_once "../../lib/admin_sub_nav.php"; ?>
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> 공지사항 </h3>
+					<h2> 공지사항 </h2>
 				</div>
 
 				<!-- 메인 시작 -->
@@ -73,7 +74,7 @@
 						<!-- <img src="../img/title_free.gif"> -->
 					</div>
 
-					<!-- form START !!! -->
+					<!-- search form START !!! -->
 					<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
 
 					<div id="list_search">
@@ -96,16 +97,17 @@
 
 					<div class="clear"></div>
 
+					<!-- list_top_title -->
+					<table>
+   					 <tr class="list_top_title">
+        				<th class="num">번호</th>
+        				<th class="subject">제목</th>
+        				<th class="writer">작성자</th>
+        				<th class="regist_day">작성일</th>
+        				<th class="hit">조회</th>
+    				</tr>
 
-					<div id="list_top_title">
-						<ul>
-							<li class="list_title1"><img src="../../img/board/list_title1.gif"></li>
-							<li class="list_title2"><img src="../../img/board/list_title2.gif"></li>
-							<li class="list_title3"><img src="../../img/board/list_title3.gif"></li>
-							<li class="list_title4"><img src="../../img/board/list_title4.gif"></li>
-							<li class="list_title5"><img src="../../img/board/list_title5.gif"></li>
-						</ul>
-					</div><!-- end of #list_top_title -->
+					</table><!-- end of list_top_title -->				
 
 
 					<div id="list_content">

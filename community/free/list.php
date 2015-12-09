@@ -58,7 +58,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h1> 자유 게시판 </h1>
+					<h2> 자유 게시판 </h2>
 				</div>
 
 				<!-- 메인 시작 -->
