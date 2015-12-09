@@ -30,13 +30,7 @@ $(document).ready(function(){
 		speed:500,
 		timer:3000
 	});
-
-	$(".flatbtn").click({
-		$(this).focus('#id');
-	});
 });
-
-
 </script>
 </head>
 <body>
