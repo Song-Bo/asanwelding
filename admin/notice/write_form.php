@@ -50,12 +50,7 @@
 			alert('내용을 입력 하세요 !');
 			document.board_form.content.focus();
 			return;
-		}
-		if (!document.board_form.pass.value) {
-			alert('비밀번호를 입력 하세요 !');
-			document.board_form.pass.focus();
-			return;
-		}
+		}		
 		document.board_form.submit();
 	}
 </script>

@@ -117,9 +117,8 @@
 						$row = $result->fetch_assoc();    // 하나의 레코드 가져오기
 
 						$item_num = $row[num];
-						/* $item_id = $row[id] */
-						/* $item_name = $row[name] */
-						$item_nick = $row[nick];
+					 	$item_id = $row[id]; 
+						$item_name = $row[name];						
 						$item_hit = $row[hit];
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);
@@ -136,7 +135,7 @@
 					if ($num_ripple) echo "[$num_ripple]";
 				?>						
 						</div>
-						<div class="list_item3"><?= $item_nick ?></div>
+						<div class="list_item3"><?= $item_name ?></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>
 					</div><!-- end of #list_item -->
@@ -146,7 +145,7 @@
 				?>
 
 					<div id="page_button">
-						<div class="page_num"> ◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp;
+						<div class="page_num"> <img src="../../img/board/이전.png">
 				<?
 					// 게시판 목록 하단에 페이지 링크 번호 출력
 					for ($i=1; $i<=$total_page; $i++) { 
@@ -157,12 +156,13 @@
 						}
 					}
 				?>
-						&nbsp;&nbsp;&nbsp;&nbsp; 다음 ▶
+						<img src="../../img/board/다음.png">
 						</div>
 						<div class="button">
 							<!-- 목록 -->
 							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
 							<img src="../../img/board/list.png"></a> &nbsp;
+
 				<?
 					if($userid == 'admin') {
 				?>

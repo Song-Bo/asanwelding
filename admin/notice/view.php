@@ -1,11 +1,11 @@
 <?
 	session_start();
-	$table = "free";
+	$table = "notice";
 	$page = $_GET[page];
 	$num = $_GET[num];
 	
 	$userid = $_SESSION[userid];
-    $username = $_SESSION[username];	
+    $username = $_SESSION[username];
 
 	require_once "../../lib/dbconn.php";
 
@@ -61,7 +61,6 @@
 			document.ripple_form.ripple_content.focus();
 			return;
 		}
-		
 		document.ripple_form.submit();
 	}
 
@@ -75,11 +74,11 @@
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
-			<? require_once "../../lib/community_sub_nav.php"; ?>
+			<? require_once "../../lib/admin_sub_nav.php"; ?>
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> 자유 게시판 </h3>
+					<h2> 공지사항 </h2>
 				</div>
 
 				<div class="main_co2" style="padding:0px 32px 50px">
@@ -116,7 +115,7 @@
 
 				<div id="ripple">
 			<?
-				$sql = "select * from free_ripple where parent='$item_num'";
+				$sql = "select * from notice_ripple where parent='$item_num'";
 				$ripple_result = $conn->query($sql);
 
 				while ($row_ripple = ($ripple_result->fetch_assoc())) {
@@ -147,7 +146,7 @@
 				}
 			?>
 					<!-- start of FORM -->
-					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?=$table?>&num=<?=$item_num?>">
+					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?= $table ?>&num=<?=$item_num?>">
 					<div id="ripple_box">
 						<div class="ripple_box1"><img src="../../img/board/title_comment.gif"></div>
 						<div class="ripple_box2"><textarea rows="5" cols="60" name="ripple_content"></textarea></div>
@@ -155,11 +154,7 @@
 					</div><!-- end of #ripple_box -->
 					</form>
 					<!-- end of FORM -->
-				</div>
-
-<!-- end of ripple -->
-
-
+				</div><!-- end of ripple -->
 
 				<div id="view_button">
 					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>&nbsp;

@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="<?=$url?>/css/common.css">
 <link rel="stylesheet" type="text/css" href="<?=$url?>/css/freeboard.css">
 <link rel="stylesheet" type="text/css" href="<?=$url?>/css/layout.css">
+
 <title>아산용접배관학원</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="<?=$url?>/js/phoschool/jquery-scrollnews.js"></script>
@@ -72,13 +73,18 @@ $(document).ready(function(){
 			<li><a href="#loginmodal" class="flatbtn" id="modaltrigger">로그인</a></li>
 			<li><a href="">회원가입</a></li>
 		<?
-			} else if ($userid == "admin") {
+			} else if ($userid) {
 		?>
 			<li><?=$username?> 님 반갑습니다.</li>
+		<? if ($userid == "admin") { ?>
 			<li><a href="<?=$url?>/admin/administration.php">관리자 모드</a></li>
+			<li><a href="<?=$url?>/login/logout.php">로그아웃</a></li>
+		<? } else { ?>
+			<li>정보수정</li>
 			<li><a href="<?=$url?>/login/logout.php">로그아웃</a></li>
 		<?
 			}
+		}
 		?>
 		</ul>		
 		</div>

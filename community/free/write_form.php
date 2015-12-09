@@ -10,6 +10,9 @@
 	$subject= $_POST[subject];
 	$content= $_POST[content];
 
+	$userid = $_SESSION[userid];
+	$username = $_SESSION[username];
+
 	require_once "../../lib/dbconn.php";
 
 	if ($mode == "modify") {
@@ -96,9 +99,11 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
+						<? if (!userid) { ?>
 												<div class="col2"><input type="text" name="writer" value="<?= $item_name ?>"></div>
-			
-					
+						<? } else { ?>
+												<div class="col2"><input type="text" name="writer" value="<?= $username?>"></div>
+						<? } ?>
 						</div><!-- end of write_row1 -->
 			
 					<div class="write_line"></div>

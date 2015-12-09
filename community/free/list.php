@@ -26,9 +26,9 @@
 				  </script>";
 			exit;
 		}
-		$sql = "select * from $table where $find like '%$search%' order by num desc";
+		$sql = "select * from free where $find like '%$search%' order by num desc";
 	} else {
-		$sql = "select * from $table order by num desc";
+		$sql = "select * from free order by num desc";
 	}
 
 	$result = $conn->query($sql);
@@ -75,22 +75,15 @@
 					</table>
 				<!-- form END !!! -->
 
-
 					<div class="clear"></div>
 
+				<!-- start of list_content -->
+				<div id="list_content">
 
-					<!-- <div id="list_top_title">
-						<ul>
-							<li class="list_title1"><img src="../../img/board/list_title1.gif"></li>
-							<li class="list_title2"><img src="../../img/board/list_title2.gif"></li>
-							<li class="list_title3"><img src="../../img/board/list_title3.gif"></li>
-							<li class="list_title4"><img src="../../img/board/list_title4.gif"></li>
-							<li class="list_title5"><img src="../../img/board/list_title5.gif"></li>
-						</ul>
-					</div>end of #list_top_title -->
+				<?
+					require_once "../../lib/announcement.php";
+				?>				
 
-
-					<div id="list_content">
 				<?
 					for ($i=$start; $i < $start+$scale && $i < $total_record; $i++) { 
 						mysqli_data_seek($result, $i);    // 포인터 이동
@@ -109,6 +102,7 @@
 						$result2 = $conn->query($sql);
 						$num_ripple = $result2->num_rows;
 				?>
+				
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
 						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>

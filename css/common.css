@@ -449,3 +449,17 @@ input[type="checkbox"] { margin:0 7px 0 0; }
 textarea.disabled { background-color:#ffffff; color:#bfbfbf; }
 			
 			
+
+
+
+
+
+/*메인슬라이드*/
+
+#cm_main_slide{width:1024px; margin:auto; padding-top:80px; position:relative;}
+
+
+
+#cm_main_bottom{width:1024px; margin:auto; clear:both;}
+#cm_main_bottom ui{}
+#cm_main_bottom li{float:left;}

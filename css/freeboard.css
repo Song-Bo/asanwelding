@@ -65,11 +65,28 @@ a {
 	margin-bottom: 10px;
 }
 
+
+
+
 /* #list_content */
 #list_content {
 	margin-top: 5px;
 	/*height:380px;*/
 }
+
+
+
+/* list_notice 1209 송보욱 */
+
+.list_notice {
+	height:18px;
+	margin-top:0px;
+	padding:6px;  
+	border-bottom:solid 1px #eeeeee;
+	background-color: #dbdbdb;
+}
+
+
 
 /* #list_item */
 #list_item {
@@ -79,7 +96,7 @@ a {
 	border-bottom:solid 1px #eeeeee;
 }
 
-#list_item .list_item1{
+.list_item1{
 	float:left;
 	/*width:40px;*/
 	/*width:30px;*/
@@ -88,14 +105,14 @@ a {
 	padding:0px 5px 0px;
 }
 
-#list_item .list_item2{
+.list_item2{
 	float:left;
 	/*width:560px;*/
 	/*width:532px;*/
 	width:470px;
 }
 
-#list_item .list_item3{
+.list_item3{
 	float:left;
 	width:80px;
 	
@@ -103,7 +120,7 @@ a {
 	/*padding: 0px 5px 0px;*/
 }
 
-#list_item .list_item4{
+.list_item4{
 	float:left;
 	/*width:80px;*/
 	width:100px;
@@ -111,12 +128,14 @@ a {
 	text-align:center;
 }
 
-#list_item .list_item5{
+.list_item5{
 	float:left;
 	/*float:right;*/	
 	width:40px;
 	text-align:center;
 }
+
+
 
 
 /* #page_button */
@@ -477,7 +496,7 @@ tr {
 th {
 	display:inline-block;
 	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: bold;
 	color: #333;
 	text-align: center;
