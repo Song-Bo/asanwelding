@@ -13,27 +13,16 @@
 			?>
 			<div class="main_content">
 				<div class="main_co1">
-					<h3>최근 게시물</h3>
+					<h1>관리자 페이지</h1>
+					<hr/>
 				</div>
 				<div class="main_co2">
-				<!-- 최근글 불러오기 -->
-					<? require_once "../lib/func.php"; ?>
-					<div id="latest">
-						<div id="latest1">
-							<div id="title_latest1"><h4>자유 게시판</h4></div>
-							<div class="latest_box">
-							<? latest_article("free", 5, 30); ?>
-							</div>
-						</div>	
+				<br><br><br><br><br>
+				<h2 align="center">관리자 모드 메인 페이지</h2>
+				<br><br>
+				<p align="center"> 방문자 수, 트렌드, 통계, 글 수 등 꾸미기</p>
 
-						<div id="latest2">
-							<div id="title_latest2"><h4>취업소식</h4></div>
-							<div class="latest_box">
-							<? latest_article("job", 5, 30); ?>					
-							</div>
-						</div>
-					</div>
-				<!-- 최근글 불러오기 -->
+
 				</div><!-- end of main_co2 -->
 			</div><!-- end of main_content -->
 		</div><!-- end of content -->

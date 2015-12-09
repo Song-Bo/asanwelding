@@ -58,7 +58,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> 취업소식 </h3>
+					<h1> 취업소식 </h1>
 				</div>
 
 				<!-- 메인 시작 -->
@@ -67,7 +67,7 @@
 						<!-- <img src="../img/title_free.gif"> -->
 					</div>
 
-					<!-- form START !!! -->
+					<!-- search form START !!! -->
 					<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
 
 					<div id="list_search">
@@ -90,8 +90,17 @@
 
 					<div class="clear"></div>
 
-
-					<div id="list_top_title">
+					
+					<table>
+   					 <tr class="list_top_title">
+        				<th class="num">번호</th>
+        				<th class="subject">제목</th>
+        				<th class="writer">작성자</th>
+        				<th class="regist_day">작성일</th>
+        				<th class="hit">조회</th>
+    				</tr>
+    				</table>
+				<!-- <div id="list_top_title">
 						<ul>
 							<li class="list_title1"><img src="../../img/board/list_title1.gif"></li>
 							<li class="list_title2"><img src="../../img/board/list_title2.gif"></li>
@@ -99,8 +108,10 @@
 							<li class="list_title4"><img src="../../img/board/list_title4.gif"></li>
 							<li class="list_title5"><img src="../../img/board/list_title5.gif"></li>
 						</ul>
-					</div><!-- end of #list_top_title -->
+					</div> -->
 
+
+					<!-- list_content START -->
 
 					<div id="list_content">
 				<?

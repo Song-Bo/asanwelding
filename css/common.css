@@ -45,7 +45,7 @@ div {
 	max-width: 2560px;
 	margin: 0 auto;
 	margin-top: 10px;
-	border-bottom: 1px solid #f0f0f0;
+	border-bottom: 1px solid #c8c8c8;
 }
 
 #header:after {
@@ -176,6 +176,7 @@ ul, li {
 /* Container */
 #container {
 	background-color:#ececec;
+	border-bottom: 1px solid #c8c8c8;
 	position: relative;
 	padding: 30px 0 80px;
 
@@ -401,95 +402,6 @@ pre {
 }
 
 
-
-/*151208*/
-
-/*게시판 디자인*/
-
-/*tr {
-	border-top: 1px solid #ececec;
-	float: left;
-	border-bottom: 1px solid #f0f0f0;
-	padding: 10px 0;
-	vertical-align: middle;
-}
-
-th {
-	display:inline-block;
-	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 12px;
-	font-weight: bold;
-	color: #333;
-	text-align: center;
-	float: left;
-	height: 20px;
-	padding: 10px 0;
-	
-}
-
-td {
-	display:inline-block;
-	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 12px;
-	color: #333;
-	border: 1px solid #ccc;
-	text-align: center;
-	float: left;
-}
-
-.num {
-	width: 40px;
-}
-
-.subject {
-	width: 450px;
-}
-
-.writer {
-	width: 100px;
-}
-
-.regist_day {
-	width: 100px;
-}
-
-.hit {
-	width: 40px;
-}
-/*table.type01 {
-    border-collapse: collapse;
-    text-align: left;
-    line-height: 1.5;
-    margin : 20px 10px;
-}
-table.type01 th {
-    width: 150px;
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    border: 1px solid #ccc;
-}
-table.type01 td {
-    width: 50px;
-    padding: 10px;
-    vertical-align: top;
-    border: 1px solid #ccc;
-}*/
-
-.button {
-	width: 122px;
-	height: 30px;
-	margin: 10px 0 0 0;
-}
-
-.h1 {
-	font-size: 16px;
-}
-
-
-
-
-
 /* 모달(Modal) */
 /* reset */
 html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, button, p, blockquote, th, td { margin:0; padding:0;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -520,13 +432,13 @@ object, del, sub, var { margin:0; padding:0; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
 /* form */
-input[type=text], input[type=password], input[type=number], input[type=tel], textarea {
+input[type=text], input[type=password], input[type=number], input[type=tel] {
     padding:7px; font-weight:inherit; border:1px solid #cccccc; border-radius:2px; outline-style:none; line-height:13px; color:#353535;
     -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
 }
 input[type="file"] { overflow:hidden; max-width:100%; }
 input[type=text], input[type=password], input[type=number], input[type=tel] { height:29px; }
-textarea, input, select { vertical-align:middle; }
+input, select { vertical-align:middle; }
 textarea { resize:none; line-height:1.2em; }
 input[type="button"], input[type="text"], input[type="password"], input[type="tel"], input[type="image"], textarea { -webkit-appearance:none; }
 input:checked[type="checkbox"] { background-color:#fff; -webkit-appearance:checkbox; }

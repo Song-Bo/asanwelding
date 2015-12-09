@@ -30,7 +30,13 @@ $(document).ready(function(){
 		speed:500,
 		timer:3000
 	});
+
+	$(".flatbtn").click({
+		$(this).focus('#id');
+	});
 });
+
+
 </script>
 </head>
 <body>
@@ -114,7 +120,7 @@ $(document).ready(function(){
 	<form method="POST" action="<?=$url?>/login/login.php">
 	<div class="login_line">
 		<div class="box_in1">
-			 <input type="text" name="id" id="id" placeholder="아이디" size="30">
+			 <input type="text" name="id" id="id" placeholder="아이디" size="30" >
 			 <input type="password" name="pw" id="pw" placeholder="비밀번호" size="30">
 		</div>		
 	</div>
