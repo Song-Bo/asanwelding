@@ -11,7 +11,7 @@ a {
 	min-height: 30px;
 	/*padding-top:10px;*/
 	/*margin-bottom:20px;*/
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	width:760px;
 }
 
@@ -60,7 +60,7 @@ a {
 }
 
 #list_search .list_search5 {
-	float:left;
+	float:right;
 	margin-left:10px;
 	margin-top:2px;
 	margin-bottom: 10px;
@@ -168,7 +168,7 @@ a {
 	text-align:right;
 	width: 150px;
 	height: 30px;
-	margin: 0px 0 0 0;
+	margin: 10px 0 0 0;
 }
 
 
@@ -181,8 +181,9 @@ a {
 	height:20px;
 	text-align:center;
 	padding-top:7px;  
-	border-top:solid 2px #aaaaaa;
-	background-color:#eeeeee;
+	border-top:solid 2px #fa2828;
+	border-bottom:solid 2px #fa2828;
+	background-color:#fffed3;
 }
 
 #write_form {
@@ -236,7 +237,7 @@ a {
 
 .write_line {
     width:99%; 
-	border-bottom:solid 1px #cccccc;
+	border-bottom:solid 1px #eeeeee;
 }
 
 #write_form .col1 {
@@ -244,7 +245,8 @@ a {
 	width:120px;
 	text-align:center;
 	padding:5px;
-	background-color:#eeeeee;
+	/*background-color:#eeeeee;*/
+	background-color: #fff;
 }
 
 #write_form .write_row3 .col1 {
@@ -295,8 +297,8 @@ a {
 }
 
 #write_button {
-	margin-top:15px;
-	width:97%;
+	margin-top:20px;
+	width: 98%;
 	text-align:right;
 }
 
@@ -324,12 +326,12 @@ a {
 
 .view_title1 {
 	float:left;
-	width:60%;
+	width:55%;
 }
 
 .view_title2 {
 	float:left;
-	width:40%;
+	width:45%;
 	text-align:right;
 }
 
@@ -407,7 +409,7 @@ a {
 	padding:8px;
 	margin-left:3px;
 	margin-bottom:15px;
-	background-color:#efefef;
+	background-color:#fff;
 }
 
 .ripple_box1 {
@@ -423,7 +425,7 @@ a {
 }
 
 .ripple_box2 textarea {
-	margin-left
+	margin-left:0px;
 	border:solid 1px #cccccc;
 	margin-right: 10px;
 }

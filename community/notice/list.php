@@ -157,13 +157,13 @@
 						</div>
 						<div class="button">
 							<!-- 목록 -->
-							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
-							<img src="../../img/board/list.png"></a> &nbsp;
+							<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
+							<img src="../../img/board/list.png"></a> --> 
 
 				<?
 					if($userid == 'admin') {
 				?>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
+					&nbsp;<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
 				<?
 					}
 				?>

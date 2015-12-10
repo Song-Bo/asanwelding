@@ -10,8 +10,9 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 
-	$item_num = $row[num]; 
-	$item_nick = $row[nick];
+	$item_num = $row[num];
+	$item_id = $row[id]; 
+	$item_name = $row[name];
 	$item_hit = $row[hit];
 
 	$file_name[0] = $row[file_name_0];
@@ -66,7 +67,7 @@
 					
 					<div id="view_title">
 						<div class="view_title1"><b><?= $item_subject ?></b></div>
-						<div class="view_title2"><b><?= $item_nick ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
+						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?></div>
 					</div>
 
 				<div id="view_content">
@@ -92,11 +93,11 @@
 
 				<div id="view_button">
 					<a href="list.php?table=<?=$table?>&page=<?=$page?>">
-					<img src="../../img/board/list.png"></a>&nbsp;
+					<img src="../../img/board/list.png"></a>
 			<?
 				if ($userid == $item_id || $userid == "root") {
 			?>
-				<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
+				&nbsp;<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
 				<img src="../../img/board/modify.png"></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')">
 				<img src="../../img/board/delete.png"></a>&nbsp;
@@ -105,10 +106,10 @@
 			?>
 
 			<?
-				// if ($userid == "root") { }
+				if ($userid) { 
 			?>
 				<a href="write_form.php?table=<?=$table?>"><img src="../../img/board/write.png"></a>
-
+			<? } ?>
 				<div class="clear"></div>
 				</div><!-- end of $view_button -->
 				</div><!-- end of main_co2 -->

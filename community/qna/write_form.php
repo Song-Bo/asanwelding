@@ -3,6 +3,9 @@
 
 	$table = "qna";
 
+	$userid = $_SESSION[userid];
+	$username = $_SESSION[username];
+
 	$num = $_GET[num];
 	$page = $_GET[page];
 	
@@ -53,19 +56,20 @@
 			document.board_form.content.focus();
 			return;
 		}
+		<? if(!$userid) { ?>
 		if (!document.board_form.pass.value) {
 			alert('비밀번호를 입력하세요 !');
 			document.board_form.pass.focus();
 			return;
 		}
+		<? } ?>
 		document.board_form.submit();
 	}
 </script>
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
-		<div class="content" id="content">
-			<div class="nav_wrap">
+		<div class="content" id="content">			
 			<? require_once "../../lib/community_sub_nav.php"; ?>
 			<div class="main_content">
 				<!-- start of main_co1 -->
@@ -81,7 +85,6 @@
 					</div>
 
 					<div id="write_form_title">
-						<img src="../../img/board/write_form_title.gif">
 					</div>
 
 					<div class="clear"></div>
@@ -106,7 +109,7 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-												<div class="col2"><input type="text" name="writer" value="<?= $writer ?>"></div>
+												<div class="col2"><input type="text" name="writer" value="<?= $username ?>"></div>
 									
 						</div><!-- end of write_row1 -->
 			
@@ -114,6 +117,7 @@
 						<div class="write_row2"><div class="col1"> 질문하기 </div>
 												<div class="col2"><input type="text" name="subject" size="73" value="<?=$item_subject?>"></div>
 						</div><!-- end of write_row2 -->
+
 					<div class="write_line"></div>
 
 						<div class="write_row3"><div class="col1"> 내용 </div>
@@ -124,9 +128,17 @@
 
 
 					<!-- start of Password -->
+					<? 
+						if(!$userid) {
+					?>
 						<div class="write_row7"><div class="col1"> 비밀번호 </div>
 												<div class="col2"><input type="password" name="pass"/></div>
 						</div> 
+						
+					<? 
+						} 
+					?>			
+
 					<!-- end of Password -->
 
 					<div class="write_line"></div>
@@ -142,7 +154,7 @@
 
 				</div><!-- end of #write_button -->
 				</form><!-- end of form -->
-
+		
 				</div><!-- end of main_co2 -->
 			</div><!-- end of main_content -->
 		</div><!-- end of content -->

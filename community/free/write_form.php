@@ -78,7 +78,7 @@
 					</div>
 
 					<div id="write_form_title">
-						<img src="../../img/board/write_form_title.gif">
+						<p><p>
 					</div>
 
 					<div class="clear"></div>

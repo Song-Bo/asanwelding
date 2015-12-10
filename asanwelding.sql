@@ -125,16 +125,15 @@ create table download (
 );
 
 
-
-/* Q & A */
+/* Q & A - group_num not null 이었고 id 와 pass notnull 아닌거 주의 */ 
 create table qna (
    num int not null auto_increment,
-   group_num int not null,
+   group_num int,
    depth int not null,
    ord int not null,
-   id char(15) not null,
+   id char(15),
    name  char(15) not null,
-   pass char(15) not null,   
+   pass char(15),   
    /*nick  char(10) not null,*/
    subject char(100) not null,
    content text not null,

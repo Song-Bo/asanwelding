@@ -17,9 +17,8 @@
 	$row = $result->fetch_assoc();
 
 	$item_num = $row[num];
-  /*$item_id = $row[id];
-	$item_name = $row[name];*/
-	$item_nick = $row[nick];
+  	$item_id = $row[id];
+	$item_name = $row[name];
 	$item_hit = $row[hit];
 	$item_date = $row[regist_day];
 	$item_subject = str_replace(" ", "&nbsp", $row[subject]);
@@ -66,7 +65,7 @@
 					
 					<div id="view_title">
 						<div class="view_title1"><b><?= $item_subject ?></b></div>
-						<div class="view_title2"><b><?= $item_nick ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
+						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?></div>
 					</div>
 
 				<div id="view_content">		

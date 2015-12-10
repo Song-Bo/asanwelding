@@ -3,6 +3,9 @@
 
 	$table = "download";
 
+	$userid = $_SESSION[userid];
+	$username = $_SESSION[username];
+
 	$num = $_GET[num];
 	$page = $_GET[page];
 	
@@ -16,7 +19,7 @@
 		$sql = "select * from $table where num=$num";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-		$item_nick = $row[nick];
+		$item_name = $row[name];
 		$item_subject = $row[subject];
 		$item_content = $row[content];
 		$item_file_0 = $row[file_name_0];
@@ -69,7 +72,8 @@
 					</div>
 
 					<div id="write_form_title">
-						<img src="../../img/board/write_form_title.gif">
+						<!-- <img src="../../img/board/write_form_title.gif"> -->
+						글쓰기
 					</div>
 
 					<div class="clear"></div>
@@ -90,7 +94,7 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
+												<div class="col2"><input type="text" name="writer" value="<?= $username ?>"></div>
 			
 						</div><!-- end of write_row1 -->
 			

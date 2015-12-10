@@ -6,6 +6,9 @@
 	$num = $_GET[num];	
 	$mode = $_GET[mode];
 
+	$userid = $_SESSION[userid];
+	$username = $_SESSION[username];
+
 	$subject = $_POST[subject];
 	$content = $_POST[content];
 	$writer = $_POST[writer];
@@ -56,7 +59,7 @@
 			$conn->query($sql);
 
 			// 레코드 삽입
-			$sql = "insert into $table (group_num, depth, ord, nick, subject, ";
+			$sql = "insert into $table (group_num, depth, ord, name, subject, ";
 			$sql.= "content, regist_day, hit) ";
 			$sql.= "values ($group_num, $depth, $ord, '$writer', '$subject', '$content', '$regist_day', 0)";
 		} else {
@@ -64,10 +67,15 @@
 			$depth = 0;
 			$ord = 0;
 
-			// 레코드 삽입 (group_num 제외)
-			$sql = "insert into $table (depth, ord, id, name, pass, subject, content, regist_day, hit) ";
-			$sql.= "values($depth, $ord, 'root', '$writer', '$pass', '$subject', '$content', '$regist_day', 0)";
-			
+			if(!$userid) {
+				// 레코드 삽입 (group_num 제외)
+				$sql = "insert into $table (depth, ord, name, pass, subject, content, regist_day, hit) ";
+				$sql.= "values($depth, $ord, '$writer', '$pass', '$subject', '$content', '$regist_day', 0)";
+			} else {
+				$sql = "insert into $table (depth, ord, id, name, subject, content, regist_day, hit) ";
+				$sql.= "values($depth, $ord, '$userid', '$username', '$subject', '$content', '$regist_day', 0)";
+			}
+
 			$conn->query($sql);
 
 			// 최근 auto_increment 필드(num)값 가져오기

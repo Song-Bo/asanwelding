@@ -94,7 +94,7 @@
 					
 					<div id="view_title">
 						<div class="view_title1"><b><?= $item_subject ?></b></div>
-						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
+						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?></div>
 					</div>
 
 				<div id="view_content">
@@ -162,11 +162,11 @@
 
 				<!-- button PART -->
 				<div id="view_button">
-					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>&nbsp;
+					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>
 			<?
 				if ($userid && ($userid == $item_id) || $userid == "admin") {
 			?>
-				<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
+				&nbsp;<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
 					<img src="../../img/board/modify.png"></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')">
 					<img src="../../img/board/delete.png"></a>&nbsp;

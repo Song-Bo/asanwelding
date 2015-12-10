@@ -1,6 +1,10 @@
 <meta charset="UTF-8">
 <?
 	session_start();
+
+	$userid = $_SESSION[userid];
+	$username = $_SESSION[username];
+
 	$num = $_GET[num];
 	$mode = $_GET[mode];
 	$page = $_GET[page];
@@ -9,8 +13,7 @@
 	$subject = $_POST[subject];
 	$content = $_POST[content];
 	$writer = $_POST[writer];	
-
-	/*
+	
 	if(!$userid) {
 		echo("
 		<script>
@@ -20,7 +23,7 @@
 		");
 		exit;
 	}
-	*/
+	
 
 	$regist_day = date("Y-m-d (H:i)"); // 현재의 '년-월-일-시-분'을 저장
 
@@ -120,9 +123,9 @@
 
 	} else {
 		
-		$sql = "insert into $table (nick, subject, content, regist_day, hit, ";
+		$sql = "insert into $table (id, name, subject, content, regist_day, hit, ";
 		$sql.= "file_name_0, file_name_1, file_name_2, file_type_0, file_type_1, file_type_2, file_copied_0, file_copied_1, file_copied_2) ";
-		$sql.= "values ('$writer', '$subject', '$content', '$regist_day', 0, ";
+		$sql.= "values ('$userid', '$username', '$subject', '$content', '$regist_day', 0, ";
 		$sql.= "'$upfile_name[0]', '$upfile_name[1]', '$upfile_name[2]', '$upfile_type[0]', '$upfile_type[1]',  '$upfile_type[2]', '$copied_file_name[0]', ";
 		$sql.= "'$copied_file_name[1]', '$copied_file_name[2]')";
 		

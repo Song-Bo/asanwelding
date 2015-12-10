@@ -62,7 +62,7 @@ $(document).ready(function(){
 			if (!$userid) {
 		?>
 			<li><a href="#loginmodal" class="flatbtn" id="modaltrigger">로그인</a></li>
-			<li><a href="">회원가입</a></li>
+			<li><a href="<?=$url?>/member/member_form.php">회원가입</a></li>
 		<?
 			} else if ($userid) {
 		?>
@@ -116,7 +116,7 @@ $(document).ready(function(){
 		</div>		
 	</div>
 	<div class="box_in2"><input type="submit" title="로그인" alt="로그인" value="로그인" class="lgn" /></div>
-	<div class="find_join"><a href="">아이디 / 비밀번호 찾기</a> &nbsp;|&nbsp; <a href="">회원가입</a></div>
+	<div class="find_join"><a href="">아이디/비밀번호 찾기</a> &nbsp;|&nbsp; <a href="<?=$url?>/member/member_form.php">회원가입</a></div>
 	</form>
 	<!-- end of form -->
 

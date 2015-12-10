@@ -109,7 +109,7 @@
 						$row = $result->fetch_assoc();    // 하나의 레코드 가져오기
 
 						$item_num = $row[num];
-						$item_nick = $row[nick];
+						$item_name = $row[name];
 						$item_hit = $row[hit];
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);
@@ -122,7 +122,7 @@
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
 						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a></div>
-						<div class="list_item3"><?= $item_nick ?></div>
+						<div class="list_item3"><?= $item_name ?></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>
 					</div><!-- end of #list_item -->
@@ -147,21 +147,18 @@
 						</div>
 						<div class="button">
 							<!-- 목록 -->
-							<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>"> -->
-							<!-- <img src="../../img/board/list.png"></a> &nbsp; -->
-							<!-- 글쓰기 -->
-							<a href="write_form.php?table=<?= $table ?>">
-							<img src="../../img/board/write.png"></a>
-
-				<!--
+							<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
+							<img src="../../img/board/list.png"></a>  -->
+			
 				<?
 					if($userid) {
 				?>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
+							<!-- 글쓰기 -->&nbsp;
+							<a href="write_form.php?table=<?= $table ?>">
+							<img src="../../img/board/write.png"></a>
 				<?
 					}
 				?>
-				-->
 						</div><!-- end of button -->
 					</div><!-- end of page_button -->
 				</div><!-- end of list content -->
