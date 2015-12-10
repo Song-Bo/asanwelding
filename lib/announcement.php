@@ -8,7 +8,9 @@
 	  $result1 = $conn->query($sql1);
 	  $total_record1 = mysqli_num_rows($result1);
 
-    for ($j=0; $j< 5; $j++) {
+    if($total_record1 >= 5) $total_record1 = 5;
+
+    for ($j=0; $j< $total_record1; $j++) {
        mysqli_data_seek($result1, $j);                  // 포인터 이동        
        $row1 		       = $result1 -> fetch_assoc();     // 하나의 레코드 가져오기	      
 	     $item_num1      = $row1[num];	
@@ -34,5 +36,6 @@
         <div class="list_item5"><?= $item_hit1 ?></div>
       </div>
 <?
+
    }
 ?>

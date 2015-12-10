@@ -91,15 +91,7 @@
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
 												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
-			
-			<?
-				if ($mode != "modify") {
-			?>
-							<div class="col3"><input type="checkbox" name="html_ok" value="y"> HTML 쓰기 </div>
-			<?
-				}
-			?>
-			
+						
 						</div><!-- end of write_row1 -->
 			
 					<div class="write_line"></div>

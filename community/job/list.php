@@ -100,29 +100,23 @@
         				<th class="hit">조회</th>
     				</tr>
     				</table>
-				<!-- <div id="list_top_title">
-						<ul>
-							<li class="list_title1"><img src="../../img/board/list_title1.gif"></li>
-							<li class="list_title2"><img src="../../img/board/list_title2.gif"></li>
-							<li class="list_title3"><img src="../../img/board/list_title3.gif"></li>
-							<li class="list_title4"><img src="../../img/board/list_title4.gif"></li>
-							<li class="list_title5"><img src="../../img/board/list_title5.gif"></li>
-						</ul>
-					</div> -->
 
+					<div class="clear"></div>
 
-					<!-- list_content START -->
-
-					<div id="list_content">
+				<!-- list_content START -->
+				<div id="list_content">
+				<?
+					require_once "../../lib/announcement.php";
+				?>				
 				<?
 					for ($i=$start; $i < $start+$scale && $i < $total_record; $i++) { 
 						mysqli_data_seek($result, $i);    // 포인터 이동
 						$row = $result->fetch_assoc();    // 하나의 레코드 가져오기
 
 						$item_num = $row[num];
-						/* $item_id = $row[id] */
-						/* $item_name = $row[name] */
-						$item_nick = $row[nick];
+						$item_id = $row[id];
+						$item_name = $row[name];
+						$item_nick = $row[name];
 						$item_hit = $row[hit];
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);
@@ -132,14 +126,18 @@
 						$result2 = $conn->query($sql);
 						$num_ripple = $result2->num_rows;
 				?>
-					<div id="list_item">
+
+
+					
+
+						<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
 						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>
 				<?
 					if ($num_ripple) echo "[$num_ripple]";
 				?>						
 						</div>
-						<div class="list_item3"><?= $item_nick ?></div>
+						<div class="list_item3"><?= $item_name ?></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>
 					</div><!-- end of #list_item -->
@@ -166,19 +164,19 @@
 							<!-- 목록 -->
 							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
 							<img src="../../img/board/list.png"></a> &nbsp;
-							<!-- 글쓰기 -->
-							<a href="write_form.php?table=<?= $table ?>">
-							<img src="../../img/board/write.png"></a>
-
-				<!--
+							
+				
 				<?
 					if($userid) {
 				?>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
+					<!-- 글쓰기 -->
+							<a href="write_form.php?table=job">
+							<img src="../../img/board/write.png"></a>
+
 				<?
 					}
 				?>
-				-->
+				
 						</div><!-- end of button -->
 					</div><!-- end of page_button -->
 				</div><!-- end of list content -->

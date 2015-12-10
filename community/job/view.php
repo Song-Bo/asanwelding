@@ -4,12 +4,9 @@
 	$ripple = "job_ripple";
 	$page = $_GET[page];
 	$num = $_GET[num];
-	/*
+
 	$userid = $_SESSION[userid];
     $username = $_SESSION[username];
-    $usernick = $_SESSION[usernick];
-    $userlevel = $_SESSION[userlevel];
-	*/	
 
 	require_once "../../lib/dbconn.php";
 
@@ -18,9 +15,8 @@
 	$row = $result->fetch_assoc();
 
 	$item_num = $row[num];
-  /*$item_id = $row[id];
-	$item_name = $row[name];*/
-	$item_nick = $row[nick];
+    $item_id = $row[id];
+	$item_name = $row[name];
 	$item_hit = $row[hit];
 
 	$image_name[0] = $row[file_name_0];
@@ -34,12 +30,6 @@
 	$item_date = $row[regist_day];
 	$item_subject = str_replace(" ", "&nbsp", $row[subject]);
 	$item_content = $row[content];
-	// $is_html = $row[is_html];
-
-  /*if ($is_html!="y") {
-		$item_content = str_replace(" ", "&nbsp", $item_content);
-		$item_content = str_replace("\n", "<br>", $item_content);
-	} */
 
 	for ($i=0; $i < 3; $i++) { 		
 		if ($image_copied[$i]) {
@@ -102,7 +92,7 @@
 					
 					<div id="view_title">
 						<div class="view_title1"><b><?= $item_subject ?></b></div>
-						<div class="view_title2"><b><?= $item_nick ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
+						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
 					</div>
 
 				<div id="view_content">
