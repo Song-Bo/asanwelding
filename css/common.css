@@ -89,6 +89,10 @@ div {
     text-align: -webkit-match-parent;
 }
 
+.notice_top3 li {
+	width: 380px;
+}
+
 .notice_title {
 	width:60px;
 	float:left;
@@ -139,8 +143,7 @@ div {
 	margin-left:0;
 }
 
-.global li {
-	background: url(//paycoscdn.toastoven.net/payco/www/img/bl_left.png) no-repeat 0 10px;
+.global li {	
 	float:left;
 	margin-left: 10px;
 	padding:0 0 0 10px;

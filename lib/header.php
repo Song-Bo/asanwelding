@@ -47,20 +47,11 @@ $(document).ready(function(){
 				<div class="notice_title fl"><a href="<?=$url?>/admin/notice/list.php"></a></div>
 				
 				<div class="notice_top3" id="roll" style="overflow:hidden;">
-					<ul>
-						<li class="notice_subject"><a href="<?=$url?>/community/free/view.php?table=free&num=17&page=1">
-						<em><b>[공지사항] </b></em>
-						욤마 하~~~~~~~~~ 브레이꺼~~~~~</a>
-						</li>
-						<li class="notice_subject"><a href="/gnuboard4/bbs/board.php?bo_table=notice&wr_id=9155">
-						<em><b>[공지사항] </b></em>
-						죽지 못해 사는 한석주와 잠자기 위해 사는 김홍만</a>
-						</li>
-						<li class="notice_subject"><a href="/gnuboard4/bbs/board.php?bo_table=notice&wr_id=9115">
-						<em><b>[공지사항] </b></em>
-						 Oh Captain ~ my captain ~  </a>
-						</li>
-					</ul>
+				<ul>
+					<? 
+						require_once "global_notice.php"; 
+					?>					
+				</ul>
 				</div>
 			</div>
 			

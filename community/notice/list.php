@@ -1,7 +1,12 @@
 <?
 	session_start();
-	$table = "free";
-	$ripple = "free_ripple";
+	require_once "../../lib/header.php";
+	require_once "../../lib/dbconn.php";
+
+	$userid = $_SESSION[userid];
+
+	$table = "notice";
+	$ripple = "notice_ripple";
 
 	$page = $_GET[page];
 	$num = $_GET[num];
@@ -10,12 +15,13 @@
 
 	$search = $_POST[search];
 	$find = $_POST[find];
+
+	$sql = "select * from $table";
+	$result = $conn->query($sql);
+	$total_record = mysqli_num_rows($result);
 ?>
 
-<?
-	require_once "../../lib/header.php";
-	require_once "../../lib/dbconn.php";
-
+<?	
 	$scale = 10; // 한 화면에 표시되는 글 수
 
 	if ($mode == "search") {
@@ -26,9 +32,9 @@
 				  </script>";
 			exit;
 		}
-		$sql = "select * from free where $find like '%$search%' order by num desc";
+		$sql = "select * from $table where $find like '%$search%' order by num desc";
 	} else {
-		$sql = "select * from free order by num desc";
+		$sql = "select * from $table order by num desc";
 	}
 
 	$result = $conn->query($sql);
@@ -54,68 +60,67 @@
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
-			<? require_once "../../lib/community_sub_nav.php"; ?>
+			<? 
+				if ($userid == "admin") require_once "../../lib/admin_sub_nav.php";
+				else require_once "../../lib/community_sub_nav.php";
+			?>
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h2> 자유 게시판 </h2>
+					<h2> 공지사항 </h2>
 				</div>
 
 				<!-- 메인 시작 -->
 				<div class="main_co2" style="padding:0px 32px 50px">
+					<div class="title">
+						<!-- <img src="../img/title_free.gif"> -->
+					</div>
 
-				<!-- start of Search Form -->
-				<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
+					<!-- search form START !!! -->
+					<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
 
-				<div id="list_search">
-					<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
-					<div class="list_search_form">
-					<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
-					<div class="list_search3"><select name="find">
-											 <option value="subject">제목</option>
-											 <option value="content">내용</option>
-											 <option value="nick">작성자</option>
-											  </select></div>
-					<div class="list_search4"><input type="text" name="search"></div>
-					<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
-					</div><!-- end of list_search_form -->
-				</div><!-- end of #list_search -->
-				</form>
-				<!-- end of Search Form -->
+					<div id="list_search">
 
-
-				<div class="clear"></div>
-
-				<!-- start of BAR -->
-				<table>
-   				 <tr class="list_top_title">
-        			<th class="num">번호</th>
-        			<th class="subject">제목</th>
-        			<th class="writer">작성자</th>
-        			<th class="regist_day">작성일</th>
-        			<th class="hit">조회</th>
-    			 </tr>
-				</table>
-				<!-- end of BAR -->
-
-				<div class="clear"></div>
+						<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
+						<div class="list_search_form">
+						<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
+						<div class="list_search3"><select name="find">
+													<option value="subject">제목</option>
+													<option value="content">내용</option>
+													<option value="nick">작성자</option>
+												  </select></div>						
+						<div class="list_search4"><input type="text" name="search"></div>
+						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
+						</div><!-- end of list_search_form -->
+					</div> <!-- end of #list_search -->
+					</form>
+					<!-- form END !!! -->
 
 
-				<!-- start of list_content -->
+					<div class="clear"></div>
 
-				<div id="list_content">
-				<?
-					require_once "../../lib/announcement.php";
-				?>				
+					<!-- list_top_title -->
+					<table>
+   					 <tr class="list_top_title">
+        				<th class="num">번호</th>
+        				<th class="subject">제목</th>
+        				<th class="writer">작성자</th>
+        				<th class="regist_day">작성일</th>
+        				<th class="hit">조회</th>
+    				</tr>
+
+					</table><!-- end of list_top_title -->				
+
+
+					<div id="list_content">
 				<?
 					for ($i=$start; $i < $start+$scale && $i < $total_record; $i++) { 
 						mysqli_data_seek($result, $i);    // 포인터 이동
 						$row = $result->fetch_assoc();    // 하나의 레코드 가져오기
 
 						$item_num = $row[num];
-						$item_id = $row[id];
-						$item_name = $row[name];
-						$item_nick = $row[name];
+					 	$item_id = $row[id]; 
+						$item_name = $row[name];						
 						$item_hit = $row[hit];
 						$item_date = $row[regist_day];
 						$item_date = substr($item_date, 0, 10);
@@ -125,12 +130,11 @@
 						$result2 = $conn->query($sql);
 						$num_ripple = $result2->num_rows;
 				?>
-				
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
 						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>
 				<?
-					if ($num_ripple) echo "[$num_ripple]";
+					if ($num_ripple) echo "&nbsp<em>[$num_ripple]</em>";
 				?>						
 						</div>
 						<div class="list_item3"><?= $item_name ?></div>
@@ -143,7 +147,7 @@
 				?>
 
 					<div id="page_button">
-						<div class="page_num"><img src="../../img/board/이전.png">
+						<div class="page_num"> <img src="../../img/board/이전.png">
 				<?
 					// 게시판 목록 하단에 페이지 링크 번호 출력
 					for ($i=1; $i<=$total_page; $i++) { 
@@ -158,21 +162,17 @@
 						</div>
 						<div class="button">
 							<!-- 목록 -->
-							<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>"> -->
-							<!-- <img src="../../img/board/list.png"></a> &nbsp; -->
-							<!-- 글쓰기 -->
-							<a href="write_form.php?table=<?= $table ?>">
-							<img src="../../img/board/write.png"></a>
+							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
+							<img src="../../img/board/list.png"></a> &nbsp;
 
-				<!--
 				<?
-					if($userid) {
+					if($userid == 'admin') {
 				?>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
+					<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
 				<?
 					}
 				?>
-				-->
+				
 						</div><!-- end of button -->
 					</div><!-- end of page_button -->
 				</div><!-- end of list content -->
