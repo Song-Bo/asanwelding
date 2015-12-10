@@ -72,25 +72,20 @@
 
 				<!-- 메인 시작 -->
 				<div class="main_co2" style="padding:0px 32px 50px">
-					<div class="title">
-						<!-- <img src="../img/title_free.gif"> -->
-					</div>
+					
 
-					<!-- search form START !!! -->
-					<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
-
+				<!-- search form START !!! -->
+				<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
 					<div id="list_search">
-
 						<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
 						<div class="list_search_form">
-						<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
 						<div class="list_search3"><select name="find">
 													<option value="subject">제목</option>
 													<option value="content">내용</option>
 													<option value="nick">작성자</option>
 												  </select></div>						
 						<div class="list_search4"><input type="text" name="search"></div>
-						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
+						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.png"></div>
 						</div><!-- end of list_search_form -->
 					</div> <!-- end of #list_search -->
 					</form>

@@ -19,11 +19,12 @@ a {
 #list_search .list_search1 {
 	float:left;
 	margin-top:2px;
-	width: 50%;
+	width: 62%;
 }
 
+
 #list_search .list_search_form {
-	width: 50%;
+	width: 38%;
 	float:right;
 }
 
@@ -37,7 +38,7 @@ a {
 #list_search .list_search3 {
 	float:left;
 	margin-left:5px;
-	margin-top:1px;
+	margin-top:2px;
 }
 
 #list_search .list_search3 select {
@@ -54,14 +55,14 @@ a {
 
 #list_search .list_search4 input {
 	width:120px;
-	height:20px;
+	height:21px;
 	border:solid 1px #cccccc;
 }
 
 #list_search .list_search5 {
 	float:left;
-	margin-left:5px;
-	margin-top:1px;
+	margin-left:10px;
+	margin-top:2px;
 	margin-bottom: 10px;
 }
 
@@ -83,10 +84,21 @@ a {
 	margin-top:0px;
 	padding:6px;  
 	border-bottom:solid 1px #eeeeee;
-	background-color: #dbdbdb;
+	background-color: #f7f7f7;
 }
 
+.list_notice .list_item1 {
+	padding: 0 3px 0;
+}
 
+.list_notice .list_item2 {
+	text-align: center;
+	font-style: inherit;
+}
+
+.list_notice .list_item3 {
+	margin-left: 4px;
+}
 
 /* #list_item */
 #list_item {
@@ -154,6 +166,9 @@ a {
 	float:right;
 	/*width:18%;*/
 	text-align:right;
+	width: 150px;
+	height: 30px;
+	margin: 0px 0 0 0;
 }
 
 
@@ -301,8 +316,9 @@ a {
 #view_title {
 	height:18px;
 	padding:10px 8px 8px 8px;  
-	border-top:solid 2px #aaaaaa;
-	background-color:#eeeeee;
+	border-top:solid 2px #ff8484;
+	border-bottom:solid 1px #ff8484;
+	background-color:#fff;
 	margin-bottom:5px;
 }
 
@@ -485,10 +501,11 @@ a {
 
 /*게시판 디자인*/
 
-tr {
-	border-top: 1px solid #fa2828;
+.list_top_title {
+	width: 760px;
+	border-top: 1px solid #ff8484;
 	float: left;
-	border-bottom: 1px solid #fa2828;
+	border-bottom: 1px solid #ff8484;
 	padding: 0px 0 0 0;
 	vertical-align: middle;
 }
@@ -534,31 +551,6 @@ td {
 
 .hit {
 	width: 40px;
-}
-/*table.type01 {
-    border-collapse: collapse;
-    text-align: left;
-    line-height: 1.5;
-    margin : 20px 10px;
-}
-table.type01 th {
-    width: 150px;
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    border: 1px solid #ccc;
-}
-table.type01 td {
-    width: 50px;
-    padding: 10px;
-    vertical-align: top;
-    border: 1px solid #ccc;
-}*/
-
-.button {
-	width: 150px;
-	height: 30px;
-	margin: 10px 0 0 0;
 }
 
 .h1 {

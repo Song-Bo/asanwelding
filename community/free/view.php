@@ -149,9 +149,9 @@
 					<!-- start of FORM -->
 					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?=$table?>&num=<?=$item_num?>">
 					<div id="ripple_box">
-						<div class="ripple_box1"><img src="../../img/board/title_comment.gif"></div>
+						<div class="ripple_box1"><img src="../../img/board/title_comment.png"></div>
 						<div class="ripple_box2"><textarea rows="5" cols="60" name="ripple_content"></textarea></div>
-						<div class="ripple_box3"><a href="#"><img src="../../img/board/ok_ripple.gif" onclick="check_input()"></a></div>
+						<div class="ripple_box3"><a href="#"><img src="../../img/board/ok_ripple.png" onclick="check_input()"></a></div>
 					</div><!-- end of #ripple_box -->
 					</form>
 					<!-- end of FORM -->

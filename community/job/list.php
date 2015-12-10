@@ -3,15 +3,12 @@
 	$table = "job";
 	$ripple = "job_ripple";
 
-	$page = $_GET[page];
 	$num = $_GET[num];
-
+	$page = $_GET[page];
 	$mode = $_GET[mode];
-
 	$search = $_POST[search];
 	$find = $_POST[find];
 ?>
-
 <?
 	require_once "../../lib/header.php";
 	require_once "../../lib/dbconn.php";
@@ -58,7 +55,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h2> 취업소식 </h2>
+					<h3> 취업소식 </h3>
 				</div>
 
 				<!-- 메인 시작 -->
@@ -74,14 +71,13 @@
 
 						<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
 						<div class="list_search_form">
-						<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
 						<div class="list_search3"><select name="find">
 													<option value="subject">제목</option>
 													<option value="content">내용</option>
 													<option value="nick">작성자</option>
 												  </select></div>						
 						<div class="list_search4"><input type="text" name="search"></div>
-						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
+						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.png"></div>
 						</div><!-- end of list_search_form -->
 					</div> <!-- end of #list_search -->
 					</form>
@@ -147,7 +143,7 @@
 				?>
 
 					<div id="page_button">
-						<div class="page_num"> ◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp;
+						<div class="page_num"><img src="../../img/board/이전.png">
 				<?
 					// 게시판 목록 하단에 페이지 링크 번호 출력
 					for ($i=1; $i<=$total_page; $i++) { 
@@ -158,24 +154,25 @@
 						}
 					}
 				?>
-						&nbsp;&nbsp;&nbsp;&nbsp; 다음 ▶
+						<img src="../../img/board/다음.png">
 						</div>
 						<div class="button">
 							<!-- 목록 -->
 							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
 							<img src="../../img/board/list.png"></a> &nbsp;
 							
-				
+
+			
 				<?
 					if($userid) {
 				?>
-					<!-- 글쓰기 -->
-							<a href="write_form.php?table=job">
+							<!-- 글쓰기 -->
+							<a href="write_form.php?table=<?= $table ?>">
 							<img src="../../img/board/write.png"></a>
-
 				<?
 					}
 				?>
+			
 				
 						</div><!-- end of button -->
 					</div><!-- end of page_button -->

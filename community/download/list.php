@@ -2,15 +2,12 @@
 	session_start();
 	$table = "download";
 
-	$page = $_GET[page];
 	$num = $_GET[num];
-
+	$page = $_GET[page];
 	$mode = $_GET[mode];
-
-	$search = $_POST[search];
 	$find = $_POST[find];
+	$search = $_POST[search];	
 ?>
-
 <?
 	require_once "../../lib/header.php";
 	require_once "../../lib/dbconn.php";
@@ -73,35 +70,39 @@
 
 						<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
 						<div class="list_search_form">
-						<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
 						<div class="list_search3"><select name="find">
 													<option value="subject">제목</option>
 													<option value="content">내용</option>
 													<option value="nick">작성자</option>
 												  </select></div>						
 						<div class="list_search4"><input type="text" name="search"></div>
-						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
+						<div class="list_search5"><input type="image" src="../../img/board/list_search_button.png"></div>
 						</div><!-- end of list_search_form -->
 					</div> <!-- end of #list_search -->
 					</form>
 					<!-- form END !!! -->
 
+					<div class="clear"></div>
+
+					<!-- start of BAR -->
+					<table>
+   						<tr class="list_top_title">
+        					<th class="num">번호</th>
+        					<th class="subject">제목</th>
+        					<th class="writer">작성자</th>
+	        				<th class="regist_day">작성일</th>
+    	    				<th class="hit">조회</th>
+    		            </tr>
+					</table>
+					<!-- end of BAR -->
 
 					<div class="clear"></div>
 
-
-					<div id="list_top_title">
-						<ul>
-							<li class="list_title1"><img src="../../img/board/list_title1.gif"></li>
-							<li class="list_title2"><img src="../../img/board/list_title2.gif"></li>
-							<li class="list_title3"><img src="../../img/board/list_title3.gif"></li>
-							<li class="list_title4"><img src="../../img/board/list_title4.gif"></li>
-							<li class="list_title5"><img src="../../img/board/list_title5.gif"></li>
-						</ul>
-					</div><!-- end of #list_top_title -->
-
-
+					<!-- start of #list_content -->
 					<div id="list_content">
+				<?
+					require_once "../../lib/announcement.php";
+				?>
 				<?
 					for ($i=$start; $i < $start+$scale && $i < $total_record; $i++) { 
 						mysqli_data_seek($result, $i);    // 포인터 이동
@@ -131,7 +132,7 @@
 				?>
 
 					<div id="page_button">
-						<div class="page_num"> ◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp;
+						<div class="page_num"><img src="../../img/board/이전.png">
 				<?
 					// 게시판 목록 하단에 페이지 링크 번호 출력
 					for ($i=1; $i<=$total_page; $i++) { 
@@ -142,12 +143,12 @@
 						}
 					}
 				?>
-						&nbsp;&nbsp;&nbsp;&nbsp; 다음 ▶
+						<img src="../../img/board/다음.png">
 						</div>
 						<div class="button">
 							<!-- 목록 -->
-							<a href="list.php?table=<?= $table ?>&page=<?= $page ?>">
-							<img src="../../img/board/list.png"></a> &nbsp;
+							<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>"> -->
+							<!-- <img src="../../img/board/list.png"></a> &nbsp; -->
 							<!-- 글쓰기 -->
 							<a href="write_form.php?table=<?= $table ?>">
 							<img src="../../img/board/write.png"></a>
