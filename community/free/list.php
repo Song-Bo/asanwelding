@@ -63,27 +63,50 @@
 
 				<!-- 메인 시작 -->
 				<div class="main_co2" style="padding:0px 32px 50px">
-					<table>
-   					 <tr class="list_top_title">
-        				<th class="num">번호</th>
-        				<th class="subject">제목</th>
-        				<th class="writer">작성자</th>
-        				<th class="regist_day">작성일</th>
-        				<th class="hit">조회</th>
-    				</tr>
 
-					</table>
-				<!-- form END !!! -->
+				<!-- start of Search Form -->
+				<form name="board_form" method="post" action="list.php?table=<?=$table?>&mode=search">
 
-					<div class="clear"></div>
+				<div id="list_search">
+					<div class="list_search1">▷ 총 <?= $total_record ?> 개의 게시물이 있습니다. </div>
+					<div class="list_search_form">
+					<div class="list_search2"><img src="../../img/board/select_search.gif"></div>
+					<div class="list_search3"><select name="find">
+											 <option value="subject">제목</option>
+											 <option value="content">내용</option>
+											 <option value="nick">작성자</option>
+											  </select></div>
+					<div class="list_search4"><input type="text" name="search"></div>
+					<div class="list_search5"><input type="image" src="../../img/board/list_search_button.gif"></div>
+					</div><!-- end of list_search_form -->
+				</div><!-- end of #list_search -->
+				</form>
+				<!-- end of Search Form -->
+
+
+				<div class="clear"></div>
+
+				<!-- start of BAR -->
+				<table>
+   				 <tr class="list_top_title">
+        			<th class="num">번호</th>
+        			<th class="subject">제목</th>
+        			<th class="writer">작성자</th>
+        			<th class="regist_day">작성일</th>
+        			<th class="hit">조회</th>
+    			 </tr>
+				</table>
+				<!-- end of BAR -->
+
+				<div class="clear"></div>
+
 
 				<!-- start of list_content -->
-				<div id="list_content">
 
+				<div id="list_content">
 				<?
 					require_once "../../lib/announcement.php";
 				?>				
-
 				<?
 					for ($i=$start; $i < $start+$scale && $i < $total_record; $i++) { 
 						mysqli_data_seek($result, $i);    // 포인터 이동
