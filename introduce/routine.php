@@ -16,7 +16,11 @@ try {
 	<div class="wrap">
 		<div class="content" id="content">
 			<div class="nav_wrap">
-				<div class="nav">학원소개</div>
+				<div class="nav">학원소개
+				<div class="nav_title">
+					introduce
+				</div></div>
+
 					<ul class="sub_nav">
 						<li class="sub_item"><a href="introduce.php" class="sub_item_txt tit1">인사말</a></li>
 						<li class="sub_item"><a href="routine.php" class="sub_item_txt tit2">오시는 길</a></li>

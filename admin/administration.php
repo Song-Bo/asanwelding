@@ -1,6 +1,5 @@
 <!-- 관리자모드 메인 페이지 -->
 <!-- 방문자수, 글 수, 통계 등 메인페이지 꾸미기 -->
-<meta charset="UTF-8">
 <?
 	session_start();
 	require_once "../lib/header.php";

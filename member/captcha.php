@@ -1,4 +1,3 @@
-<meta charset="UTF-8">
 <?
 	session_start();
 	header("Content-type: image/jpeg");

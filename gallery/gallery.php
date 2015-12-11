@@ -13,7 +13,10 @@ require_once "../lib/header.php";
 		<div class="content" id="content">
 			<div class="nav_wrap">
 				<div class="nav">
-					수강안내
+					갤러리
+				<div class="nav_title">
+					gallery
+				</div>
 				</div>
 				<div class="sub_nav">
 				<!-- <div class="sub_nav1">

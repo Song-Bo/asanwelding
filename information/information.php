@@ -32,7 +32,11 @@ function change() {
 			<div class="nav_wrap">
 			<div class="nav">
 				수강안내
+			<div class="nav_title">
+					information
+				</div>
 			</div>
+			
 			<div class="sub_nav">
 				<!-- <div class="sub_nav1">
 					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>

@@ -17,6 +17,11 @@
 			document.member_form.pw.focus();
 			return;
 		}
+		if (document.member_form.pw.value != document.member_form.pw2.value) {
+			alert('비밀번호가 다릅니다 !');
+			document.member_form.pw2.focus();
+			return;
+		}
 		if (!document.member_form.name.value) {
 			alert('이름을 입력하세요 !');
 			document.member_form.name.focus();
