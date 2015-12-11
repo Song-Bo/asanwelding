@@ -15,6 +15,7 @@
 				alert('문자가 일치 하지 않습니다.');
 				history.go(-1);
 			  </script>";
+		exit;
 	}
 
 	// FORM POST 받아오기

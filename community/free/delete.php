@@ -21,8 +21,11 @@
 		}
 	}
 
+	$sql = "delete from $ripple where num=$num";
+	$conn->query($sql);
 	$sql = "delete from $table where num=$num";
 	$conn->query($sql);
+
 	$conn->close();
 
 	echo "

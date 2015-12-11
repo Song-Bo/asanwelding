@@ -258,6 +258,7 @@ a {
 	float:left;
 	margin-left: 8px;
 	margin-top:2px;
+	vertical-align: center;
 }
 
 
@@ -269,8 +270,9 @@ a {
 
 #write_row2 .col2 input {
 	width:600px;
-	height:17px;
+	height:18px;
 	border:solid 1px #cccccc;
+	
 }
 
 #write_row3 .col2 textarea {
@@ -414,8 +416,9 @@ a {
 
 .ripple_box1 {
 	float:left;
+	width: 100px;
 	/*margin:5px;*/
-
+	overflow: hidden;
 }
 
 .ripple_box2 {

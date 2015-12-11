@@ -51,11 +51,13 @@
 			document.board_form.content.focus();
 			return;
 		}
+		<? if(!$userid) { ?>
 		if (!document.board_form.pass.value) {
 			alert('비밀번호를 입력하세요 !');
 			document.baord_form.pass.focus();
 			return;
 		}		
+		<? } ?>
 		document.board_form.submit();
 	}
 </script>
@@ -99,7 +101,7 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-						<? if (!userid) { ?>
+						<? if (!$userid) { ?>
 												<div class="col2"><input type="text" name="writer" value="<?= $item_name ?>"></div>
 						<? } else { ?>
 												<div class="col2"><input type="text" name="writer" value="<?= $username?>"></div>
@@ -119,15 +121,19 @@
 					<div class="write_line"></div>
 
 					
+					<?
+						if(!$userid) {
+					?>
 					<!-- 비밀번호 란 추가 write_row7 -->
 						<div class="write_row7"><div class="col1">비밀번호</div>
 												<div class="col2"><input type="password" name="pass" value=""></div>
 						</div> 
 
 					<div class="write_line"></div>
-
 					<!-- end of 비밀번호 란 write_row7 -->
-
+					<? 
+						} 
+					?>
 
 						<div class="write_row4"><div class="col1"> 이미지파일 1 </div>
 												<div class="col2"><input type="file" name="upfile[]"></div>

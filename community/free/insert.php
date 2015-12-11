@@ -158,13 +158,20 @@
 
 	/* mode != modify */
 	else {		
+		if (!$userid) {
+			$sql = "insert into $table (name, pass, subject, content, regist_day, hit, ";
+			$sql.= "file_name_0, file_name_1, file_name_2, file_copied_0, file_copied_1, file_copied_2) ";
+			$sql.= "values ('$writer', '$pass', '$subject', '$content', '$regist_day', 0, ";
+			$sql.= "'$upfile_name[0]', '$upfile_name[1]', '$upfile_name[2]', '$copied_file_name[0]', ";
+			$sql.= "'$copied_file_name[1]', '$copied_file_name[2]')";
+		} else {
+			$sql = "insert into $table (name, id, subject, content, regist_day, hit, ";
+			$sql.= "file_name_0, file_name_1, file_name_2, file_copied_0, file_copied_1, file_copied_2) ";
+			$sql.= "values ('$writer','$userid', '$subject', '$content', '$regist_day', 0, ";
+			$sql.= "'$upfile_name[0]', '$upfile_name[1]', '$upfile_name[2]', '$copied_file_name[0]', ";
+			$sql.= "'$copied_file_name[1]', '$copied_file_name[2]')";
+		}
 
-		$sql = "insert into $table (name, id, pass, subject, content, regist_day, hit, ";
-		$sql.= "file_name_0, file_name_1, file_name_2, file_copied_0, file_copied_1, file_copied_2) ";
-		$sql.= "values ('$writer','$userid','$pass', '$subject', '$content', '$regist_day', 0, ";
-		$sql.= "'$upfile_name[0]', '$upfile_name[1]', '$upfile_name[2]', '$copied_file_name[0]', ";
-		$sql.= "'$copied_file_name[1]', '$copied_file_name[2]')";
-		
 		$conn->query($sql); 
 
 		echo "<script>

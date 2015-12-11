@@ -119,19 +119,19 @@
 
 				while ($row_ripple = ($ripple_result->fetch_assoc())) {
 					$ripple_num = $row_ripple[num];
-					// $ripple_id = $row_ripple[id];
-					$ripple_nick = $row_ripple[nick];
+					$ripple_id = $row_ripple[id];
+					$ripple_name = $row_ripple[name];
 					$ripple_content = str_replace("\n", "<br><br>", $row_ripple[content]);
 					$ripple_content = str_replace(" ", "&nbsp;", $ripple_content);
 					$ripple_date = $row_ripple[regist_day];
 			?>
 					<div id="ripple_writer_title">
 						<ul>
-							<li class="writer_title1"><?=$ripple_nick?></li>
+							<li class="writer_title1"><?=$ripple_name?></li>
 							<li class="writer_title2"><?=$ripple_date?></li>
 							<li class="writer_title3">
 			<?
-				if ($userid == "root" || $userid == $rippple_id) {
+				if ($userid == "admin" || $userid == $ripple_id) {
 					echo "<a href='delete_ripple.php?table=$table&num=$item_num&ripple_num=$ripple_num'>[삭제]</a>";		
 				}
 			?>
@@ -145,9 +145,9 @@
 				}
 			?>
 					<!-- start of FORM -->
-					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?= $table ?>&num=<?=$item_num?>">
+					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?=$table?>&num=<?=$item_num?>">
 					<div id="ripple_box">
-						<div class="ripple_box1"><img src="../../img/board/title_comment.png"></div>
+						<div class="ripple_box1"><?=$username?> 님의 댓글!^^</div>
 						<div class="ripple_box2"><textarea rows="5" cols="60" name="ripple_content"></textarea></div>
 						<div class="ripple_box3"><a href="#"><img src="../../img/board/ok_ripple.png" onclick="check_input()"></a></div>
 					</div><!-- end of #ripple_box -->

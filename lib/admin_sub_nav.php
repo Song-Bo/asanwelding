@@ -4,6 +4,9 @@
 <div class="nav_wrap">
 	<div class="admin_nav">
 		관리자 모드
+		<div class="nav_title">
+			administration
+		</div>
 	</div>
 		<ul class="sub_nav">
 			<li class="sub_item"><a href="<?=$url?>/community/notice/list.php" class="sub_item_txt tit1">공지사항</a></li>

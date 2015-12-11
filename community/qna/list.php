@@ -145,7 +145,7 @@
 						if ($page == $i) { // 현재 페이지 번호 링크 안함
 							echo "<b> $i </b>";
 						} else {
-							echo "<a href='list.php?table=$table&page=$i'> $i </a>";
+							echo "<a href='list.php?table=$table&page=$i'><b> $i </b></a>";
 						}
 					}
 				?>

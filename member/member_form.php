@@ -34,10 +34,7 @@
 		}		
 		document.member_form.submit();
 	}
-	function reCaptcha() {
-		var imgsrc = document.getElementById("reCaptcha");
-		imgsrc.src = "./captcha.php?ver=" + Math.random();
-	}
+	
 </script>
 <div id="container">
 	<div class="wrap">
@@ -68,9 +65,9 @@
 							<div class="body">
 								<form name="member_form" method="POST" action="insert.php">
 									<dl class="form1">
-										<dt><label for="id">* 아이디 (4~12자의 영문 소문자를 입력하여 주세요.)</label></dt>
-										<dd><input type="text" class="text" id="id" name="id" value=""></dd>
-										<dt><label for="password">* 비밀번호</label></dt>
+										<dt><label for="id">* 아이디  (4~12자의 영문 소문자를 입력하세요.)</label></dt>
+										<dd><input type="text" class="text" id="id" name="id" value="" placeholder=""></dd>
+										<dt><label for="password">* 비밀번호 (6자 이상의 영문, 숫자를 입력하세요.)</label></dt>
 										<dd><input type="password" class="text" id="pw" name="pw" value=""></dd>
 										<dt><label for="password2">비밀번호 확인 </label></dt>
 										<dd><input type="password" class="text" id="pw2" name="pw2" value=""></dd>
@@ -86,7 +83,7 @@
 										<dd><input type="text" class="text" id="captcha" name="captcha" value="" placeholder="아래 문자를 입력해 주세요."></dd>
 									</dl>
 									<div class="sin">
-									<img src="./captcha.php" alt="captcha" id="reCaptcha"><input type="button" value="새로고침" onclick="reCaptcha()">
+									<img src="./captcha.php" alt="captcha" id="reCaptcha">
 									</div>
 									<div class="btn">
 										<p>

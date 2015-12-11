@@ -6,7 +6,7 @@ dl,ul,ol,menu,li{list-style:none}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 input,select,textarea{vertical-align:middle}
-fieldset,img,button{border:0 none;vertical-align:top}
+fieldset,img,button{border:0 none;vertical-align:middle;}
 button{overflow:visible;margin:0;padding:0;border:0;background:none;cursor:pointer}
 button::-moz-focus-inner{padding:0;border:0}
 address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
@@ -272,7 +272,6 @@ ul, li {
 }
 
 
-
 /* Footer */
 #footer {
 	min-width: 1024px;
@@ -292,6 +291,11 @@ ul, li {
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: bolder;
 	text-decoration: none;
+}
+
+.nav_title {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size:20px;
 }
 
 .logo_txt {
@@ -408,6 +412,7 @@ pre {
 
 
 /* 모달 */
+
 
 /*메인슬라이드*/
 

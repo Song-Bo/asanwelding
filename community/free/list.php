@@ -149,7 +149,7 @@
 						if ($page == $i) { // 현재 페이지 번호 링크 안함
 							echo "<b> $i </b>";
 						} else {
-							echo "<a href='list.php?table=$table&page=$i'> $i </a>";
+							echo "<a href='list.php?table=$table&page=$i'><b> $i </b></a>";
 						}
 					}
 				?>
@@ -160,7 +160,7 @@
 							<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>"> -->
 							<!-- <img src="../../img/board/list.png"></a> &nbsp; -->
 							<!-- 글쓰기 -->
-							<a href="write_form.php?table=<?= $table ?>">
+							<a href="write_form.php?table=free">
 							<img src="../../img/board/write.png"></a>
 
 				<!--

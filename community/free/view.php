@@ -133,7 +133,7 @@
 							<li class="writer_title2"><?=$ripple_date?></li>
 							<li class="writer_title3">
 			<?
-				if ($userid == "admin" || $userid == $rippple_id) {
+				if ($userid == "admin" || $userid == $ripple_id) {
 					echo "<a href='delete_ripple.php?table=$table&num=$item_num&ripple_num=$ripple_num'>[삭제]</a>";		
 				}
 			?>

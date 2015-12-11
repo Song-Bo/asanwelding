@@ -62,7 +62,7 @@
 			document.board_form.pass.focus();
 			return;
 		}
-		<? } ?>
+		<? } ?>	
 		document.board_form.submit();
 	}
 </script>
