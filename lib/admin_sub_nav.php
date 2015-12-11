@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?
 	$url = "http://$_SERVER[HTTP_HOST]/asan";
 ?>

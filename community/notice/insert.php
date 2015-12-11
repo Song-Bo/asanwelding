@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?
 	session_start();
 	$num = $_GET[num];

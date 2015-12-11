@@ -54,7 +54,7 @@
 
 	echo "<script>
 			alert('아산용접배관학원에 오신걸 환영 합니다 !');
-			location.href='../index.php'
+			location.href='../introduce/introduce.php'
 		  </script>";	
 
 ?>

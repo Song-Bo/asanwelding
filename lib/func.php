@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?
 	function latest_article ($table, $loop, $char_limit) {
 		include "../lib/dbconn.php";
