@@ -38,8 +38,7 @@
 			return;
 		}		
 		document.member_form.submit();
-	}
-	
+	}		
 </script>
 <div id="container">
 	<div class="wrap">
@@ -59,6 +58,7 @@
 			<div class="main_content">
 				<div class="main_co1">
 					<!-- <h3>회원가입</h3> -->
+					<span id="tn">fd</span> 
 				</div>
 				<div class="main_co2">
 					
@@ -66,16 +66,19 @@
 					<div class="single-col"></div>
 					<div id="member_auth">
 						<div class="wrapper_table">
-							<div class="header1">&nbsp;&nbsp;<strong>아산용접배관학원은 실명제를 실시 하고 있습니다.</strong></div>
+							<div class="header1">
+								&nbsp;&nbsp;<strong>아산용접배관학원은 실명제를 실시 하고 있습니다.</strong><br>
+								 
+							</div><!-- end of header1 -->
 							<div class="body">
 								<form name="member_form" method="POST" action="insert.php">
 									<dl class="form1">
 										<dt><label for="id">* 아이디  (4~12자의 영문 소문자를 입력하세요.)</label></dt>
-										<dd><input type="text" class="text" id="id" name="id" value="" placeholder=""></dd>
+										<dd><input type="text" class="text" id="id" name="id"></dd>
 										<dt><label for="password">* 비밀번호 (6자 이상의 영문, 숫자를 입력하세요.)</label></dt>
 										<dd><input type="password" class="text" id="pw" name="pw" value=""></dd>
 										<dt><label for="password2">비밀번호 확인 </label></dt>
-										<dd><input type="password" class="text" id="pw2" name="pw2" value=""></dd>
+										<dd><input type="password" class="text" id="pw2" name="pw2" onkeyup="test();"></dd>
 										<dt><label for="login_name">* 이름 </label></dt>
 										<dd><input type="text" class="text" id="name" name="name" value=""></dd>
 										<dt><label for="birth">* 생년월일 </label></dt>
@@ -109,3 +112,33 @@
 <?
 require_once "../lib/footer.php";
 ?>
+
+<script>
+	$(document).ready(function() {
+
+		test = function() {
+		
+		var pw = $("#pw").val();
+		var pw2 = $("#pw2").val();			
+
+		$.ajax({
+			url:"./member_ajax.php",
+			type:"POST",
+			data:{"pw":pw, "pw2":pw2},
+			dataType:"Json",
+			error: function(request, status, error) {
+				// alert("code : "+request.status+"\r\nmessage : "+status+"\r\nmessageText : "+request.responseText);
+			},
+			success: function(res) {
+				if(res[0].confirm=="ok") {
+					$("#tn").html("비밀번호 일치 !");
+					
+				} else {
+					$("#tn").html("비밀번호 불일치");
+					 					
+				}
+			}
+		});
+		}
+	});
+</script>

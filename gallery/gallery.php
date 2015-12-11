@@ -45,8 +45,51 @@ require_once "../lib/header.php";
 						}
 					}
 
+
+
 			</script>
-			허허허
+			허허허		
+			<br><br><hr>
+<dl>
+<dt><label for="패스워드1"></label></dt>
+<dd><input type="password" id="n" name="n"></dd>
+<dt><label for="패스워드2"></label></dt>
+<dd><input type="password" id="m" name="m" onkeyup="test();"></dd><br>
+<span id="tn"></span>
+<script>
+			$(document).ready(function(){
+			
+			test = function(){
+		
+			var tt = $("#n").val();
+			var ee = $("#m").val();			
+		
+			$.ajax({
+				url:"./ajax.php",
+				type:"POST",
+				data:{"tt":tt, "ee":ee},
+				dataType:"Json",	
+				error: function(request,status,error){
+				//alert("code : "+request.status+"\r\nmessage : "+status+"\r\nmessageText : "+request.responseText);
+				},
+				success: function(res){
+				//alert(res[0].okk+" / 이유 : "+res[0].sujung);
+
+				if(res[0].okk=="ok"){
+					$("#tn").html("비번 맞다 로그인 시키주라");
+					//여기서 서브밋 해주면 된다
+				}else if(res[0].okk=="no"){
+					$("#tn").html("비번을 확인해주세요");
+				}
+				
+			}
+		});
+	}
+});
+</script>
+<br><br><hr>
+			
+
 
 
 			</div>
