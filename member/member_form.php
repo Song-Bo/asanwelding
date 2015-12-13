@@ -58,7 +58,6 @@
 			<div class="main_content">
 				<div class="main_co1">
 					<!-- <h3>회원가입</h3> -->
-					<span id="tn">fd</span> 
 				</div>
 				<div class="main_co2">
 					
@@ -77,8 +76,8 @@
 										<dd><input type="text" class="text" id="id" name="id"></dd>
 										<dt><label for="password">* 비밀번호 (6자 이상의 영문, 숫자를 입력하세요.)</label></dt>
 										<dd><input type="password" class="text" id="pw" name="pw" value=""></dd>
-										<dt><label for="password2">비밀번호 확인 </label></dt>
-										<dd><input type="password" class="text" id="pw2" name="pw2" onkeyup="test();"></dd>
+										<dt><label for="password2">비밀번호 확인 </label><span id="tn"></span></dt>
+										<dd><input type="password" class="text" id="pw2" name="pw2" onkeyup="test()"></dd>
 										<dt><label for="login_name">* 이름 </label></dt>
 										<dd><input type="text" class="text" id="name" name="name" value=""></dd>
 										<dt><label for="birth">* 생년월일 </label></dt>
@@ -113,6 +112,7 @@
 require_once "../lib/footer.php";
 ?>
 
+									
 <script>
 	$(document).ready(function() {
 
@@ -127,14 +127,16 @@ require_once "../lib/footer.php";
 			data:{"pw":pw, "pw2":pw2},
 			dataType:"Json",
 			error: function(request, status, error) {
-				// alert("code : "+request.status+"\r\nmessage : "+status+"\r\nmessageText : "+request.responseText);
+				
 			},
 			success: function(res) {
-				if(res[0].confirm=="ok") {
+				if(res[0].okk=="ok") {
+
 					$("#tn").html("비밀번호 일치 !");
 					
-				} else {
-					$("#tn").html("비밀번호 불일치");
+				} else if(res[0].okk=="no") {
+
+					$("#tn").html("비밀번호를 확인해 주세요.");
 					 					
 				}
 			}
