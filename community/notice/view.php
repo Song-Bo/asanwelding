@@ -151,8 +151,8 @@
 					<!-- start of FORM -->
 					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?= $table ?>&num=<?=$item_num?>">
 					<div id="ripple_box">
-						<div class="ripple_box1"><img src="../../img/board/title_comment.png"></div>
-						<div class="ripple_box2"><textarea rows="5" cols="60" name="ripple_content"></textarea></div>
+						<div class="ripple_box1"><?=$username?> 님의 댓글!^^</div>
+						<div class="ripple_box2"><textarea rows="4" cols="60" name="ripple_content"></textarea></div>
 						<div class="ripple_box3"><a href="#"><img src="../../img/board/ok_ripple.png" onclick="check_input()"></a></div>
 					</div><!-- end of #ripple_box -->
 					</form>
@@ -162,15 +162,15 @@
 
 				<!-- button PART -->
 				<div id="view_button">
-					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>
+					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><p class="word">목록</p></a>
 			<?
 				if ($userid && ($userid == $item_id) || $userid == "admin") {
 			?>
 				&nbsp;<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
-					<img src="../../img/board/modify.png"></a>&nbsp;
+					<p class="word">수정</p></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')">
-					<img src="../../img/board/delete.png"></a>&nbsp;
-				<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
+					<p class="word">삭제</p></a>&nbsp;
+				<a href="write_form.php?table=<?= $table ?>"><p class="word">글쓰기</p></a>
 			<?
 				}
 			?>

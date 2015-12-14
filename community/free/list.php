@@ -162,7 +162,7 @@
 							<!-- <img src="../../img/board/list.png"></a> &nbsp; -->
 							<!-- 글쓰기 -->
 							<a href="write_form.php?table=free">
-							<img src="../../img/board/write.png"></a>
+							<p class="word">글쓰기</p></a><!-- <img src="../../img/board/write.png"> -->
 
 				<!--
 				<?

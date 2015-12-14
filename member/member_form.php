@@ -68,23 +68,23 @@ require_once "../lib/header.php";
 
 							</div><!-- end of header1 -->
 							<div class="body">
-								<form name="member_form" method="POST" action="insert.php">
+								<form name="member_form" method="POST" action="./insert.php">
 									<dl class="form1">
-										<dt><label for="id">* 아이디&nbsp;</label><span id="id_space"></span></dt>
-										<dd><input type="text" class="text" id="id1" name="id1" onkeyup="confirm_id()"></dd>
-										<dt><label for="password">* 비밀번호 (6자 이상의 영문, 숫자를 입력하세요.)</label></dt>
+										<dt><label for="id"><font color="red"> * </font> 아이디&nbsp;</label><span id="id_space"></span></dt>
+										<dd><input type="text" class="text" id="id1" name="id1" onblur="confirm_id()"></dd>
+										<dt><label for="password"><font color="red"> * </font> 비밀번호 (6자 이상의 영문, 숫자를 입력하세요.)</label></dt>
 										<dd><input type="password" class="text" id="pw1" name="pw1" value=""></dd>
-										<dt><label for="password2">비밀번호 확인 </label><span id="pw_space"></span></dt>
+										<dt><label for="password2"><font color="red"> * </font>비밀번호 확인 </label><span id="pw_space"></span></dt>
 										<dd><input type="password" class="text" id="pw2" name="pw2" onkeyup="confirm_pass()"></dd>
-										<dt><label for="login_name">* 이름 </label></dt>
+										<dt><label for="login_name"><font color="red"> * </font> 이름 </label></dt>
 										<dd><input type="text" class="text" id="name" name="name" value=""></dd>
-										<dt><label for="birth">* 생년월일 </label></dt>
+										<dt><label for="birth"><font color="red"> * </font> 생년월일 </label></dt>
 										<dd><input type="text" class="text" id="birth" name="birth" value="" placeholder="ex) 19601230"></dd>
-										<dt><label for="phone">* 전화번호 </label></dt>
+										<dt><label for="phone"><font color="red"> * </font> 전화번호 </label></dt>
 										<dd><input type="text" class="text" id="phone" name="phone" value="" placeholder="ex) 010-0000-0000"></dd>
 										<dt><label for="email">이메일</label></dt>
 										<dd><input type="email" class="text" id="email" name="email" value="" placeholder="ex) asan@asan.kr"></dd>
-										<dt><label for="captcha">자동가입방지</label></dt>
+										<dt><label for="captcha"><font color="red"> * </font>자동가입방지</label></dt>
 										<dd><input type="text" class="text" id="captcha" name="captcha" value="" placeholder="아래 문자를 입력해 주세요."></dd>
 									</dl>
 									<div class="sin">
@@ -92,7 +92,7 @@ require_once "../lib/header.php";
 									</div>
 									<div class="btn">
 										<p>
-											<button type="submit" class="btn_submit" onclick="check_input()">가입하기</button>
+											<a href="#"><input type="button" class="btn_submit" onclick="check_input()" value="가입하기"></input></a>
 										</p>
 									</div>
 								</form>

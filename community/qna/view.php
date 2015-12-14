@@ -73,14 +73,14 @@
 				</div>
 
 				<div id="view_button">
-					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>&nbsp;
+					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><p class="word">목록</p></a>&nbsp;
 			<?
 				// if ($userid && ($userid == $item_id) || $userlevel == 1) {
 			?>
 				<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
-					<img src="../../img/board/modify.png"></a>&nbsp;
+					<p class="word">수정</p></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')">
-					<img src="../../img/board/delete.png"></a>&nbsp;
+					<p class="word">삭제</p></a>&nbsp;
 			<?
 				// }
 			?>
@@ -88,7 +88,7 @@
 			<?
 				if($userid) {
 			?>
-				<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
+				<a href="write_form.php?table=<?= $table ?>"><p class="word">글쓰기</p></a>
 			<?
 				}
 			?>

@@ -55,7 +55,7 @@ a {
 }
 
 #list_search .list_search4 input {
-	width:120px;
+	width:147px;
 	height:21px;
 	border:solid 1px #cccccc;
 }
@@ -172,19 +172,39 @@ a {
 	margin: 10px 0 0 0;
 }
 
+.word {
+	float:right;
+	/*display: block; 이거 해놔야 이미지를 네모처럼 인식해서 깔금하게 수정됨*/
+	width: 60px;
+	height: 25px;
+	background-color: #fa2828;
+	color: #fff;
+	
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 16px;
+	font-weight: bolder;
+	
+	padding-top: 5px !important;
+	
+	/*text-decoration: none;*/
+	text-align: center;
+
+	margin-left:15px;	
+}
+
 
 
 /* write_form.php */
 
 #write_form_title {
-	margin-top:20px;
+	margin-top:0px;
 	width:99%;
 	height:20px;
 	text-align:center;
 	padding-top:7px;  
 	border-top:solid 2px #fa2828;
 	border-bottom:solid 2px #fa2828;
-	background-color:#fffed3;
+	background-color:#fa2828;
 }
 
 #write_form {
@@ -321,11 +341,11 @@ a {
 #view_title {
 	height:18px;
 	padding:10px 8px 8px 8px;  
-	border-top:solid 2px #ff8484;
-	border-bottom:solid 1px #ff8484;
+	border-top:solid 2px #ff2828;
+	border-bottom:solid 1px #c8c8c8;
 	background-color:#fff;
 	margin-bottom:5px;
-	
+	background-color: #f4f4f4;
 	
 }
 
@@ -366,7 +386,6 @@ p.test {
 
 
 
-
 /* ripple css */
 
 #ripple {
@@ -402,7 +421,7 @@ p.test {
 
 #ripple_content {
 	padding:10px;
-	margin-left:5px;
+	margin-left:3px;
 	line-height:150%;
 	font-style: inherit;
 }
@@ -410,7 +429,8 @@ p.test {
 .hor_line_ripple {
 	width:100%;
 	height:1px;
-	margin-bottom:3px;
+	margin-left: 3px;
+	margin-bottom:0px;
 	border-bottom:solid 1px #cccccc;
 }
 
@@ -421,31 +441,36 @@ p.test {
 	padding:8px;
 	margin-left:3px;
 	margin-bottom:15px;
-	background-color:#fff;
+	background-color:#f4f4f4;
 	border-bottom: solid 1px #ff8484;
 }
 
 .ripple_box1 {
 	float:left;
-	width: 100px;
-	/*margin:5px;*/
+	width: 80px;
+	margin:10px;
 	overflow: hidden;
 }
 
 .ripple_box2 {
+	overflow: hidden;
 	float:left;
+	vertical-align: center;
+	text-align: center;
 	/*margin:5px;*/
-	margin:0px 3px;
+	padding-left:30px;
+	margin:8px 0 10px;
 }
 
 .ripple_box2 textarea {
-	margin-left:0px;
+	
 	border:solid 1px #cccccc;
 	margin-right: 10px;
 }
 
 .ripple_box3 {
-	float:left;
+	overflow: hidden;
+	float:right;
 	/*margin:5px 0 0 10px;*/
 	margin: 10px 0 0 10px;
 }
@@ -519,11 +544,12 @@ p.test {
 
 .list_top_title {
 	width: 760px;
-	border-top: 1px solid #ff8484;
+	border-top: 1px solid #ff2828;
 	float: left;
-	border-bottom: 1px solid #ff8484;
+	border-bottom: 1px solid #ff2828;
 	padding: 0px 0 0 0;
 	vertical-align: middle;
+	background-color: #ff2828;
 }
 
 th {
@@ -531,11 +557,11 @@ th {
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 16px;
 	font-weight: bold;
-	color: #333;
+	color: #fff;
 	text-align: center;
 	float: left;
 	height: 20px;
-	padding: 10px 0;
+	padding: 5px 0;
 	
 }
 

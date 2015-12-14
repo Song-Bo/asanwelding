@@ -4,20 +4,17 @@
 	$userid = $_SESSION[userid];
 	$username = $_SESSION[username];
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="No-Cache">
 <link rel="stylesheet" type="text/css" href="<?=$url?>/css/common.css">
 <link rel="stylesheet" type="text/css" href="<?=$url?>/css/freeboard.css">
 <link rel="stylesheet" type="text/css" href="<?=$url?>/css/layout.css">
-
 <title>아산용접배관학원</title>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="<?=$url?>/js/phoschool/jquery-scrollnews.js"></script>
@@ -31,7 +28,14 @@ $(document).ready(function(){
 		speed:500,
 		timer:3000
 	});
-});
+});	
+</script>
+<script>
+	function first_focus() {
+		document.login_form.id.focus();
+
+		return;
+	}
 </script>
 </head>
 <body>
@@ -108,7 +112,7 @@ $(document).ready(function(){
 	<div class="p_c_text">회원이 되시면 여러 혜택을 누리실 수 있습니다.</div>
 
 	<!-- start of form -->
-	<form method="POST" action="<?=$url?>/login/login.php">
+	<form method="POST" action="#"><!--<?=$url?>/login/login.php -->
 	<div class="login_line">
 		<div class="box_in1">
 			 <input type="text" name="id" id="id" placeholder="아이디" size="30" >
@@ -128,26 +132,71 @@ $(document).ready(function(){
 <!-- Modal Window Part -->
 <script type="text/javascript">
 $(function(){
+  $("form").submit(function(e){	
+  	var id = $('#id').val();
+  	var pw = $('#pw').val();
 
-  $("#dsaform").submit(function(e){	
-
-	if (!$('#id').val()) {
+	if (!id) {
 		alert('아이디를 입력하세요.');
 		$('#id').val();
 		$('#id').focus();
+		return false;
 			
-	}
-
-	else if (!$('#pw').val()) {
+	} else if (!pw) {
 		alert('비밀번호를 입력하세요.');
 		$('#pw').val();
 		$('#pw').focus();		
+		return false;
 	}
+
+	$.ajax({
+		url:"<?=$url?>/lib/login_ajax.php",
+		type:"POST",
+		data:{"id":id, 'pw':pw},
+		dataType:"Json",
+		error: function(request, status, error) {
+			alert('어서오세요 !');
+			location.href="../index.php";
+		},
+		success: function(res) {
+			if(res[0].confirm=="ok") {
+				alert('어서 오세요 !');
+				location.href="../index.php";
+			} else if(res[0].confirm=="no") {
+				if(res[0].reason=="noid") {
+					alert('등록되지 않은 아이디 입니다 !');
+					$('#pw').val("");
+					$('#id').val();
+					$('#id').focus();
+					$('#id').select();
+
+				} else if (res[0].reason == "nopw") {
+					alert('비밀번호가 일치하지 않습니다 !');
+					$('#pw').val("");
+					$('#pw').focus();
+					$('#pw').select();
+				}
+			}
+		}
+	});
+
+
 	
   	 return false;    
   });
   
-  $('#modaltrigger').leanModal({ top: 110, overlay: 0.8, closeButton: ".hidemodal" });
+
+
+  $('#modaltrigger').leanModal({ 
+
+   	top: 100, 
+  	overlay: 0.3, 
+  	closeButton: ".hidemodal" 
+
+  });
+
+
+
 });
 
 </script>

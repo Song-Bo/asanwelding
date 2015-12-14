@@ -1,23 +1,6 @@
 <meta charset="UTF-8">
 <?
 	session_start();
-
-	// CAPTCHA 확인
-	$cap = 'notEq';
-	if ($_POST['captcha'] == $_SESSION['captcha']) {
-		// Captcha verification is Correct. Do Something Here !
-		$cap = 'Eq';
-	} else {
-		// Captcha verification is Wrong. Take other action !
-		$cap = '';
-
-		echo "<script>
-				alert('문자가 일치 하지 않습니다.');
-				history.go(-1);
-			  </script>";
-		exit;
-	}
-
 	// FORM POST 받아오기
 	$id = $_POST[id1];
 	$pw = $_POST[pw1];
@@ -30,6 +13,28 @@
 	
 	$user_pass_phrase = sha1($_POST['captcha']);
 	$ip = $REMOTE_ADDR; // 방문자 IP 저장
+?>
+<?
+
+	// CAPTCHA 확인
+	$cap = 'notEq';
+
+	if ($_POST['captcha'] == $_SESSION['captcha']) {
+		// Captcha verification is Correct. Do Something Here !
+		$cap = 'Eq';		
+	} else {
+		// Captcha verification is Wrong. Take other action !
+		$cap = '';
+
+		echo "<script>
+				alert('문자가 일치 하지 않습니다.');
+				history.go(-1);
+			  </script>";
+		exit;
+	}
+
+
+	
 ?>
 <?
 	require_once "../lib/dbconn.php";
@@ -56,5 +61,9 @@
 			alert('아산용접배관학원에 오신걸 환영 합니다 !');
 			location.href='../introduce/introduce.php'
 		  </script>";	
+
+
+	$_SESSION[userid] = $id;
+	$_SESSION[username] = $name;
 
 ?>

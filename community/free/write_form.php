@@ -193,9 +193,9 @@
 
 
 				<!-- start of #write_button -->
-				<div id="write_button"><a href="#"><img src="../../img/board/ok.png" onclick="check_input()"></a>
+				<div id="write_button"><a href="#"><p class="word" onclick="check_input()">완료</p></a>
 								&nbsp; <a href="list.php?table=<?=$table?>&page=<?=$page?>">
-										<img src="../../img/board/list.png"></a>
+										<p class="word">목록</p></a>
 
 				</div><!-- end of #write_button -->
 				</form><!-- end of form -->

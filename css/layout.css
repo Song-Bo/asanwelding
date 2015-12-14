@@ -145,5 +145,6 @@ div.body div.btn {
     background-color: #fa2828;
     border: 1px solid #fa2828;
     color: #fff;
+    cursor: pointer;
 }
 

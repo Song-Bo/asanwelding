@@ -163,7 +163,7 @@
 				<?
 					if($userid == 'admin') {
 				?>
-					&nbsp;<a href="write_form.php?table=<?= $table ?>"><img src="../../img/board/write.png"></a>
+					&nbsp;<a href="write_form.php?table=<?= $table ?>"><p class="word">글쓰기</p></a>
 				<?
 					}
 				?>
