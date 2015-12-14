@@ -127,12 +127,13 @@
 				
 					<div id="list_item">
 						<div class="list_item1"><?= $number ?> </div>
-						<div class="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>
+						<div class="list_item2"><p class="test"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?=$item_subject?></a>
 				<?
 					if ($num_ripple) echo "[$num_ripple]";
-				?>						
+				?>			
+						</p>			
 						</div>
-						<div class="list_item3"><?= $item_name ?></div>
+						<div class="list_item3"><p class="test"><?= $item_name ?></p></div>
 						<div class="list_item4"><?= $item_date ?></div>
 						<div class="list_item5"><?= $item_hit ?></div>
 					</div><!-- end of #list_item -->

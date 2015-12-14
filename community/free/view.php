@@ -91,7 +91,7 @@
 			<!-- <div id="view_comment"> &nbsp; </div> -->
 					
 					<div id="view_title">
-						<div class="view_title1"><b><?= $item_subject ?></b></div>
+						<div class="view_title1"><p class="test"><b><?= $item_subject ?></b></p></div>
 						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?></div>
 					</div>
 

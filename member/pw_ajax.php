@@ -1,28 +1,22 @@
 <?	
-	$id = $_POST[id];
-
 	$check = ($_POST[pw]);
 	$check2 = ($_POST[pw2]);
- 
+
 	if($check2 == $check){
 		$arg = array(
-				array("confirm" => "ok")
-				);
+			array("confirm" => "ok")
+			);
 
 		$result = json_encode($arg);
 		echo $result;	
 		exit;
 
 	} else {
-
 		$arg = array(
-			array("confirm" => "no")
+		array("confirm" => "no")
 			);
-
 		$result = json_encode($arg);
 		echo $result;	
-		exit;
+		exit;	
 	}
-
-
 ?>

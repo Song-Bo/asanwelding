@@ -19,8 +19,8 @@
 	}
 
 	// FORM POST 받아오기
-	$id = $_POST[id];
-	$pw = $_POST[pw];
+	$id = $_POST[id1];
+	$pw = $_POST[pw1];
 	$pw2 = $_POST[pw2];
 	$name = $_POST[name];
 	$birth = $_POST[birth];

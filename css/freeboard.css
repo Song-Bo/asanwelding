@@ -325,6 +325,15 @@ a {
 	border-bottom:solid 1px #ff8484;
 	background-color:#fff;
 	margin-bottom:5px;
+	
+	
+}
+
+/* 너무 긴 길 적었을 때 짤라주는.... */
+p.test {
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .view_title1 {

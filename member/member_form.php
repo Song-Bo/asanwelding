@@ -1,23 +1,23 @@
 <?
-	session_start();
+session_start();
 ?>
 <?
-	require_once "../lib/header.php";
+require_once "../lib/header.php";
 ?>
 <!-- start of container -->
 <script>
 	function check_input() {
-		if (!document.member_form.id.value) {
+		if (!document.member_form.id1.value) {
 			window.alert('아이디를 입력하세요 !');
-			document.member_form.id.focus();
+			document.member_form.id1.focus();
 			return;
 		}
-		if (!document.member_form.pw.value) {
+		if (!document.member_form.pw1.value) {
 			alert('비밀번호를 입력하세요 !');
-			document.member_form.pw.focus();
+			document.member_form.pw1.focus();
 			return;
 		}
-		if (document.member_form.pw.value != document.member_form.pw2.value) {
+		if (document.member_form.pw1.value != document.member_form.pw2.value) {
 			alert('비밀번호가 다릅니다 !');
 			document.member_form.pw2.focus();
 			return;
@@ -56,10 +56,8 @@
 				</ul>
 			</div><!-- end of nav_wrap -->
 			<div class="main_content">
-				<div class="main_co1">
-					<!-- <h3>회원가입</h3> -->
-				</div>
-				<div class="main_co2">
+				
+				<div class="main_co2" style="margin-top:20px">
 					
 					<!-- 회원가입 폼 -->
 					<div class="single-col"></div>
@@ -67,17 +65,17 @@
 						<div class="wrapper_table">
 							<div class="header1">
 								&nbsp;&nbsp;<strong>아산용접배관학원은 실명제를 실시 하고 있습니다.</strong><br>
-								 
+
 							</div><!-- end of header1 -->
 							<div class="body">
 								<form name="member_form" method="POST" action="insert.php">
 									<dl class="form1">
-										<dt><label for="id">* 아이디  (4~12자의 영문 소문자를 입력하세요.)</label></dt>
-										<dd><input type="text" class="text" id="id" name="id"></dd>
+										<dt><label for="id">* 아이디&nbsp;</label><span id="id_space"></span></dt>
+										<dd><input type="text" class="text" id="id1" name="id1" onkeyup="confirm_id()"></dd>
 										<dt><label for="password">* 비밀번호 (6자 이상의 영문, 숫자를 입력하세요.)</label></dt>
-										<dd><input type="password" class="text" id="pw" name="pw" value=""></dd>
-										<dt><label for="password2">비밀번호 확인 </label><span id="tn"></span></dt>
-										<dd><input type="password" class="text" id="pw2" name="pw2" onkeyup="test()"></dd>
+										<dd><input type="password" class="text" id="pw1" name="pw1" value=""></dd>
+										<dt><label for="password2">비밀번호 확인 </label><span id="pw_space"></span></dt>
+										<dd><input type="password" class="text" id="pw2" name="pw2" onkeyup="confirm_pass()"></dd>
 										<dt><label for="login_name">* 이름 </label></dt>
 										<dd><input type="text" class="text" id="name" name="name" value=""></dd>
 										<dt><label for="birth">* 생년월일 </label></dt>
@@ -90,7 +88,7 @@
 										<dd><input type="text" class="text" id="captcha" name="captcha" value="" placeholder="아래 문자를 입력해 주세요."></dd>
 									</dl>
 									<div class="sin">
-									<img src="./captcha.php" alt="captcha" id="reCaptcha">
+										<img src="./captcha.php" alt="captcha" id="reCaptcha">
 									</div>
 									<div class="btn">
 										<p>
@@ -110,37 +108,53 @@
 
 <?
 require_once "../lib/footer.php";
-?>
-
-									
+?>				
 <script>
 	$(document).ready(function() {
 
-		test = function() {
-		
-		var pw = $("#pw").val();
-		var pw2 = $("#pw2").val();			
+		confirm_id = function() {
 
-		$.ajax({
-			url:"./member_ajax.php",
-			type:"POST",
-			data:{"pw":pw, "pw2":pw2},
-			dataType:"Json",
-			error: function(request, status, error) {
-				
-			},
-			success: function(res) {
-				if(res[0].okk=="ok") {
+			var id = $("#id1").val();
 
-					$("#tn").html("비밀번호 일치 !");
-					
-				} else if(res[0].okk=="no") {
-
-					$("#tn").html("비밀번호를 확인해 주세요.");
-					 					
+			$.ajax({
+				url:"./id_ajax.php",
+				type:"POST",
+				data:{"id":id},
+				dataType:"Json",
+				error: function(request, status, error) {
+					alert(error);
+				},
+				success: function(res) {
+					if(res[0].confirm=="ok") {
+						$("#id_space").css("color","blue").html("&nbsp;이용가능 합니다 !");
+					} else if(res[0].confirm=="no") {
+						$("#id_space").css("color","red").html("&nbsp;이미 등록된 아이디 입니다.");
+					}
 				}
-			}
-		});
+			});
+		}
+
+		confirm_pass = function() {
+
+			var pw = $("#pw1").val();
+			var pw2 = $("#pw2").val();			
+
+			$.ajax({
+				url:"./pw_ajax.php",
+				type:"POST",
+				data:{"pw":pw, "pw2":pw2},
+				dataType:"Json",
+				error: function(request, status, error) {
+					alert(error);
+				},
+				success: function(res) {
+					if(res[0].confirm=="ok") {
+						$("#pw_space").css("color", "blue").html("&nbsp;비밀번호 일치 !");
+					} else if(res[0].confirm=="no") {
+						$("#pw_space").css("color","red").html("&nbsp;비밀번호를 확인해 주세요.");
+					}
+				}
+			});
 		}
 	});
 </script>
