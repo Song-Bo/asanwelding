@@ -9,7 +9,7 @@
 	$row = $result->fetch_assoc();
 	$db_id = $row[id];
 	$db_pass = $row[pass];
-
+	$db_name = $row[name];
 
 	if($db_id != $id){
 		$arg = array(array(
@@ -33,11 +33,9 @@
 				"confirm" => "ok"));
 			$result = json_encode($arg);
 			
-			$_SESSION[userid] = $row[id];
-			$_SESSION[username] = $row[name];
+			$_SESSION['userid'] = $db_id;
+			$_SESSION['username'] = $db_name;
 			exit;
 		}
 	}
-
-
 ?>

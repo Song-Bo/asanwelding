@@ -69,7 +69,7 @@
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
-					<h3> 자유 게시판&nbsp;&nbsp;-&nbsp;&nbsp;글쓰기 </h3>
+					<h3> 자유 게시판&nbsp;&nbsp;-&nbsp;&nbsp;<?if($mode=="modify"){?>수정<?}else{?>글쓰기 <?}?> </h3>
 				</div>
 
 

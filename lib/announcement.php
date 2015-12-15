@@ -30,7 +30,7 @@
 	  <div class="list_notice">
         <div class="list_item1"><h4 style="color:#fa2828">공지</h4></div>
         <div class="list_item2"><a href="<?=$url?>/community/notice/view.php?table=<?=$table?>&num=<?=$item_num1?>&page=<?=$page?>">
-      						  <?=$item_subject1?></a></div>
+      						  <b><?=$item_subject1?></b></a></div>
         <div class="list_item3"><?= $item_name1 ?></div>
         <div class="list_item4"><?= $item_date1 ?></div>
         <div class="list_item5"><?= $item_hit1 ?></div>

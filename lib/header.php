@@ -33,7 +33,6 @@ $(document).ready(function(){
 <script>
 	function first_focus() {
 		document.login_form.id.focus();
-
 		return;
 	}
 </script>
@@ -129,7 +128,7 @@ $(document).ready(function(){
 
 
 
-<!-- Modal Window Part -->
+<!-- Modal Login Part -->
 <script type="text/javascript">
 $(function(){
   $("form").submit(function(e){	
@@ -155,8 +154,8 @@ $(function(){
 		data:{"id":id, 'pw':pw},
 		dataType:"Json",
 		error: function(request, status, error) {
-			alert('어서오세요 !');
-			location.href="../index.php";
+			alert('아산용접배관학원에 오신걸 환영합니다 !');
+			location.href="<?=$url?>/index.php";
 		},
 		success: function(res) {
 			if(res[0].confirm=="ok") {
@@ -178,25 +177,23 @@ $(function(){
 				}
 			}
 		}
-	});
-
-
-	
+	});	
   	 return false;    
   });
   
 
 
   $('#modaltrigger').leanModal({ 
-
    	top: 100, 
   	overlay: 0.3, 
   	closeButton: ".hidemodal" 
 
   });
 
-
-
+  $('#modaltrigger').click(function (){
+  	$('#id').val("");
+  	$('#id').focus();
+  });
 });
 
 </script>

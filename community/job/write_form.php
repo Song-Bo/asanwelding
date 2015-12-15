@@ -16,7 +16,7 @@
 		$sql = "select * from $table where num=$num";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
-		$item_nick = $row[nick];
+		$item_name = $row[name];
 		$item_subject = $row[subject];
 		$item_content = $row[content];
 		$item_file_0 = $row[file_name_0];
@@ -58,7 +58,7 @@
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
-					<h3> 취업소식&nbsp;&nbsp;-&nbsp;&nbsp;글쓰기 </h3>
+					<h3> 취업소식&nbsp;&nbsp;-&nbsp;&nbsp;<?if($mode=="modify"){?>수정<?}else{?>글쓰기 <?}?></h3>
 				</div>
 
 
@@ -90,8 +90,11 @@
 				<div id="write_form">
 					<div class="write_line"></div> 						
 						<div class="write_row1"><div class="col1"> 작성자 </div>
-												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
-						
+						<? if (!$userid) { ?>
+												<div class="col2"><input type="text" name="writer" value="<?= $item_name ?>"></div>
+						<? } else { ?>
+												<div class="col2"><input type="text" name="writer" value="<?= $username?>"></div>
+						<? } ?>
 						</div><!-- end of write_row1 -->
 			
 					<div class="write_line"></div>
