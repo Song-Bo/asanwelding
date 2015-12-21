@@ -124,6 +124,17 @@ create table download (
    primary key(num)
 );
 
+/* 다운로드 댓글 */
+create table download_ripple (
+	num int not null auto_increment,
+	parent int not null,
+	id char(15) not null, 
+	name char(15) not null, 
+	/*nick char(10) not null,*/
+	content text not null,
+	regist_day char(20),
+	primary key(num)
+);
 
 /* Q & A - group_num not null 이었고 id 와 pass notnull 아닌거 주의 */ 
 create table qna (
@@ -141,6 +152,18 @@ create table qna (
    hit int,
    /*is_html char(1),*/
    primary key(num)
+);
+
+/* qna_ripple */
+create table qna_ripple (
+	num int not null auto_increment,
+	parent int not null,
+	id char(15) not null, 
+	name char(15) not null, 
+	/*nick char(10) not null,*/
+	content text not null,
+	regist_day char(20),
+	primary key(num)
 );
 
 

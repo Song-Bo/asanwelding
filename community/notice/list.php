@@ -96,7 +96,11 @@
 
 					<!-- list_top_title -->
 					<table>
+					<? if ($userid == "admin") { ?>
+					 <tr class="list_top_title_admin">
+					<? } else { ?>
    					 <tr class="list_top_title">
+   					<? } ?>
         				<th class="num">번호</th>
         				<th class="subject">제목</th>
         				<th class="writer">작성자</th>

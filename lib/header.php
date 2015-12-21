@@ -74,7 +74,7 @@ $(document).ready(function(){
 			<li><a href="<?=$url?>/admin/administration.php">관리자 모드</a></li>
 			<li><a href="<?=$url?>/login/logout.php">로그아웃</a></li>
 		<? } else { ?>
-			<li>정보수정</li>
+			<li><a href="<?=$url?>/member/member_form_modify.php">마이페이지</a></li>
 			<li><a href="<?=$url?>/login/logout.php">로그아웃</a></li>
 		<?
 			}
