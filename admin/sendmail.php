@@ -37,7 +37,7 @@ if ($_GET ['email']) {
 		$mail->ClearAddresses ();
 		?>     
 		<?
-		$content = sha1 ( $content );
+		$content = $content;//$content = sha1 ( $content );
 		$sql = "update member set pass='$content' where id='$id'";
 		$conn->query ( $sql );
 		$conn->close ();
