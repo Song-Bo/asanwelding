@@ -3,13 +3,10 @@
 	$table = "gallery";
 	$page = $_GET[page];
 	$num = $_GET[num];
-	/*
+
 	$userid = $_SESSION[userid];
     $username = $_SESSION[username];
-    $usernick = $_SESSION[usernick];
-    $userlevel = $_SESSION[userlevel];
-	*/	
-
+   
 	require_once "../../lib/dbconn.php";
 
 	$sql = "select * from $table where num=$num";
@@ -17,9 +14,7 @@
 	$row = $result->fetch_assoc();
 
 	$item_num = $row[num];
-  /*$item_id = $row[id];
-	$item_name = $row[name];*/
-	$item_nick = $row[nick];
+	$item_name = $row[name];
 	$item_hit = $row[hit];
 
 	$image_name[0] = $row[file_name_0];
@@ -33,12 +28,6 @@
 	$item_date = $row[regist_day];
 	$item_subject = str_replace(" ", "&nbsp", $row[subject]);
 	$item_content = $row[content];
-	// $is_html = $row[is_html];
-
-  /*if ($is_html!="y") {
-		$item_content = str_replace(" ", "&nbsp", $item_content);
-		$item_content = str_replace("\n", "<br>", $item_content);
-	} */
 
 	for ($i=0; $i < 3; $i++) { 		
 		if ($image_copied[$i]) {
@@ -84,22 +73,9 @@
 <div id="container">
 	<div class="wrap">
 		<div class="content" id="content">
-			<div class="nav_wrap">
-			<div class="nav">
-				갤러리
-			</div>
-			<div class="sub_nav">
-				<div class="sub_nav1" style="padding: 30px 20px 20px">
-					<a href="./list.php"><h3>갤러리</h3></a>
-				</div>
-				<!-- <div class="sub_nav1">
-					<a href="#"><img src="../img/sub_nav_1.png" width="200" height="66"></a>
-				</div>
-				<div class="sub_nav2">
-					<img src="../img/sub_nav_2.png" width="200" height="56">
-				</div> -->
-			</div>
-			</div>
+			<?
+				require_once "../../lib/gallery_sub_nav.php";
+			?>
 			<div class="main_content">
 
 				<div class="main_co1">
@@ -116,7 +92,7 @@
 					
 					<div id="view_title">
 						<div class="view_title1"><b><?= $item_subject ?></b></div>
-						<div class="view_title2"><b><?= $item_nick ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
+						<div class="view_title2"><b><?= $item_name ?></b>&nbsp;&nbsp;|&nbsp;&nbsp;조회수 : <?= $item_hit ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?= $item_date ?></div>
 					</div>
 
 				<div id="view_content">
@@ -169,33 +145,34 @@
 				}
 			?>
 					<!-- start of FORM -->
-					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?= $table ?>&num=<?=$item_num?>">
+					<form name="ripple_form" method="post" action="insert_ripple.php?table=<?=$table?>&num=<?=$item_num?>">
 					<div id="ripple_box">
-						<div class="ripple_box1"><img src="../../img/board/title_comment.gif"></div>
-						<div class="ripple_box2"><textarea rows="5" cols="60" name="ripple_content"></textarea></div>
-						<div class="ripple_box3"><a href="#"><img src="../../img/board/ok_ripple.gif" onclick="check_input()"></a></div>
+						<div class="ripple_box1"><?=$username?> 님의 댓글!^^</div>
+						<div class="ripple_box2"><textarea rows="4" cols="60" name="ripple_content"></textarea></div>
+						<div class="ripple_box3"><a href="#"><img src="../../img/board/ok_ripple.png" onclick="check_input()"></a></div>
 					</div><!-- end of #ripple_box -->
 					</form>
 					<!-- end of FORM -->
-				</div><!-- end of ripple -->
+				</div>
+<!-- end of ripple -->
 
 				<div id="view_button">
-					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><img src="../../img/board/list.png"></a>&nbsp;
+					<a href="list.php?table=<?= $table ?>&page=<?=$page?>"><p class="word">목록</p></a>
 			<?
-				// if ($userid && ($userid == $item_id) || $userlevel == 1) {
+				if ($userid && ($userid == $item_id) || $userid == "admin") {
 			?>
-				<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
-					<img src="../../img/board/modify.png"></a>&nbsp;
+				&nbsp;<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>">
+					<p class="word">수정</p></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')">
-					<img src="../../img/board/delete.png"></a>&nbsp;
+					<p class="word">삭제</p></a>&nbsp;
 			<?
-				// }
+				}
 			?>
 			
 			<?
 				if($userid) {
 			?>
-				<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
+				<a href="write_form.php?table=<?= $table ?>"><!-- <img src="../../img/board/write.png"> --><p class="word">글쓰기</p></a>
 			<?
 				}
 			?>

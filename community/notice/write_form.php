@@ -73,8 +73,8 @@
 
 				<!-- start of main_co2 -->
 				<div class="main_co2">
-					<div id="write_form_title">
-						<img src="../../img/board/write_form_title.gif">
+					<div id="write_form_title_admin">
+						
 					</div>
 
 					<div class="clear"></div>
@@ -162,9 +162,10 @@
 
 				<!-- start of #write_button -->
 				<div id="write_button">
-					<a href="#"><p class="word" onclick="check_input()">완료</p></a>&nbsp;
 					<a href="list.php?table=<?=$table?>&page=<?=$page?>">
-					<p class="word">목록</p></a>
+						<p class="word">목록</p></a>&nbsp;
+					<a href="#"><p class="word" onclick="check_input()">완료</p></a>
+					
 				</div><!-- end of #write_button -->
 			
 				</form>

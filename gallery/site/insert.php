@@ -8,13 +8,6 @@
 	$content = $_POST[content];
 	$writer = $_POST[writer];
 
-	/*
-	$userid = $_SESSION[userid];
-    $username = $_SESSION[username];
-    $usernick = $_SESSION[usernick];
-    $userlevel = $_SESSION[userlevel];
-	*/
-
 	$mode = $_GET[mode];
 	$page = $_GET[page];
 
@@ -90,7 +83,7 @@
 
 	/* adding dbconn.php, SQL query START !! */
 
-	require_once "../lib/dbconn.php";
+	require_once "../../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$num_checked = count($_POST['del_file']);
@@ -137,15 +130,8 @@
 		$sql = "update $table set subject='$subject', content='$content' where num=$num";
 		$conn->query($sql); 
 
-	} else {
-		if ($html_ok == "y") {
-			$is_html = "y";
-		} else {
-			$is_html = "";
-			$content = htmlspecialchars($content);
-		}
-
-		$sql = "insert into $table (nick, subject, content, regist_day, hit, ";
+	} else {		
+		$sql = "insert into $table (name, subject, content, regist_day, hit, ";
 		$sql.= "file_name_0, file_name_1, file_name_2, file_copied_0, file_copied_1, file_copied_2) ";
 		$sql.= "values ('$writer', '$subject', '$content', '$regist_day', 0, ";
 		$sql.= "'$upfile_name[0]', '$upfile_name[1]', '$upfile_name[2]', '$copied_file_name[0]', ";
@@ -158,6 +144,6 @@
 
 	echo "<script>
 	       window.alert('등록 되었습니다 !');
-	       location.href = 'gallery.php?table=$table&page=$page';
+	       location.href = 'list.php?table=$table&page=$page';
 	      </script>";
 ?>

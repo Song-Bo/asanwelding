@@ -46,6 +46,9 @@ require_once "../lib/header.php";
 			<div class="nav_wrap">
 				<div class="nav">
 					회원가입
+				<div class="nav_title">
+					join
+				</div>
 				</div>
 				<ul class="sub_nav">
 					<!-- <li class="sub_item"><a href="<?=$url?>/community/notice/list.php" class="sub_item_txt tit0">공지사항</a></li>
@@ -64,7 +67,7 @@ require_once "../lib/header.php";
 					<div id="member_auth">
 						<div class="wrapper_table">
 							<div class="header1">
-								&nbsp;&nbsp;<strong>아산용접배관학원은 실명제를 실시 하고 있습니다.</strong><br>
+								&nbsp;&nbsp;아산용접배관학원은 실명제를 실시 하고 있습니다.<br>
 
 							</div><!-- end of header1 -->
 							<div class="body">

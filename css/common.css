@@ -21,7 +21,10 @@ a{color:#767676;text-decoration:none;cursor:pointer}
 ::-moz-placeholder{color:#999}
 :-ms-input-placeholder{color:#999}
 input[type='checkbox']{width:13px;height:13px;vertical-align:top;-webkit-appearance:checkbox}
-
+article { display:block; }
+.content_interior {
+    position: relative;
+}
 
 /* Body */
 body {
@@ -261,8 +264,8 @@ ul, li {
 	float: left;
 	width: 266px;
 	height: 250px;
-	border: 1px solid red;
-	margin: 3px;
+	/*border: 1px solid red;*/
+	margin: 15px;
 	background-repeat: no-repeat;
 }
 

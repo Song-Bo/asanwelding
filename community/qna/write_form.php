@@ -148,9 +148,11 @@
 				</div><!-- end of #write_form -->
 
 				<!-- start of #write_button -->
-				<div id="write_button"><a href="#"><p class="word" onclick="check_input()">완료</p></a>
-								&nbsp; <a href="list.php?table=<?=$table?>&page=<?=$page?>">
-										<p class="word">목록</p></a>
+				<div id="write_button">
+				<a href="list.php?table=<?=$table?>&page=<?=$page?>">
+										<p class="word">목록</p></a>&nbsp; 
+				<a href="#"><p class="word" onclick="check_input()">완료</p></a>
+								
 
 				</div><!-- end of #write_button -->
 				</form><!-- end of form -->

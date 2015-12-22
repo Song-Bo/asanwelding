@@ -6,18 +6,11 @@
 	$num = $_GET[num];
 	$page = $_GET[page];
 
-	/*
-	$userid = $_SESSION[userid];
-	$username = $_SESSION[username];
-    $usernick = $_SESSION[usernick];
-    $userlevel = $_SESSION[userlevel];
-	*/
-
 	$mode = $_GET[mode];
 	$subject= $_POST[subject];
 	$content= $_POST[content];
 
-	require_once "../lib/dbconn.php";
+	require_once "../../lib/dbconn.php";
 
 	if ($mode == "modify") {
 		$sql = "select * from $table where num=$num";
@@ -35,7 +28,7 @@
 	}
 ?>
 <?
-	require_once "../lib/header.php";
+	require_once "../../lib/header.php";
 ?>
 <script>
 	function check_input() {
@@ -60,18 +53,14 @@
 <!-- start of container -->
 <div id="container">
 	<div class="wrap">
-		<div class="nav_wrap">
-			<div class="nav">
-				갤러리
-			</div>
-			<ul class="sub_nav">
-				<li class="sub_nav1"><a href="gallery.php" class="sub_nav_txt">갤러리</a></li>
-			</ul>
-			</div>
+		<div class="content" id="content">
+		<?
+			require_once "../../lib/gallery_sub_nav.php";
+		?>
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
-					<h3> 갤러리&nbsp;&nbsp;-&nbsp;&nbsp;글쓰기 </h3>
+					<h3> 현장갤러리 </h3>
 				</div>
 
 
@@ -82,7 +71,7 @@
 					</div>
 
 					<div id="write_form_title">
-						<img src="../img/board/write_form_title.gif">
+						
 					</div>
 
 					<div class="clear"></div>
@@ -105,14 +94,7 @@
 						<div class="write_row1"><div class="col1"> 작성자 </div>
 												<div class="col2"><input type="text" name="writer" value="<?= $item_nick ?>"></div>
 			
-			<?
-				if ($mode != "modify") {
-			?>
-							<div class="col3"><input type="checkbox" name="html_ok" value="y"> HTML 쓰기 </div>
-			<?
-				}
-			?>
-			
+					
 						</div><!-- end of write_row1 -->
 			
 					<div class="write_line"></div>
@@ -184,9 +166,11 @@
 				</div><!-- end of #write_form -->
 
 				<!-- start of #write_button -->
-				<div id="write_button"><a href="#"><img src="../img/board/ok.png" onclick="check_input()"></a>
-								&nbsp; <a href="gallery.php?table=<?=$table?>&page=<?=$page?>">
-										<img src="../img/board/list.png"></a>
+				<div id="write_button">
+				<a href="list.php?table=<?=$table?>&page=<?=$page?>">
+										<p class="word">목록</p></a>&nbsp; 
+				<a href="#"><p class="word" onclick="check_input()">완료</p></a>
+								
 
 				</div><!-- end of #write_button -->
 				</form><!-- end of form -->
@@ -198,5 +182,5 @@
 </div><!-- end of container -->
 
 <?
-	require_once "../lib/footer.php";
+	require_once "../../lib/footer.php";
 ?>

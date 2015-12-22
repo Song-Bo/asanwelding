@@ -20,6 +20,10 @@
 <script type="text/javascript" src="<?=$url?>/js/phoschool/jquery-scrollnews.js"></script>
 <script type="text/javascript" src="<?=$url?>/js/phoschool/jquery-blink.js"></script>
 <script type="text/javascript" src="<?=$url?>/js/jquery.leanModal.min.js"></script>
+<script type="text/javascript" src="<?=$url?>/js/jquery.menu.js"></script>
+<script type="text/javascript" src="<?=$url?>/js/jquery.common.js"></script>
+<script type="text/javascript" src="<?=$url?>/js/jquery.wrest.js"></script>
+<script type="text/javascript" src="<?=$url?>/js/jquery.flexslider-min"></script>
 <script>
 $(document).ready(function(){
 	// 공지사항 롤링
@@ -111,7 +115,7 @@ $(document).ready(function(){
 	<div class="p_c_text">회원이 되시면 여러 혜택을 누리실 수 있습니다.</div>
 
 	<!-- start of form -->
-	<form method="POST" action="#"><!--<?=$url?>/login/login.php -->
+	<form class="mo" method="POST" action="#"><!--<?=$url?>/login/login.php -->
 	<div class="login_line">
 		<div class="box_in1">
 			 <input type="text" name="id" id="id" placeholder="아이디" size="30" >
@@ -119,7 +123,8 @@ $(document).ready(function(){
 		</div>		
 	</div>
 	<div class="box_in2"><input type="submit" title="로그인" alt="로그인" value="로그인" class="lgn" /></div>
-	<div class="find_join"><a href="">아이디/비밀번호 찾기</a> &nbsp;|&nbsp; <a href="<?=$url?>/member/member_form.php">회원가입</a></div>
+	<div class="find_join"><a href="<?=$url?>/member/member_find_form.php?find=id">아이디 찾기</a>/<a href="<?=$url?>/member/member_find_form.php?find=pw">비밀번호 찾기</a> &nbsp;|&nbsp; 
+	<a href="<?=$url?>/member/member_form.php">회원가입</a></div>
 	</form>
 	<!-- end of form -->
 
@@ -131,7 +136,7 @@ $(document).ready(function(){
 <!-- Modal Login Part -->
 <script type="text/javascript">
 $(function(){
-  $("form").submit(function(e){	
+  $(".mo").submit(function(e){	
   	var id = $('#id').val();
   	var pw = $('#pw').val();
 

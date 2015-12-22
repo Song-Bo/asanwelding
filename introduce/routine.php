@@ -27,7 +27,7 @@ try {
 					</ul>			
 			</div>
 			<div class="main_content">
-				<div class="main_co1">
+				<div class="main_co1" style="padding: 0px 0px 20px 55px">
 					<? require_once "map.php"; ?>
 				</div>
 				<div class="main_co2">

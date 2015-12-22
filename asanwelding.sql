@@ -173,7 +173,7 @@ create table qna_ripple (
 
 CREATE TABLE IF NOT EXISTS `gallery` (
   `num` int(11) NOT NULL AUTO_INCREMENT,
-  /*`nick` char(16) NOT NULL,*/
+  `name` char(16) NOT NULL,*/
   `subject` char(100) NOT NULL,
   `content` text NOT NULL,
   `regist_day` char(20) DEFAULT NULL,

@@ -1,12 +1,9 @@
 <?
 	session_start();
 	$table = "member";
-
 	$page = $_GET[page];
 	$num = $_GET[num];
-
 	$mode = $_GET[mode];
-
 	$search = $_POST[search];
 	$find = $_POST[find];
 ?>
@@ -109,7 +106,6 @@
 				<div class="clear"></div>
 
 				
-
 				<!-- start of BAR -->
 				<table>
    				 <tr class="list_top_title_admin">
@@ -124,7 +120,6 @@
 
 				<div class="clear"></div>
 
-
 				<!-- start of list_content -->
 
 				<div id="list_content">
@@ -134,9 +129,7 @@
 					for ($i=$start; $i < $start+$scale && $i < $total_record; $i++) { 
 						mysqli_data_seek($result, $i);    // 포인터 이동
 						$row = $result->fetch_assoc();    // 하나의 레코드 가져오기
-				?>
-					
-        			
+				?>        			
         			
 					<div id="member_item">
 					<div class="chk">
@@ -172,16 +165,8 @@
 						<!-- <a href="list.php?table=<?= $table ?>&page=<?= $page ?>"> -->
 						<!-- <img src="../../img/board/list.png"></a> &nbsp; -->
 						<!-- 글쓰기 -->
-						<input class="word" type="submit"  value="삭제"/>
-				<!--
-				<?
-					if($userid) {
-				?>
-					<a href="write_form.php?table=<?= $table ?>"><img src="../img/board/write.png"></a>
-				<?
-					}
-				?>
-				-->
+						<input class="word" type="submit" value="삭제"/>
+				
 						</div><!-- end of button -->
 					
 					</div><!-- end of page_button -->

@@ -28,7 +28,7 @@
 
 	echo "
 		<script>
-			location.href='gallery.php?table=$table';
+			location.href='list.php?table=$table';
 		</script>
 	";
 ?>

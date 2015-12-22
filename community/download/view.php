@@ -19,35 +19,24 @@
 	$item_name = $row[name];
 	$item_hit = $row[hit];
 
-	$image_name[0] = $row[file_name_0];
-	$image_name[1] = $row[file_name_1];
-	$image_name[2] = $row[file_name_2];
+	$file_name[0] = $row[file_name_0];
+	$file_name[1] = $row[file_name_1];
+	$file_name[2] = $row[file_name_2];
 
-	$image_copied[0] = $row[file_copied_0];
-	$image_copied[1] = $row[file_copied_1];
-	$image_copied[2] = $row[file_copied_2];
+	$file_type [0] = $row [file_type_0];
+	$file_type [1] = $row [file_type_1];
+	$file_type [2] = $row [file_type_2];
+
+	$file_copied[0] = $row[file_copied_0];
+	$file_copied[1] = $row[file_copied_1];
+	$file_copied[2] = $row[file_copied_2];
 
 	$item_date = $row[regist_day];
 	$item_subject = str_replace(" ", "&nbsp", $row[subject]);
-	$item_content = $row[content];
-
-	for ($i=0; $i < 3; $i++) { 		
-		if ($image_copied[$i]) {
-			$imageinfo = getimagesize("./data/".$image_copied[$i]);
-			$image_width[$i] = $imageinfo[0];
-			$image_height[$i] = $imageinfo[1];
-			$image_type[$i] = $imageinfo[2];
-
-			if ($image_width[$i] > 760) {
-				$image_width[$i] = 760;
-			}
-		} else {
-			$image_width[$i] = "";
-			$image_height[$i] = "";
-			$image_type[$i] = "";
-		}
-	}
-
+	
+	$item_content = str_replace ( " ", "&nbsp;", $row [content] );
+	$item_content = str_replace ( "\n", "<br>", $item_content );
+	
 	$new_hit = $item_hit + 1;
 	$sql = "update $table set hit=$new_hit where num=$num";  // 조회수 증가
 	$conn->query($sql);
@@ -99,21 +88,27 @@
 				<div id="view_content">
 			<?
 				for ($i=0; $i < 3; $i++) { 
-					if ($image_copied[$i]) {
-						$img_name = $image_copied[$i];
-						$img_name = "./data/".$img_name;
-						$img_width = $image_width[$i];
+					if ($userid == "admin" && $file_copied[$i]) {
+						$show_name = $file_name[$i];
+						$real_name = $file_copied[$i];
+						$real_type = $file_type[$i];
+						$file_path = "./data/".$real_name;
+						$file_size = filesize($file_path);
 
-						echo "<img src='$img_name' width='$img_width'>"."<br><br>";
+						echo "☞ 첨부파일 : $show_name ($file_size Byte) &nbsp;&nbsp;&nbsp;&nbsp;
+							<a href='download.php?table=$table&num=$num&real_name=$real_name&
+							show_name=$show_name&file_type=$real_type'>[저장]</a><br>";
+
 					}
 				}
 			?>
+				<br><br>
 						<?= $item_content ?>
 				</div>
 
 
-<!-- start of ripple -->
 
+<!-- start of ripple -->
 
 				<div id="ripple">
 			<?
