@@ -1,6 +1,6 @@
 <?
 	session_start();
-	$table = "gallery";
+	$table = "free_gallery";
 	$page = $_GET[page];
 	$num = $_GET[num];
 
@@ -79,7 +79,7 @@
 			<div class="main_content">
 
 				<div class="main_co1">
-					<h3> 현장 갤러리 </h3>
+					<h3> 자유 갤러리 </h3>
 				</div>
 
 				<div class="main_co2" style="padding:0px 32px 50px">
@@ -114,7 +114,7 @@
 
 				<div id="ripple">
 			<?
-				$sql = "select * from gallery_ripple where parent='$item_num'";
+				$sql = "select * from free_gallery_ripple where parent='$item_num'";
 				$ripple_result = $conn->query($sql);
 
 				while ($row_ripple = ($ripple_result->fetch_assoc())) {
@@ -131,7 +131,7 @@
 							<li class="writer_title2"><?=$ripple_date?></li>
 							<li class="writer_title3">
 			<?
-				if ($userid == "root" || $userid == $rippple_id) {
+				if ($userid == "admin" || $userid == $rippple_id) {
 					echo "<a href='delete_ripple.php?table=$table&num=$item_num&ripple_num=$ripple_num'>[삭제]</a>";		
 				}
 			?>

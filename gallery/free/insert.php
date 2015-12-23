@@ -1,20 +1,18 @@
-<meta charset="UTF-8">
 <?
 	session_start();
-
 	$num = $_GET[num];
-	$table = "gallery";
+	$table = "free_gallery";
+
+	$userid = $_SESSION[userid];
+	$username = $_SESSION[username];
 
 	$subject = $_POST[subject];
 	$content = $_POST[content];
 	$writer = $_POST[writer];
-	
-	$userid = $_SESSION[userid];
-	$username = $_SESSION[username];
 
 	$mode = $_GET[mode];
 	$page = $_GET[page];
-	
+
 	if(!$userid) {
 		echo("
 		<script>
@@ -24,7 +22,7 @@
 		");
 		exit;
 	}
-	
+
 	$regist_day = date("Y-m-d (H:i)"); // 현재의 '년-월-일-시-분'을 저장
 
 	$files = $_FILES["upfile"];

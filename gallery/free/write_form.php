@@ -1,7 +1,7 @@
 <?
 	session_start();
 
-	$table = "gallery";
+	$table = "free_gallery";
 
 	$num = $_GET[num];
 	$page = $_GET[page];
@@ -63,7 +63,7 @@
 			<div class="main_content">
 				<!-- start of main_co1 -->
 				<div class="main_co1">
-					<h3> 현장갤러리 </h3>
+					<h3> 자유갤러리 </h3>
 				</div>
 
 

@@ -12,6 +12,6 @@
 	</div>
 	<ul class="sub_nav" >
 		<li class="sub_item"><a href="<?=$url?>/gallery/site/list.php" class="sub_item_txt tit0">현장 갤러리</a></li>
-		<li class="sub_item"><a href="<?=$url?>/gallery/train/list.php" class="sub_item_txt tit1">실습 갤러리</a></li>
+		<li class="sub_item"><a href="<?=$url?>/gallery/free/list.php" class="sub_item_txt tit1">자유 갤러리</a></li>
 	</ul>
 </div><!-- end of nav_wrap -->

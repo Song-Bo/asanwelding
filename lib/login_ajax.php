@@ -33,8 +33,8 @@
 				"confirm" => "ok"));
 			$result = json_encode($arg);
 			
-			$_SESSION['userid'] = $db_id;
-			$_SESSION['username'] = $db_name;
+			$_SESSION[userid] = $db_id;
+			$_SESSION[username] = $db_name;
 			exit;
 		}
 	}

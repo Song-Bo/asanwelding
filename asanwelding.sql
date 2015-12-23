@@ -1,4 +1,4 @@
-﻿/* TABLE = 11 개 */
+﻿/* TABLE = 16 개 */
 
 /* DataBase 생성 */
 create database asan_db;
@@ -173,7 +173,7 @@ create table qna_ripple (
 
 CREATE TABLE IF NOT EXISTS `gallery` (
   `num` int(11) NOT NULL AUTO_INCREMENT,
-  `name` char(16) NOT NULL,*/
+  `name` char(16) NOT NULL,
   `subject` char(100) NOT NULL,
   `content` text NOT NULL,
   `regist_day` char(20) DEFAULT NULL,
@@ -192,7 +192,8 @@ CREATE TABLE IF NOT EXISTS `gallery` (
 CREATE TABLE `gallery_ripple` (
 	`num` INT(11) NOT NULL AUTO_INCREMENT,
 	`parent` INT(11) NOT NULL,
-	/*`nick` CHAR(10) NOT NULL,*/
+	`id` CHAR(15) NOT NULL,
+  `name` CHAR(15) NOT NULL,
 	`content` TEXT NOT NULL,
 	`regist_day` CHAR(20) NULL DEFAULT NULL,
 	PRIMARY KEY (`num`)
@@ -201,6 +202,37 @@ COLLATE='utf8_general_ci'
 ENGINE=InnoDB
 ;
 
+/* 자유 갤러리 */
+CREATE TABLE IF NOT EXISTS `free_gallery` (
+  `num` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(16) NOT NULL,
+  `subject` char(100) NOT NULL,
+  `content` text NOT NULL,
+  `regist_day` char(20) DEFAULT NULL,
+  `hit` int(11) DEFAULT NULL,
+  `file_name_0` char(40) DEFAULT NULL,
+  `file_name_1` char(40) DEFAULT NULL,
+  `file_name_2` char(40) DEFAULT NULL,
+  `file_copied_0` char(30) DEFAULT NULL,
+  `file_copied_1` char(30) DEFAULT NULL,
+  `file_copied_2` char(30) DEFAULT NULL,
+  PRIMARY KEY (`num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+/* 갤러리 리플 */
+CREATE TABLE `free_gallery_ripple` (
+  `num` INT(11) NOT NULL AUTO_INCREMENT,
+  `parent` INT(11) NOT NULL,
+  `id` CHAR(15) NOT NULL,
+  `name` CHAR(15) NOT NULL,
+  `content` TEXT NOT NULL,
+  `regist_day` CHAR(20) NULL DEFAULT NULL,
+  PRIMARY KEY (`num`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
 
 
 

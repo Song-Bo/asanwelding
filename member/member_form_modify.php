@@ -61,7 +61,7 @@
 					<div id="member_auth">
 						<div class="wrapper_table">
 							<div class="header1">
-								&nbsp;&nbsp;<strong style="align='center'">정보수정 </strong><br>
+								&nbsp;&nbsp;정보수정<br>
 
 							</div><!-- end of header1 -->
 							<div class="body">

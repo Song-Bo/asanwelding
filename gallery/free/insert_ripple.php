@@ -22,7 +22,7 @@
 
    	$regist_day = date("Y-m-d (H:i)");
 
-   	$sql = "insert into gallery_ripple (parent, id, name, content, regist_day) ";
+   	$sql = "insert into free_gallery_ripple (parent, id, name, content, regist_day) ";
    	$sql.= "values ($num, '$userid', '$username', '$ripple_content', '$regist_day')";
 
    	$conn->query($sql);

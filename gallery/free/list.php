@@ -1,7 +1,7 @@
 <?
 	session_start();
-	$table = "gallery";
-	$ripple = "gallery_ripple";
+	$table = "free_gallery";
+	$ripple = "free_gallery_ripple";
 
 	$page = $_GET[page];
 	$num = $_GET[num];
@@ -83,7 +83,7 @@
 			?>
 			<div class="main_content">
 			<div class="main_co1">
-				<h2>현장 갤러리</h2>
+				<h2>자유 갤러리</h2>
 			</div><!-- end of main_co1 -->
 			<!-- start of main_co2 -->
 			<div class="main_co2">
@@ -160,7 +160,7 @@
 				<?
 					if($userid) {
 				?>
-					<a href="write_form.php?table=gallery">
+					<a href="write_form.php?table=free_gallery">
 					<p class="word">글쓰기</p></a>
 				<?
 					}

@@ -1,11 +1,8 @@
 @chaset "UTF-8";
-a {
-	text-decoration: none;
-}
+a {	text-decoration: none; }
 
 
 /* list.php */
-
 /* #list_search */
 #list_search {
 	height:100%;
@@ -216,8 +213,9 @@ a {
 .page_num {
 	float:left;
 	width:80%;
-	margin-top:10px;
+	margin-top:20px;
 	text-align:center;
+	margin-bottom: 20px;
 }
 
 .button {

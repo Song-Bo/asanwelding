@@ -1,8 +1,8 @@
 <?
-session_start();
+	session_start();
 ?>
 <?
-require_once "../lib/header.php";
+	require_once "../lib/header.php";
 ?>
 
 <!-- start of container -->
@@ -19,16 +19,6 @@ require_once "../lib/header.php";
 	
 			<!-- 메인 갤러리 시작 -->
 			<div class="main_co2" style="padding:0px 0px;">
-	<script language="javascript">
-	function layer_popup(type) {
-	if(type=="open") {
-		document.getElementById('layer_popup1').style.display = "";
-	} else {
-		document.getElementById('layer_popup1').style.display = "none";
-	}
-	}
-	</script>
-
 	
 	<script type="text/javascript">
 	var item_width;
@@ -39,7 +29,7 @@ require_once "../lib/header.php";
 	var timerSlider;
 	var item_left;
     var pagination = 0;
-    var $on_rolling ;
+    var $on_rolling;
     var item_left = 0;
     var side_opacity = "0.3";
 	var backcolor = "#000";
@@ -97,7 +87,7 @@ require_once "../lib/header.php";
 		isSlidding = true; 
         clearTimeout(timerSlider);
 
-		if(way == "l"){ 
+		if(way == "l") { 
 			$on_rolling.find(".content_interior_rolling li:first-child").before($on_rolling.find(".content_interior_rolling li:last-child").clone());
 			$on_rolling.find(".content_interior_rolling li").css({"background":backcolor});
 			$on_rolling.find(".content_interior_rolling li p").css({"opacity":side_opacity});
@@ -117,20 +107,21 @@ require_once "../lib/header.php";
 
 
 			});
-		}else{
+
+		} else {
 			$on_rolling.find(".content_interior_rolling li:last-child").after($on_rolling.find(".content_interior_rolling li:first-child").clone());
 			$on_rolling.find(".content_interior_rolling li:eq(2)").css({"background":""});
 			$on_rolling.find(".content_interior_rolling li p:eq(2)").css({"opacity":"1"});
 			$on_rolling.find(".content_interior_rolling li:eq(1)").css({"background":backcolor});
 			$on_rolling.find(".content_interior_rolling li p:eq(1)").css({"opacity":side_opacity});
-			$on_rolling.find(".content_interior_rolling ul").animate({left:"-="+item_width}, tSlidding, function(){
-								
+			$on_rolling.find(".content_interior_rolling ul").animate({left:"-="+item_width},
+			 tSlidding, function(){								
 				$on_rolling.find(".content_interior_rolling li:first-child").remove();
 				$on_rolling.find(".content_interior_rolling ul").css({"left":"-"+item_left+"px"});
 				isSlidding = false;				 
 				timerSlider = setTimeout(function(){
-					fnMoveSlide("r")
-				}, iSlidding);
+				fnMoveSlide("r")
+			 }, iSlidding);
 
 			});			
 		}
@@ -141,10 +132,12 @@ require_once "../lib/header.php";
 				<div class="content_interior">
 				<div class="content_interior_rolling">
 				<ul>
-     		        <li><p><img src="../img/gallery/main_sd5.png" width="740" height="490"><br></p></li>
-					<li><p><img src="../img/gallery/main_sd2.png" width="740" height="490"></p></li>
-					<li><p><img src="../img/gallery/main_sd3.png" width="740" height="490"></p></li>
-					<li><p><img src="../img/gallery/main_sd1.png" width="740" height="490"><br style="clear:both;"><br></p></li>
+     		        <li><p><img src="../img/gallery/asan1.jpg" width="824" height="490"><br></p></li>
+					<li><p><img src="../img/gallery/asan2.jpg" width="824" height="490"></p></li>
+					<li><p><img src="../img/gallery/asan3.jpg" width="824" height="490"></p></li>
+					<li><p><img src="../img/gallery/asan4.jpg" width="824" height="490"></p></li>
+					<!-- <li><p><img src="../img/gallery/main_sd3.png" width="824" height="490"></p></li> -->
+					<!-- <li><p><img src="../img/gallery/main_sd1.png" width="824" height="490"><br style="clear:both;"><br></p></li> -->
 				</ul>
 				</div>
 

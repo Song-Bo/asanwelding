@@ -45,7 +45,7 @@
 					<div id="member_auth">
 						<div class="wrapper_table">
 							<div class="header1">
-								&nbsp;&nbsp;<strong style="align='center'">회원탈퇴 </strong><br>
+								&nbsp;&nbsp;회원탈퇴<br>
 
 							</div><!-- end of header1 -->
 							<div class="body">
@@ -56,6 +56,7 @@
 										
 										<dt><label for="password2"><font color="red"> * </font>비밀번호 </label><span id="pw_space"></span></dt>
 										<dd><input type="password" class="text" id="pw2" name="pw2"></dd>
+										
 									</dl>
 									<div class="btn">
 										<p>

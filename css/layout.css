@@ -65,8 +65,8 @@
 
 
 
-/* 회원가입 폼 -- 홍만 */
 
+/* 회원가입 폼 -- 홍만 */
 
 #member_auth{
   width: 100%;
@@ -147,11 +147,51 @@ div.body div.btn {
 
 
 
+
 /* 갤러리 */
+
 /* 메인 슬라이드 */
-.content_interior {position:relative;}
-.content_interior .content_interior_rolling{position:relative;width:100%;height:490px;overflow:hidden;}
-.content_interior .content_interior_rolling ul{position:absolute;margin:0px;padding:0px;list-style:none;}
-.content_interior .content_interior_rolling ul li{float:left;}
-.content_interior .btn_interior_left{position:absolute;top:200px;left:45%;margin-left:-325px;cursor:pointer;}
-.content_interior .btn_interior_right{position:absolute;top:200px;left:54%;margin-left:300px;cursor:pointer;}
+
+.content_interior {
+  position:relative;
+  margin:0px;
+  padding:0px;
+}
+
+.content_interior .content_interior_rolling{
+  position:relative;
+  width:824px;
+  height:490px;
+  overflow:hidden;
+  /*margin:0px;
+  padding:0px;*/
+}
+
+.content_interior .content_interior_rolling ul{
+  width:100%;
+  position:absolute;
+  margin:0px;
+  padding:0px;
+  list-style:none;
+}
+
+.content_interior .content_interior_rolling ul li{  
+  float:left;
+}
+
+/* 좌우 버튼 */
+.content_interior .btn_interior_left{
+  position:absolute;
+  top:220px;
+  left:45%;
+  margin-left:-325px;
+  cursor:pointer;
+}
+
+.content_interior .btn_interior_right{
+  position:absolute;
+  top:220px;
+  left:54%;
+  margin-left:364px;
+  cursor:pointer;
+}
