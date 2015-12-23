@@ -132,10 +132,13 @@
 				<div class="content_interior">
 				<div class="content_interior_rolling">
 				<ul>
-     		        <li><p><img src="../img/gallery/asan1.jpg" width="824" height="490"><br></p></li>
+					<?
+						require_once "main_gallery.php";
+					?>
+     		       <!--  <li><p><img src="../img/gallery/asan1.jpg" width="824" height="490"><br></p></li>
 					<li><p><img src="../img/gallery/asan2.jpg" width="824" height="490"></p></li>
 					<li><p><img src="../img/gallery/asan3.jpg" width="824" height="490"></p></li>
-					<li><p><img src="../img/gallery/asan4.jpg" width="824" height="490"></p></li>
+					<li><p><img src="../img/gallery/asan4.jpg" width="824" height="490"></p></li> -->
 					<!-- <li><p><img src="../img/gallery/main_sd3.png" width="824" height="490"></p></li> -->
 					<!-- <li><p><img src="../img/gallery/main_sd1.png" width="824" height="490"><br style="clear:both;"><br></p></li> -->
 				</ul>
